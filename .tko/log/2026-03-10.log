@@ -1,0 +1,17 @@
+2026-03-10 13:37:29, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-10 13:38:20, EXEC, v:1, k:sandbox@user_001, mode:FULL, size:1, fail:COMP
+2026-03-10 13:38:59, EXEC, v:1, k:sandbox@user_001, mode:FREE
+2026-03-10 13:39:11, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-10 13:50:07, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-10 13:53:53, EXEC, v:1, k:sandbox@user_001, mode:FULL, size:6, fail:COMP
+2026-03-10 13:53:55, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-10 13:55:44, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-10 13:59:02, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-10 13:59:21, MOVE, v:1, k:ed@escada, mode:DOWN
+2026-03-10 14:01:38, MOVE, v:1, k:ed@escada, mode:PICK
+2026-03-10 14:02:18, EXEC, v:1, k:ed@escada, mode:FULL, rate:0, size:5
+2026-03-10 14:02:18, EXEC, v:1, k:ed@escada, mode:FULL, rate:0, size:5
+2026-03-10 14:02:19, EXEC, v:1, k:ed@escada, mode:FULL, rate:0, size:5
+2026-03-10 14:04:05, MOVE, v:1, k:ed@escada, mode:BACK
+2026-03-10 14:12:27, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-10 14:12:31, EXEC, v:1, k:sandbox@user_001, mode:FREE, size:0
