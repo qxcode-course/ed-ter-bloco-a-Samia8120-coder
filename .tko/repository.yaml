@@ -6,9 +6,17 @@ sources:
   writeable: true
   quests: null
   tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  cache_timestamp: '2026-03-11 13:46:23'
+  quests: null
+  tasks: null
 expanded:
-- sandbox@sandbox:00_rascunhos
+- ed@main-quest
 - sandbox@sandbox
+- sandbox@sandbox:00_rascunhos
 tasks: {}
 flags:
   painel: 0
