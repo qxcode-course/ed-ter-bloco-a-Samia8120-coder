@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_20-19-22",
+            "content": "@@ -153,23 +153,29 @@\n / 2%0A\n-    var temp = \n+%09var res = math.Sqrt(\n (p *\n@@ -202,34 +202,8 @@\n 3)))\n-%0A%09var res = math.Sqrt(temp\n )%0A%0A%09\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-11_20-20-35",
+            "content": "@@ -149,17 +149,20 @@\n n3) / 2%0A\n-%09\n+    \n var temp\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-20-42",
+            "content": "@@ -228,16 +228,18 @@\n mt.Print\n+ln\n (res)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-28-24",
+            "content": "@@ -177,32 +177,24 @@\n - n1\n-) * (p - n2) * (p - \n+*(p-n2)*(p-\n n3))\n+)\n %0A%09va\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-29-19",
+            "content": "@@ -161,16 +161,17 @@\n  temp = \n+(\n p * (p -\n@@ -196,16 +196,17 @@\n (p - n3)\n+)\n %0A%09var re\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-30-03",
+            "content": "@@ -90,21 +90,11 @@\n n(n1\n-, n2, n3\n )%0A%09\n-//\n fmt.\n@@ -109,10 +109,8 @@\n 2)%0A%09\n-//\n fmt.\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-32-38",
+            "content": "@@ -134,19 +134,22 @@\n n(n3)%0A%0A%09\n+var \n p \n-:\n = (n1 + \n@@ -166,14 +166,17 @@\n  2%0A%09\n+var \n temp \n-:\n = p \n@@ -213,13 +213,16 @@\n 3)%0A%09\n+var \n res \n-:\n = ma\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-48-51",
+            "content": "@@ -159,18 +159,16 @@\n 3) / 2%0A%09\n-//\n temp := \n@@ -224,36 +224,12 @@\n qrt(\n-(p * (p - n1*(p-n2)*(p-n3)))\n+temp\n )%0A%0A%09\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-52-04",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n1, n2, n3 float64\n\tfmt.Scanln(n1, n2, n3)\n\t//fmt.Scanln(n2)\n\t//fmt.Scanln(n3)\n\n\tp := (n1 + n2 + n3) / 2\n\t//temp := p * (p - n1) * (p - n2) * (p - n3)\n\tres := math.Sqrt((p * (p - n1*(p-n2)*(p-n3))))\n\n\tfmt.Print(res)\n}\n",
+            "lines": "19"
+        }
+    ]
+}
