@@ -6,8 +6,10 @@ import (
 )
 
 func main() {
-	var n1, n2, n3 float64
-	fmt.Scanln(n1, n2, n3)
+	var n1 float64
+	var n2 float64
+	var n3 float64
+	fmt.Scanf("%f %f %f", n1, n2, n3)
 	//fmt.Scanln(n2)
 	//fmt.Scanln(n3)
 

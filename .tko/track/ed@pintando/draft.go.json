@@ -42,8 +42,18 @@
         },
         {
             "label": "2026-03-11_20-52-04",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n1, n2, n3 float64\n\tfmt.Scanln(n1, n2, n3)\n\t//fmt.Scanln(n2)\n\t//fmt.Scanln(n3)\n\n\tp := (n1 + n2 + n3) / 2\n\t//temp := p * (p - n1) * (p - n2) * (p - n3)\n\tres := math.Sqrt((p * (p - n1*(p-n2)*(p-n3))))\n\n\tfmt.Print(res)\n}\n",
+            "content": "@@ -85,22 +85,11 @@\n Scan\n-f(%22%25f %25f %25f%22, \n+ln(\n n1, \n",
             "lines": "19"
+        },
+        {
+            "label": "2026-03-11_20-59-57",
+            "content": "@@ -59,37 +59,13 @@\n r n1\n- float64%0A%09var n2 float64%0A%09var\n+, n2,\n  n3 \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-11_21-00-42",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n1 float64\n\tvar n2 float64\n\tvar n3 float64\n\tfmt.Scanf(\"%f %f %f\", n1, n2, n3)\n\t//fmt.Scanln(n2)\n\t//fmt.Scanln(n3)\n\n\tp := (n1 + n2 + n3) / 2\n\t//temp := p * (p - n1) * (p - n2) * (p - n3)\n\tres := math.Sqrt((p * (p - n1*(p-n2)*(p-n3))))\n\n\tfmt.Print(res)\n}\n",
+            "lines": "21"
         }
     ]
 }

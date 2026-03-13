@@ -10,7 +10,7 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-11 19:49:54'
+  cache_timestamp: '2026-03-13 10:48:45'
   quests: null
   tasks: null
 expanded:
