@@ -14,11 +14,12 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@sandbox
-- ed@revisão
 - ed@main-quest
+- sandbox@sandbox
 - sandbox@sandbox:00_rascunhos
-tasks: {}
+- ed@revisão
+tasks:
+  ed@pintando: '{self:1, rate:100, study:89}'
 flags:
   painel: 0
   quests: 0
