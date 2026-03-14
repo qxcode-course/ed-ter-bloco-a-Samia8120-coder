@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_14-15-15",
+            "content": "@@ -41,18 +41,8 @@\n cao(\n-a string, \n i in\n@@ -71,24 +71,17 @@\n t.Print(\n-a, %22 eh \n+%22\n crianca%5C\n@@ -127,24 +127,17 @@\n t.Print(\n-a, %22 eh \n+%22\n jovem%5Cn%22\n@@ -181,24 +181,17 @@\n t.Print(\n-a, %22 eh \n+%22\n adulto%5Cn\n@@ -238,24 +238,17 @@\n t.Print(\n-a, %22 eh \n+%22\n idoso%5Cn%22\n@@ -275,16 +275,9 @@\n int(\n-a, %22 eh \n+%22\n mumi\n@@ -364,17 +364,16 @@\n mt.Scan(\n-&\n idade)%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-14_14-17-59",
+            "content": "@@ -434,14 +434,8 @@\n cao(\n-nome, \n idad\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-14_14-18-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc comparacao(a string, i int) {\n\tif i < 12 {\n\t\tfmt.Print(a, \" eh crianca\\n\")\n\t} else if i >= 12 && i < 18 {\n\t\tfmt.Print(a, \" eh jovem\\n\")\n\t} else if i >= 18 && i < 65 {\n\t\tfmt.Print(a, \" eh adulto\\n\")\n\t} else if i >= 65 && i < 1000 {\n\t\tfmt.Print(a, \" eh idoso\\n\")\n\t} else {\n\t\tfmt.Print(a, \" eh mumia\\n\")\n\t}\n}\n\nfunc main() {\n\tvar nome string\n\tvar idade int\n\n\tfmt.Scanln(&nome)\n\tfmt.Scan(&idade)\n\n\tcomparacao(nome, idade)\n}\n",
+            "lines": "27"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+2026-03-14 13:50:05, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-14 13:50:12, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-14 14:15:15, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:27
+2026-03-14 14:17:59, EXEC, v:1, k:ed@mumia, mode:FULL, size:27, fail:COMP
+2026-03-14 14:18:25, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:27
+2026-03-14 14:18:37, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-14 14:19:30, SELF, v:1, k:ed@mumia, self:1, rate:100, study:30
