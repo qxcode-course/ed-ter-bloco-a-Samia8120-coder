@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_23-15-16",
+            "content": "@@ -99,32 +99,26 @@\n t.Print(x, y\n-, %22%5Cn%22\n )%0A\n+\n %09%7D else if d\n@@ -147,38 +147,32 @@\n %09%09fmt.Print(x, y\n-, %22%5Cn%22\n )%0A%09%7D else if d =\n@@ -203,30 +203,24 @@\n t.Print(x, y\n-, %22%5Cn%22\n )%0A%09%7D else if\n@@ -243,16 +243,16 @@\n -%0A%09%09y++%0A\n+\n %09%09fmt.Pr\n@@ -263,14 +263,8 @@\n x, y\n-, %22%5Cn%22\n )%0A%09%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-16_23-16-41",
+            "content": "@@ -81,16 +81,22 @@\n %7B%0A%09%09x--%0A\n+%09%09y--%0A\n %09%09fmt.Pr\n@@ -103,32 +103,32 @@\n int(x, y, %22%5Cn%22)%0A\n-\n %09%7D else if d == \n@@ -139,16 +139,22 @@\n %7B%0A%09%09x++%0A\n+%09%09y--%0A\n %09%09fmt.Pr\n@@ -191,16 +191,22 @@\n = %22U%22 %7B%0A\n+%09%09x--%0A\n %09%09y--%0A%09%09\n@@ -219,32 +219,32 @@\n int(x, y, %22%5Cn%22)%0A\n-\n %09%7D else if d == \n@@ -249,16 +249,22 @@\n = %22D%22 %7B%0A\n+%09%09x--%0A\n %09%09y++%0A%09%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-16_23-17-44",
+            "content": "@@ -412,25 +412,30 @@\n %7D%0A%0A%09\n+for \n i := 0\n-%0A%09for\n+;\n  i %3C Q\n+; i++\n  %7B%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-16_23-28-00",
+            "content": "@@ -408,61 +408,33 @@\n y)%0A%09\n-%09posicao(x, y, D)%0A%09%7D%0A%0A%09//for \n+%7D%0A%0A%09\n i := 0\n-;\n+%0A%09for\n  i %3C Q\n-; i++\n  %7B%0A%09\n-//\n %09pos\n@@ -452,10 +452,8 @@\n D)%0A%09\n-//\n %7D%0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-16_23-35-02",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc posicao(x int, y int, d string) {\n\tif d == \"L\" {\n\t\tx--\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"R\" {\n\t\tx++\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"U\" {\n\t\ty--\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"D\" {\n\t\ty++\n\t\tfmt.Print(x, y, \"\\n\")\n\t}\n}\nfunc main() {\n\tvar Q int\n\tvar D string\n\n\tfmt.Scan(&Q)\n\tfmt.Scan(&D)\n\n\tvar x int\n\tvar y int\n\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scan(&x, &y)\n\t\tposicao(x, y, D)\n\t}\n\n\t//for i := 0; i < Q; i++ {\n\t//\tposicao(x, y, D)\n\t//}\n}\n",
+            "lines": "38"
+        }
+    ]
+}
