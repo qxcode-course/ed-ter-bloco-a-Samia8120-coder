@@ -2,21 +2,6 @@ package main
 
 import "fmt"
 
-func posicao(x int, y int, d string) {
-	if d == "L" {
-		x--
-		fmt.Print(x, y, "\n")
-	} else if d == "R" {
-		x++
-		fmt.Print(x, y, "\n")
-	} else if d == "U" {
-		y--
-		fmt.Print(x, y, "\n")
-	} else if d == "D" {
-		y++
-		fmt.Print(x, y, "\n")
-	}
-}
 func main() {
 	var Q int
 	var D string
@@ -24,15 +9,49 @@ func main() {
 	fmt.Scan(&Q)
 	fmt.Scan(&D)
 
-	var x int
-	var y int
+	vetor_x := make([]int, Q)
+	vetor_y := make([]int, Q)
 
 	for i := 0; i < Q; i++ {
-		fmt.Scan(&x, &y)
-		posicao(x, y, D)
+		fmt.Scan(&vetor_x[i], &vetor_y[i])
 	}
 
-	//for i := 0; i < Q; i++ {
-	//	posicao(x, y, D)
-	//}
+	//Logica
+
+	if D == "L" {
+		for i := 0; i < Q; i++ {
+			if i == 0 {
+				fmt.Print(vetor_x[i]-1, vetor_y[i], "\n")
+			} else {
+				fmt.Print(vetor_x[i-1], vetor_y[i-1], "\n")
+			}
+		}
+	}
+	if D == "R" {
+		for i := 0; i < Q; i++ {
+			if i == 0 {
+				fmt.Print(vetor_x[i]+1, vetor_y[i], "\n")
+			} else {
+				fmt.Print(vetor_x[i-1], vetor_y[i-1], "\n")
+			}
+		}
+	}
+	if D == "U" {
+		for i := 0; i < Q; i++ {
+			if i == 0 {
+				fmt.Print(vetor_x[i], vetor_y[i]-1, "\n")
+			} else {
+				fmt.Print(vetor_x[i-1], vetor_y[i-1], "\n")
+			}
+		}
+	}
+	if D == "D" {
+		for i := 0; i < Q; i++ {
+			if i == 0 {
+				fmt.Print(vetor_x[i], vetor_y[i]+1, "\n")
+			} else {
+				fmt.Print(vetor_x[i-1], vetor_y[i-1], "\n")
+			}
+		}
+	}
 }

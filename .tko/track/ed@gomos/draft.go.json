@@ -22,8 +22,58 @@
         },
         {
             "label": "2026-03-16_23-35-02",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc posicao(x int, y int, d string) {\n\tif d == \"L\" {\n\t\tx--\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"R\" {\n\t\tx++\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"U\" {\n\t\ty--\n\t\tfmt.Print(x, y, \"\\n\")\n\t} else if d == \"D\" {\n\t\ty++\n\t\tfmt.Print(x, y, \"\\n\")\n\t}\n}\nfunc main() {\n\tvar Q int\n\tvar D string\n\n\tfmt.Scan(&Q)\n\tfmt.Scan(&D)\n\n\tvar x int\n\tvar y int\n\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scan(&x, &y)\n\t\tposicao(x, y, D)\n\t}\n\n\t//for i := 0; i < Q; i++ {\n\t//\tposicao(x, y, D)\n\t//}\n}\n",
+            "content": "@@ -341,90 +341,100 @@\n %0A%0A%09v\n-etor_x := make (%5BQ%5D,\n+ar x int%0A%09var y\n  int\n-)%0A%09vetor_y := make (%5BQ%5D, int)%0A%09//var x int%0A%09//var y int\n+%0A%0A%09for i := 0; i %3C Q; i++ %7B%0A%09%09fmt.Scan(&x, &y)%0A%09%09posicao(x, y, D)%0A%09%7D\n %0A%0A%09\n+//\n for \n@@ -459,46 +459,31 @@\n  %7B%0A%09\n-%09fmt.Scan(&vetor_x%5Bi%5D, &vetor_y%5Bi%5D)%0A%0A%09\n+//%09posicao(x, y, D)%0A%09//\n %7D%0A%7D%0A\n",
             "lines": "38"
+        },
+        {
+            "label": "2026-03-17_14-10-27",
+            "content": "@@ -351,25 +351,26 @@\n  := make\n+ \n (%5B\n-%5Dint, Q\n+Q%5D, int\n )%0A%09vetor\n@@ -383,17 +383,18 @@\n make\n+ \n (%5B\n-%5Dint, Q\n+Q%5D, int\n )%0A%09/\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_14-12-38",
+            "content": "@@ -25,10 +25,8 @@\n t%22%0A%0A\n-/*\n func\n@@ -60,16 +60,16 @@\n ring) %7B%0A\n+\n %09if d ==\n@@ -269,10 +269,8 @@\n %09%7D%0A%7D\n-*/\n %0Afun\n@@ -415,16 +415,17 @@\n r y int%0A\n+%0A\n %09for i :\n@@ -483,147 +483,8 @@\n i%5D)%0A\n-%09%7D%0A%09if D == %22L%22 %7B%0A%09%09for i := 0; i %3C Q; i++%7B%0A%09%09%09if i == 0 %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi%5D-1, vetor_y%5Bi%5D)%0A%09%09%09%7D//else%7B%0A%09%09%09//%09fmt.Print()%0A%09%09%09//%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_14-18-53",
+            "content": "@@ -23,18 +23,16 @@\n fmt%22%0A%0A/*\n-%0A%09\n func pos\n@@ -62,17 +62,16 @@\n ring) %7B%0A\n-%09\n %09if d ==\n@@ -83,14 +83,12 @@\n %7B%0A%09%09\n-%09\n x--%0A\n-%09\n %09%09fm\n@@ -99,33 +99,32 @@\n int(x, y, %22%5Cn%22)%0A\n-%09\n %09%7D else if d == \n@@ -133,17 +133,16 @@\n %22 %7B%0A\n-%09\n %09%09x++%0A%09%09\n %09fmt\n@@ -133,25 +133,24 @@\n %22 %7B%0A%09%09x++%0A%09%09\n-%09\n fmt.Print(x,\n@@ -151,33 +151,32 @@\n int(x, y, %22%5Cn%22)%0A\n-%09\n %09%7D else if d == \n@@ -187,14 +187,12 @@\n %7B%0A%09%09\n-%09\n y--%0A\n-%09\n %09%09fm\n@@ -211,17 +211,16 @@\n , %22%5Cn%22)%0A\n-%09\n %09%7D else \n@@ -237,17 +237,16 @@\n %22 %7B%0A\n-%09\n %09%09y++%0A%09%09\n %09fmt\n@@ -241,17 +241,16 @@\n %09%09y++%0A%09%09\n-%09\n fmt.Prin\n@@ -263,23 +263,20 @@\n , %22%5Cn%22)%0A\n-%09\n %09%7D%0A\n-%09%7D%0A\n+%7D\n */%0Afunc \n@@ -520,25 +520,24 @@\n ; i %3C Q; i++\n- \n %7B%0A%09%09%09if i ==\n@@ -583,21 +583,14 @@\n y%5Bi%5D\n-, %22%5Cn%22\n )%0A%09%09%09%7D\n- \n //el\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-17_14-19-10",
+            "content": "@@ -654,118 +654,6 @@\n %0A%09%7D%0A\n-%09if D == %22R%22 %7B%0A%09%09for i := 0; i %3C Q; i++ %7B%0A%09%09%09if i == 0 %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi%5D+1, vetor_y, %22%5Cn%22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-17_14-22-13",
+            "content": "@@ -734,35 +734,32 @@\n _x%5Bi%5D+1, vetor_y\n-%5Bi%5D\n , %22%5Cn%22)%0A%09%09%09%7D%0A%09%09%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-17_14-22-43",
+            "content": "@@ -410,17 +410,42 @@\n int, Q)%0A\n+%09//var x int%0A%09//var y int\n %0A\n-\n %09for i :\n@@ -506,20 +506,8 @@\n %0A%09%7D%0A\n-%0A%09//Logica%0A%0A\n %09if \n@@ -699,32 +699,32 @@\n %0A%09%09%09if i == 0 %7B%0A\n+\n %09%09%09%09fmt.Print(ve\n@@ -769,236 +769,6 @@\n %0A%09%7D%0A\n-%09if D == %22U%22 %7B%0A%09%09for i := 0; i %3C Q; i++ %7B%0A%09%09%09if i == 0 %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi%5D, vetor_y%5Bi%5D-1, %22%5Cn%22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if D == %22D%22 %7B%0A%09%09for i := 0; i %3C Q; i++ %7B%0A%09%09%09if i == 0 %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi%5D, vetor_y%5Bi%5D+1, %22%5Cn%22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-17_14-24-12",
+            "content": "@@ -601,18 +601,21 @@\n %09%09%7D \n+//\n else\n- \n %7B%0A%09%09%09\n+//\n %09fmt\n@@ -625,39 +625,15 @@\n int(\n-vetor_x%5Bi-1%5D, vetor_y%5Bi-1%5D\n )%0A%09%09%09\n+//\n %7D%0A%09%09\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-17_14-36-54",
+            "content": "@@ -644,22 +644,16 @@\n r_y%5Bi-1%5D\n-, %22%5Cn%22\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-17_14-37-06",
+            "content": "@@ -771,73 +771,13 @@\n n%22)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi-1%5D, vetor_y%5Bi-1%5D, %22%5Cn%22)%0A\n %09%09%09%7D%0A\n+\n %09%09%7D%0A\n@@ -886,68 +886,8 @@\n n%22)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi-1%5D, vetor_y%5Bi-1%5D, %22%5Cn%22)%0A\n %09%09%09%7D\n@@ -943,32 +943,32 @@\n %0A%09%09%09if i == 0 %7B%0A\n+\n %09%09%09%09fmt.Print(ve\n@@ -1001,68 +1001,8 @@\n n%22)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(vetor_x%5Bi-1%5D, vetor_y%5Bi-1%5D, %22%5Cn%22)%0A\n %09%09%09%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-17_14-37-35",
+            "content": "package main\n\nimport \"fmt\"\n\n/*\n\tfunc posicao(x int, y int, d string) {\n\t\tif d == \"L\" {\n\t\t\tx--\n\t\t\tfmt.Print(x, y, \"\\n\")\n\t\t} else if d == \"R\" {\n\t\t\tx++\n\t\t\tfmt.Print(x, y, \"\\n\")\n\t\t} else if d == \"U\" {\n\t\t\ty--\n\t\t\tfmt.Print(x, y, \"\\n\")\n\t\t} else if d == \"D\" {\n\t\t\ty++\n\t\t\tfmt.Print(x, y, \"\\n\")\n\t\t}\n\t}\n*/\nfunc main() {\n\tvar Q int\n\tvar D string\n\n\tfmt.Scan(&Q)\n\tfmt.Scan(&D)\n\n\tvetor_x := make([]int, Q)\n\tvetor_y := make([]int, Q)\n\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scan(&vetor_x[i], &vetor_y[i])\n\t}\n\n\t//Logica\n\n\tif D == \"L\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Print(vetor_x[i]-1, vetor_y[i], \"\\n\")\n\t\t\t} else {\n\t\t\t\tfmt.Print(vetor_x[i-1], vetor_y[i-1], \"\\n\")\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"R\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Print(vetor_x[i]+1, vetor_y[i], \"\\n\")\n\t\t\t} else {\n\t\t\t\tfmt.Print(vetor_x[i-1], vetor_y[i-1], \"\\n\")\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"U\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Print(vetor_x[i], vetor_y[i]-1, \"\\n\")\n\t\t\t} else {\n\t\t\t\tfmt.Print(vetor_x[i-1], vetor_y[i-1], \"\\n\")\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"D\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Print(vetor_x[i], vetor_y[i]+1, \"\\n\")\n\t\t\t} else {\n\t\t\t\tfmt.Print(vetor_x[i-1], vetor_y[i-1], \"\\n\")\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "74"
         }
     ]
 }
