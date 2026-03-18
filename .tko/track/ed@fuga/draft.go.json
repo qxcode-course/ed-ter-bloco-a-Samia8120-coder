@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_20-18-56",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,496 +23,46 @@\n mt%22%0A\n-%0A\n func \n-caminho(h int, p int, f int, d int) %7B%0A%09if d == 1 %7B%0A%09%09for f %3C= 16 %7B%0A%09%09%09f++%0A%09%09%09if f == 16 %7B%0A%09%09%09%09f = 0%0A%09%09%09%7D%0A%09%09%09if f == p %7B%0A%09%09%09%09fmt.Print(%22N%5Cn%22)%0A%09%09%09%09break%0A%09%09%09%7D else if f == h %7B%0A%09%09%09%09fmt.Print(%22S%5Cn%22)%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D else if d == -1 %7B%0A%09%09for f == -1 %7B%0A%09%09%09f--%0A%09%09%09if f == -1 %7B%0A%09%09%09%09f = 15%0A%09%09%09%7D%0A%09%09%09if f == p %7B%0A%09%09%09%09fmt.Print(%22N%5Cn%22)%0A%09%09%09%09break%0A%09%09%09%7D else if f == h %7B%0A%09%09%09%09fmt.Print(%22S%5Cn%22)%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%7D%0Afunc main() %7B%0A%09var H, P, F, D int%0A%09fmt.Scan(&H, &P, &F, &D)%0A%0A%09caminho(H, P, F, D\n+main() %7B%0A    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-18_21-02-10",
+            "content": "@@ -272,12 +272,13 @@\n r f \n-%3C 16\n+== -1\n  %7B%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-18_21-20-04",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc caminho(h int, p int, f int, d int) {\n\tif d == 1 {\n\t\tfor f <= 16 {\n\t\t\tf++\n\t\t\tif f == 16 {\n\t\t\t\tf = 0\n\t\t\t}\n\t\t\tif f == p {\n\t\t\t\tfmt.Print(\"N\\n\")\n\t\t\t\tbreak\n\t\t\t} else if f == h {\n\t\t\t\tfmt.Print(\"S\\n\")\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t} else if d == -1 {\n\t\tfor f < 16 {\n\t\t\tf--\n\t\t\tif f == -1 {\n\t\t\t\tf = 15\n\t\t\t}\n\t\t\tif f == p {\n\t\t\t\tfmt.Print(\"N\\n\")\n\t\t\t\tbreak\n\t\t\t} else if f == h {\n\t\t\t\tfmt.Print(\"S\\n\")\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n}\nfunc main() {\n\tvar H, P, F, D int\n\tfmt.Scan(&H, &P, &F, &D)\n\n\tcaminho(H, P, F, D)\n}\n",
+            "lines": "41"
+        }
+    ]
+}
