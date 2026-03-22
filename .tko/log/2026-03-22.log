@@ -1,0 +1,7 @@
+2026-03-22 14:51:04, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-22 17:02:16, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-22 17:02:18, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-22 17:30:01, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:39
+2026-03-22 17:30:31, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:39
+2026-03-22 17:30:41, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-22 17:31:16, SELF, v:1, k:ed@pedra, self:1, rate:100, study:30, guided:1

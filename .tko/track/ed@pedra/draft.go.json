@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-03-18_21-16-52",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -17,689 +17,52 @@\n ort \n-(%0A    %22fmt%22%0A)%0A%0Atype Jogada struct%7B%0A    pa, pb int%0A%7D%0A%0Afunc pontuacao(j Jogada) int %7B%0A    if j.pa %3E j.pb%7B%0A        return j.pa - j.pb%0A    %7D%0A    return j.pb - j.pa%0A%7D%0A%0Afunc main() %7B%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A    jogadas := make(%5B%5DJogada, qtd)%0A    for i := range qtd%7B%0A        fmt.Scan(&jogadas%5Bi%5D.pa, &jogadas%5Bi%5D.pb)%0A    %7D%0A    ind_melhor := -1%0A    for i, jog := range jogadas%7B%0A        if jog.pa %3C 10 %7C%7C jog.pb %3C 10%7B%0A            continue%0A        %7D%0A        if ind_melhor == -1 %7C%7C (pontuacao(jog) %3C pontuacao(jogadas%5Bind_melhor%5D))%7B%0A            ind_melhor = i%0A        %7D%0A    %7D%0A    if ind_melhor == -1 %7B%0A        fmt.Print(%22sem ganhador%22)%0A    %7D else %7B%0A        fmt.Print(ind_melhor)%0A    %7D %0A\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-03-22_17-30-01",
+            "content": "@@ -642,18 +642,16 @@\n ganhador\n-%5Cn\n %22)%0A    %7D\n@@ -690,14 +690,8 @@\n lhor\n-, %22%5Cn%22\n )%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-22_17-30-31",
+            "content": "package main\nimport (\n    \"fmt\"\n)\n\ntype Jogada struct{\n    pa, pb int\n}\n\nfunc pontuacao(j Jogada) int {\n    if j.pa > j.pb{\n        return j.pa - j.pb\n    }\n    return j.pb - j.pa\n}\n\nfunc main() {\n    qtd := 0\n    fmt.Scan(&qtd)\n    jogadas := make([]Jogada, qtd)\n    for i := range qtd{\n        fmt.Scan(&jogadas[i].pa, &jogadas[i].pb)\n    }\n    ind_melhor := -1\n    for i, jog := range jogadas{\n        if jog.pa < 10 || jog.pb < 10{\n            continue\n        }\n        if ind_melhor == -1 || (pontuacao(jog) < pontuacao(jogadas[ind_melhor])){\n            ind_melhor = i\n        }\n    }\n    if ind_melhor == -1 {\n        fmt.Print(\"sem ganhador\\n\")\n    } else {\n        fmt.Print(ind_melhor, \"\\n\")\n    } \n\n}\n",
+            "lines": "39"
         }
     ]
 }
