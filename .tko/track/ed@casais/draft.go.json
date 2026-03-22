@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_17-35-11",
+            "content": "@@ -55,10 +55,8 @@\n     \n-//\n var \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-22_17-35-24",
+            "content": "@@ -47,24 +47,26 @@\n r N int%0A    \n+//\n var cont_par\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-22_17-47-59",
+            "content": "@@ -41,80 +41,52 @@\n     \n-N := 0%0A    fmt.Scan(&N)%0A    animais := make(%5B%5Dint, N)%0A    %0A    solteiros\n+var N int%0A    var cont_pares int%0A    especie\n  := \n@@ -94,57 +94,27 @@\n ake(\n-map%5Bint\n+%5B\n %5Dint\n+, N\n )%0A    \n-for i := range animais%7B%0A   \n+%0A\n     \n- \n fmt.\n@@ -123,258 +123,73 @@\n an(&\n-animais%5Bi%5D)%0A    %7D%0A    n_pares := 0%0A    for _, animal := range animais%7B%0A        if solteiros%5B-animal%5D %3E 0 %7B%0A            solteiros%5B-animal%5D--%0A            n_pares++%0A        %7D else %7B%0A            solteiros%5Banimal%5D++%0A        %7D%0A    %7D%0A    fmt.Println(n_pares)\n+N)%0A    for i := 0; i %3C N; i++%7B%0A        fmt.Scan(&especie%5Bi%5D)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-22_18-00-21",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    N := 0\n    fmt.Scan(&N)\n    animais := make([]int, N)\n    \n    solteiros := make(map[int]int)\n    for i := range animais{\n        fmt.Scan(&animais[i])\n    }\n    n_pares := 0\n    for _, animal := range animais{\n        if solteiros[-animal] > 0 {\n            solteiros[-animal]--\n            n_pares++\n        } else {\n            solteiros[animal]++\n        }\n    }\n    fmt.Println(n_pares)\n}\n",
+            "lines": "22"
+        }
+    ]
+}

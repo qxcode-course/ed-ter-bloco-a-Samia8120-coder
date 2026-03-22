@@ -1,12 +1,22 @@
 package main
 import "fmt"
 func main() {
-    var N int
-    var cont_pares int
-    especie := make([]int, N)
-    
+    N := 0
     fmt.Scan(&N)
-    for i := 0; i < N; i++{
-        fmt.Scan(&especie[i])
+    animais := make([]int, N)
+    
+    solteiros := make(map[int]int)
+    for i := range animais{
+        fmt.Scan(&animais[i])
     }
+    n_pares := 0
+    for _, animal := range animais{
+        if solteiros[-animal] > 0 {
+            solteiros[-animal]--
+            n_pares++
+        } else {
+            solteiros[animal]++
+        }
+    }
+    fmt.Println(n_pares)
 }

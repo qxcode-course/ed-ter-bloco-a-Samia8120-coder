@@ -22,6 +22,7 @@ tasks:
   ed@mumia: '{self:1, rate:100, study:30}'
   ed@fuga: '{self:1, rate:100, study:60, friend:Kayky Martins}'
   ed@pedra: '{self:1, rate:100, study:30, guided:1}'
+  ed@casais: '{self:1, rate:100, study:30, guided:1}'
   ed@gomos: '{self:1, rate:100, study:90, friend:Sophia Munis}'
 flags:
   painel: 0
