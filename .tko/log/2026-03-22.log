@@ -12,3 +12,11 @@
 2026-03-22 18:00:21, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:22
 2026-03-22 18:00:34, MOVE, v:1, k:ed@casais, mode:BACK
 2026-03-22 18:01:06, SELF, v:1, k:ed@casais, self:1, rate:100, study:30, guided:1
+2026-03-22 18:02:17, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-22 18:08:17, EXEC, v:1, k:ed@baruel, mode:FULL, size:12, fail:COMP
+2026-03-22 18:18:25, EXEC, v:1, k:ed@baruel, mode:FULL, size:20, fail:COMP
+2026-03-22 18:33:32, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:33
+2026-03-22 18:34:24, EXEC, v:1, k:ed@baruel, mode:FULL, rate:75, size:34
+2026-03-22 18:36:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:38
+2026-03-22 18:37:26, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-22 18:38:19, SELF, v:1, k:ed@baruel, self:1, rate:100, study:60, guided:1

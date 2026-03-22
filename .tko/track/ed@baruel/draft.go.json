@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_18-08-17",
+            "content": "@@ -216,186 +216,6 @@\n ool%0A\n-%09repetidos := make(%5B%5Dint, 0, qtd_possui)%0A%09for _, figura := range figuras%7B%0A%09%09if unicos%5Bfigura%5D %7B%0A%09%09%09repetidos = append(repetidos, figura)%0A%09%09%7D else %7B%0A%09%09%09unicos%5Bfigura%5D = true%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-22_18-18-25",
+            "content": "@@ -199,21 +199,16 @@\n icos := \n-make(\n map%5Bint%5D\n@@ -211,17 +211,16 @@\n int%5Dbool\n-)\n %0A%09repeti\n@@ -393,336 +393,9 @@\n %09%09%7D%0A\n+\n %09%7D%0A\n-%09saida := fmt.Sprintf(%22%25v%22, repetidos)%0A%09if saida == %22%5B%5D%22 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%09fmt.Println(saida%5B1: len(saida)-1%5D)%0A%09faltantes := make(%5B%5Dint, 0, qtd_album)%0A%09for i := 1; i %3C= qtd_album; i++%7B%0A%09%09if !unicos%5Bi%5D%7B%0A%09%09%09faltantes = append(faltantes, i)%0A%09%09%7D%0A%09%7D%0A%09saida = fmt.Sprintf(%22%25v%22, faltantes)%0A%09fmt.Println(saida%5B1: len(saida)-1%5D)%0A\n %7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-22_18-33-32",
+            "content": "@@ -478,23 +478,16 @@\n (%22N%22)%0A%09%7D\n- else %7B\n %0A%09fmt.Pr\n@@ -516,19 +516,16 @@\n da)-1%5D)%0A\n-%09%7D%0A\n %09faltant\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-22_18-34-23",
+            "content": "@@ -702,57 +702,8 @@\n es)%0A\n-%09if saida == %22%5B%5D%22 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A\n %09fmt\n@@ -735,13 +735,10 @@\n da)-1%5D)%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_18-36-39",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar qtd_album, qtd_possui int\n\tfmt.Scan(&qtd_album, &qtd_possui)\n\tfiguras := make([]int, qtd_possui)\n\tfor i := range figuras{\n\t\tfmt.Scan(&figuras[i])\n\t}\n\n\tunicos := make(map[int]bool)\n\trepetidos := make([]int, 0, qtd_possui)\n\tfor _, figura := range figuras{\n\t\tif unicos[figura] {\n\t\t\trepetidos = append(repetidos, figura)\n\t\t} else {\n\t\t\tunicos[figura] = true\n\t\t}\n\t}\n\tsaida := fmt.Sprintf(\"%v\", repetidos)\n\tif saida == \"[]\" {\n\t\tfmt.Println(\"N\")\n\t} else {\n\tfmt.Println(saida[1: len(saida)-1])\n\t}\n\tfaltantes := make([]int, 0, qtd_album)\n\tfor i := 1; i <= qtd_album; i++{\n\t\tif !unicos[i]{\n\t\t\tfaltantes = append(faltantes, i)\n\t\t}\n\t}\n\tsaida = fmt.Sprintf(\"%v\", faltantes)\n\tif saida == \"[]\" {\n\t\tfmt.Println(\"N\")\n\t} else {\n\tfmt.Println(saida[1: len(saida)-1])\n\t}\n}\n",
+            "lines": "38"
+        }
+    ]
+}
