@@ -14,7 +14,6 @@ sources:
   tasks: null
 expanded:
 - ed@map_set
-- ed@basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:89}'
   ed@mumia: '{self:1, rate:100, study:30}'
@@ -27,7 +26,6 @@ flags:
   panel: 0
   inbox: 1
   show_panel: 1
-  tasks: 0
   task_graph_mode: 0
   show_time: 0
 lang: go

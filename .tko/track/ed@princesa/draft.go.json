@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-03-24_14-02-23",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var N, E int\n    fmt.Scan(&N, &E)\n}\n",
+            "content": "@@ -22,135 +22,8 @@\n fmt%22\n-%0A%0Atype Soldado struct%7B%0A    vivo, espada int%0A%7D%0A%0Afunc matar()%7B%0A    //mata ai%0A%7D%0Afunc cacar_vivo()%7B%0A    //ca%C3%A7a vivo e da a espada%0A%7D\n %0Afun\n@@ -45,24 +45,12 @@\n var \n-tamanho, posicao\n+N, E\n  int\n@@ -68,211 +68,13 @@\n an(&\n-tamanho, &posicao)%0A    vet := make(%5B%5DSoldado, tamanho)%0A    for i := range tamanho %7B%0A        fmt.Scan(vet%5Bi%5D)%0A    %7D%0A%0A    ax := 0%0A    for ax %3E 1%7B%0A        //coisos%0A        for %7B%0A            %0A        %7D%0A    %7D%0A\n+N, &E)\n %0A%7D%0A\n",
             "lines": "6"
+        },
+        {
+            "label": "2026-03-28_23-04-03",
+            "content": "package main\nimport \"fmt\"\n\ntype Soldado struct{\n    vivo, espada int\n}\n\nfunc matar(){\n    //mata ai\n}\nfunc cacar_vivo(){\n    //ca\u00e7a vivo e da a espada\n}\nfunc main() {\n    var tamanho, posicao int\n    fmt.Scan(&tamanho, &posicao)\n    vet := make([]Soldado, tamanho)\n    for i := range tamanho {\n        fmt.Scan(vet[i])\n    }\n\n    ax := 0\n    for ax > 1{\n        //coisos\n        for {\n            \n        }\n    }\n\n}\n",
+            "lines": "30"
         }
     ]
 }
