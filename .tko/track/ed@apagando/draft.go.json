@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-28_23-58-34",
+            "content": "@@ -230,52 +230,12 @@\n r i \n-:= range num_deixa%7B%0A%09%09fmt.Scan(&deixaram%5Bi%5D)\n+%7B%0A%09%09\n %0A%09%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_23-59-35",
+            "content": "@@ -166,98 +166,31 @@\n %7D%0A%0A%09\n-fmt.Scan(&num_deixa)%0A%09deixaram := make(map%5Bint%5Dbool)%0A%09var ident_deixa int%0A%09for i := 0; i %3C\n+deixaram := make(%5B%5Dint,\n  num\n@@ -195,24 +195,18 @@\n um_deixa\n-; i++%7B%0A%09\n+)%0A\n %09fmt.Sca\n@@ -212,161 +212,70 @@\n an(&\n-ident_deixa)%0A%09%09deixaram%5Bident_deixa%5D = true%0A%09%7D%0A%0A%09for i := 0; i %3C num_ini; i++%7B%0A%09%09final := fila%5Bi%5D%0A%09%09if !(deixaram%5Bfinal%5D)%7B%0A%09%09%09fmt.Printf(%22%25d%22, final)%0A%09%09%7D\n+num_deixa)%0A%09for i := range num_deixa%7B%0A%09%09fmt.Scan(&deixaram%5Bi%5D)\n %0A%09%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-29_00-26-54",
+            "content": "@@ -421,17 +421,16 @@\n intf(%22%25d\n- \n %22, final\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-29_00-27-32",
+            "content": "@@ -421,16 +421,17 @@\n intf(%22%25d\n+ \n %22, final\n@@ -440,22 +440,8 @@\n %09%09%7D%0A\n-%09%09fmt.Print()%0A\n %09%7D%0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-29_00-28-56",
+            "content": "@@ -451,11 +451,8 @@\n int(\n-%22 %22\n )%0A%09%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_00-29-21",
+            "content": "@@ -421,17 +421,16 @@\n intf(%22%25d\n- \n %22, final\n@@ -435,14 +435,31 @@\n al)%0A%09%09%7D%0A\n+%09%09fmt.Print(%22 %22)%0A\n %09%7D%0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_00-31-24",
+            "content": "@@ -420,10 +420,9 @@\n rint\n-ln\n+f\n (%22%25d\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-29_00-33-56",
+            "content": "@@ -416,17 +416,18 @@\n mt.Print\n-f\n+ln\n (%22%25d %22, \n@@ -444,17 +444,7 @@\n %0A%09%7D%0A\n-%09println()\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-29_00-35-47",
+            "content": "@@ -440,21 +440,17 @@\n %09%09%7D%0A%09%7D%0A%09\n-fmt.P\n+p\n rintln()\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-29_00-37-38",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar num_ini, num_deixa int\n\tfmt.Scan(&num_ini)\n\tfila := make([]int, num_ini)\n\tfor i := range num_ini{\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&num_deixa)\n\tdeixaram := make(map[int]bool)\n\tvar ident_deixa int\n\tfor i := 0; i < num_deixa; i++{\n\t\tfmt.Scan(&ident_deixa)\n\t\tdeixaram[ident_deixa] = true\n\t}\n\n\tfor i := 0; i < num_ini; i++{\n\t\tfinal := fila[i]\n\t\tif !(deixaram[final]){\n\t\t\tfmt.Printf(\"%d \", final)\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "26"
+        }
+    ]
+}
