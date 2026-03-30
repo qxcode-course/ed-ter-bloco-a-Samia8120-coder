@@ -22,6 +22,7 @@ tasks:
   ed@casais: '{self:1, rate:100, study:30, guided:1}'
   ed@baruel: '{self:1, rate:100, study:60, guided:1}'
   ed@gomos: '{self:1, rate:100, study:90, friend:Sophia Munis}'
+  ed@apagando: '{self:1, rate:100, study:60, friend:Kayky Martins}'
 flags:
   panel: 0
   inbox: 1
@@ -29,4 +30,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@apagando
+selected: ed@buscas

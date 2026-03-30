@@ -1,0 +1,8 @@
+2026-03-30 18:08:31, SELF, v:1, k:ed@apagando, self:1, study:60, friend:Kayky Martins
+2026-03-30 18:09:15, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-30 18:09:19, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100
+2026-03-30 18:09:22, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-30 18:09:50, MOVE, v:1, k:ed@buscas, mode:DOWN
+2026-03-30 18:09:54, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-30 18:34:09, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:10
+2026-03-30 19:00:07, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:21

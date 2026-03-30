@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_18-34-09",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -25,19 +25,21 @@\n %22%0A%0Atype \n-str\n+coisa\n  struct \n@@ -40,16 +40,17 @@\n truct %7B%0A\n+%0A\n %7D%0A%0Afunc \n@@ -62,235 +62,39 @@\n ) %7B%0A\n-%09var t1, t2 int%0A%09fmt.Scan(&t1)%0A%09vetor_consulta := %5B...%5Dstring%7B%7D%0A%09for i := 0; i %3C t1; i++ %7B%0A%09%09fmt.Scan(&vetor_consulta%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Scan(&t2)%0A%09vetor_busca := %5B...%5Dstring%7B%7D%0A%09for i := 0; i %3C t2; i++ %7B%0A%09%09fmt.Scan(&vetor_busca%5Bi%5D)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_19-00-07",
+            "content": "package main\n\nimport \"fmt\"\n\ntype str struct {\n}\n\nfunc main() {\n\tvar t1, t2 int\n\tfmt.Scan(&t1)\n\tvetor_consulta := [...]string{}\n\tfor i := 0; i < t1; i++ {\n\t\tfmt.Scan(&vetor_consulta[i])\n\t}\n\n\tfmt.Scan(&t2)\n\tvetor_busca := [...]string{}\n\tfor i := 0; i < t2; i++ {\n\t\tfmt.Scan(&vetor_busca[i])\n\t}\n}\n",
+            "lines": "21"
+        }
+    ]
+}
