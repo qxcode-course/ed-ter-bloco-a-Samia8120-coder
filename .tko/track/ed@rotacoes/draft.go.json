@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_21-28-55",
+            "content": "@@ -88,15 +88,22 @@\n  := \n+make(\n %5B%5Dint\n-%7B%7D\n+, t)\n %0A   \n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_21-34-06",
+            "content": "@@ -119,56 +119,8 @@\n t %7B%0A\n-        if t == 0 %7B%0A            break%0A        %7D%0A\n     \n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_21-40-27",
+            "content": "@@ -100,16 +100,29 @@\n     for \n+i := range t \n %7B%0A      \n@@ -175,28 +175,25 @@\n     \n-vetor = append\n+fmt.Scan\n (vetor\n+%5Bi%5D\n )%0A  \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-30_21-43-36",
+            "content": "@@ -114,23 +114,63 @@\n     \n-fmt.Scanf(%22%25v%22,\n+if t == 0 %7B%0A            break%0A        %7D%0A        vetor =\n  app\n@@ -179,17 +179,16 @@\n d(vetor)\n-)\n %0A    %7D%0A%7D\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-30_21-47-44",
+            "content": "@@ -104,15 +104,8 @@\n for \n-range t\n %7B%0A  \n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_21-49-00",
+            "content": "@@ -75,21 +75,21 @@\n &r)%0A    \n-slice\n+vetor\n  := %5B%5Din\n@@ -144,215 +144,20 @@\n end(\n-slice))%0A    %7D%0A    //---%0A    for range r %7B%0A            pri_elemento := slice%5B:1%5D%0A            resto := slice%5B1:%5D%0A            juncao := append(resto, pri_elemento...)%0A            fmt.Print(juncao)%0A        %7D%0A    \n+vetor))%0A    %7D\n %0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-30_22-05-07",
+            "content": "@@ -22,208 +22,8 @@\n fmt%22\n-%0A%0Afunc rotacao(r int, slice %5B%5Dint, juncao %5B%5Dint)%7B%0A    for range r %7B%0A            pri_elemento := slice%5B:1%5D%0A            resto := slice%5B1:%5D%0A            juncao = append(resto, pri_elemento...)%0A        %7D%0A%7D\n %0Afun\n@@ -96,30 +96,8 @@\n t%7B%7D%0A\n-    juncao := %5B%5Dint%7B%7D%0A\n     \n@@ -172,34 +172,148 @@\n     \n-rotacao(r, slice, juncao)%0A\n+for range r %7B%0A            pri_elemento := slice%5B:1%5D%0A            resto := slice%5B1:%5D%0A            juncao := append(resto, pri_elemento...)%0A    \n     \n@@ -334,15 +334,25 @@\n juncao)%0A\n+        %7D%0A\n     %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-30_22-13-00",
+            "content": "@@ -221,34 +221,8 @@\n   %7D%0A\n-        fmt.Print(juncao)%0A\n %7D%0Afu\n@@ -416,15 +416,41 @@\n juncao)%0A\n+        fmt.Print(juncao)%0A\n     %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-30_22-15-38",
+            "content": "@@ -90,36 +90,8 @@\n r %7B%0A\n-        if len(slice) %3E 0 %7B%0A\n     \n@@ -217,26 +217,16 @@\n       %7D%0A\n-        %7D%0A\n         \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-30_22-27-21",
+            "content": "@@ -263,18 +263,16 @@\n         \n-//\n fmt.Prin\n@@ -484,28 +484,11 @@\n ao)%0A    \n-fmt.Print(juncao)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-30_22-28-44",
+            "content": "@@ -495,24 +495,17 @@\n mt.Print\n-f(%22%25v%22, \n+(\n juncao)%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-30_22-34-34",
+            "content": "@@ -55,27 +55,33 @@\n %5Dint\n-)\n+, juncao\n  %5B%5D\n- \n int\n+)\n %7B%0A\n-%0A\n     for \n i :=\n@@ -80,26 +80,15 @@\n for \n-i := 0; i %3C r; i++\n+range r\n  %7B%0A \n@@ -148,17 +148,18 @@\n = slice%5B\n-0\n+:1\n %5D%0A      \n@@ -156,37 +156,69 @@\n :1%5D%0A            \n-slice\n+resto := slice%5B1:%5D%0A            juncao\n  = append(slice%5B\n@@ -211,25 +211,21 @@\n  append(\n-slice%5B1:%5D\n+resto\n , pri_el\n@@ -230,16 +230,19 @@\n elemento\n+...\n )%0A      \n@@ -267,20 +267,27 @@\n     \n-return slice\n+//fmt.Print(juncao)\n %0A%7D%0Af\n@@ -311,19 +311,16 @@\n var t, r\n-, x\n  int%0A   \n@@ -366,68 +366,66 @@\n     \n-for i := 0; i %3C t; i++%7B%0A        fmt.Scan(&x)%0A        slice =\n+juncao := %5B%5Dint%7B%7D%0A    for range t%7B%0A        fmt.Scanf(%22%25v%22,\n  app\n@@ -437,11 +437,9 @@\n lice\n-, x\n+)\n )%0A  \n@@ -459,21 +459,8 @@\n %0A   \n- resultado :=\n  rot\n@@ -472,16 +472,24 @@\n r, slice\n+, juncao\n )%0A    fm\n@@ -499,19 +499,21 @@\n rint\n-ln(resultad\n+f(%22%25v%22, junca\n o)%0A%7D\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-30_23-01-37",
+            "content": "@@ -480,12 +480,8 @@\n tln(\n-%22 %22,\n resu\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-30_23-02-41",
+            "content": "@@ -65,28 +65,9 @@\n nt%7B%0A\n-    n := len(slice)\n %0A\n+\n     \n@@ -106,169 +106,23 @@\n  if \n-r == 5008%7B%0A            r = r %25 n%0A            return app\n+l\n en\n-d\n (slice\n-%5Br:%5D, slice%5B:r%5D...)%0A        %7D%0A        if n == 0 %7B%0A            return slice%0A        %7Delse if n %3E 0\n+) %3E 0 \n %7B%0A  \n@@ -218,22 +218,30 @@\n       %7D%0A\n+    \n     %7D%0A\n+    \n     retu\n@@ -248,18 +248,16 @@\n rn slice\n-  \n %0A%7D%0Afunc \n@@ -460,16 +460,16 @@\n  slice)%0A\n-\n     fmt.\n@@ -476,16 +476,20 @@\n Println(\n+%22 %22,\n resultad\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-30_23-14-43",
+            "content": "@@ -482,22 +482,15 @@\n  := \n-make(\n %5B%5Dint\n-, t)\n+%7B%7D\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_23-16-42",
+            "content": "@@ -436,16 +436,19 @@\n var t, r\n+, x\n  int%0A   \n@@ -529,18 +529,16 @@\n         \n-//\n fmt.Scan\n@@ -550,18 +550,16 @@\n         \n-//\n slice = \n@@ -579,36 +579,8 @@\n  x)%0A\n-        fmt.Scan(&slice%5Bi%5D)%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_23-17-36",
+            "content": "@@ -273,16 +273,25 @@\n    %7Delse\n+ if n %3E 0\n %7B%0A      \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_23-19-13",
+            "content": "@@ -85,18 +85,16 @@\n ce)%0A    \n-//\n for i :=\n@@ -114,22 +114,28 @@\n + %7B%0A\n+    \n     if \n-n\n+r\n  == \n-0 \n+5008\n %7B%0A  \n@@ -145,27 +145,75 @@\n        r\n-eturn slice\n+ = r %25 n%0A            return append(slice%5Br:%5D, slice%5B:r%5D...)\n %0A       \n@@ -219,37 +219,35 @@\n   %7D%0A        \n-    r = r %25 n\n+if n == 0 %7B\n %0A           \n@@ -258,39 +258,13 @@\n urn \n-append(slice%5Br:%5D, slice%5B:r%5D...)\n+slice\n %0A   \n@@ -268,18 +268,17 @@\n         \n-//\n+%7D\n else%7B%0A  \n@@ -285,18 +285,16 @@\n         \n-//\n   pri_el\n@@ -322,18 +322,16 @@\n         \n-//\n   slice \n@@ -372,18 +372,16 @@\n         \n-//\n %7D%0A    %7D%0A\n@@ -384,18 +384,16 @@\n   %7D%0A    \n-//\n return s\n@@ -399,16 +399,17 @@\n slice  %0A\n+%7D\n %0Afunc ma\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_23-21-39",
+            "content": "@@ -77,24 +77,55 @@\n  len(slice)%0A\n+    //for i := 0; i %3C r; i++ %7B%0A\n     if n == \n@@ -171,16 +171,20 @@\n         \n+  \n+  \n r = r %25 \n@@ -185,16 +185,20 @@\n = r %25 n%0A\n+    \n         \n@@ -217,18 +217,16 @@\n d(slice%5B\n-n-\n r:%5D, sli\n@@ -233,10 +233,8 @@\n ce%5B:\n-n-\n r%5D..\n@@ -362,16 +362,37 @@\n /%7D%0A    %7D\n+%0A    //return slice  \n %0A%0Afunc m\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_23-23-31",
+            "content": "@@ -201,16 +201,137 @@\n -r%5D...)%0A\n+        //else%7B%0A          //  pri_elemento := slice%5B0%5D%0A          //  slice = append(slice%5B1:%5D, pri_elemento)%0A        //%7D%0A\n     %7D%0A%0Af\n@@ -547,125 +547,21 @@\n     \n-fmt.Print(%22%5B %22)%0A    for i := range slice %7B%0A        if i %3E 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Print(\n+resultado := \n rota\n@@ -573,23 +573,16 @@\n , slice)\n-)%0A    %7D\n %0A    fmt\n@@ -594,12 +594,17 @@\n tln(\n-%22 %5D%22\n+resultado\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_23-27-12",
+            "content": "@@ -438,16 +438,99 @@\n t(%22%5B %22)%0A\n+    for i := range slice %7B%0A        if i %3E 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A\n         \n@@ -558,16 +558,22 @@\n slice))%0A\n+    %7D%0A\n     fmt.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_23-27-53",
+            "content": "@@ -433,16 +433,17 @@\n .Print(%22\n+%5B\n  %22)%0A    \n@@ -493,13 +493,14 @@\n intln(%22 \n+%5D\n %22)%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-30_23-28-14",
+            "content": "@@ -418,30 +418,24 @@\n   //---%0A    \n-    //\n fmt.Print(ro\n@@ -436,25 +436,11 @@\n int(\n-rotacao(r, slice)\n+%22 %22\n )%0A  \n@@ -459,103 +459,31 @@\n int(\n-%22%5B %22)%0Afor i, v := range slice %7B%0A    if i %3E 0 %7B%0A        fmt.Print(%22 %22)%0A    %7D%0A    fmt.Print(v)%0A%7D%0A\n+rotacao(r, slice))%0A    \n fmt.\n@@ -496,11 +496,9 @@\n n(%22 \n-%5D\n %22)%0A\n-%0A\n %7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-30_23-29-02",
+            "content": "@@ -482,24 +482,27 @@\n (%22%5B %22)%0Afor i\n+, v\n  := range sl\n@@ -565,33 +565,17 @@\n t.Print(\n-rotacao(r, slice)\n+v\n )%0A%7D%0Afmt.\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-30_23-29-48",
+            "content": "@@ -17,35 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22strings%22%0A)\n+%22fmt%22\n %0A%0Afu\n@@ -422,78 +422,185 @@\n ---%0A\n-str := strings.Trim(\n+        //fmt.Print(rotacao(r, slice))%0A        fmt.Print(%22%5B %22)%0Afor i := range slice %7B%0A    if i %3E 0 %7B%0A        fmt.Print(%22 %22)%0A    %7D%0A    \n fmt.\n-Sp\n+P\n rint(\n-slice), %22%5B%5D%22)%0Afmt.Println(%22%5B %22 + str + \n+rotacao(r, slice))%0A%7D%0Afmt.Println(\n %22 %5D%22\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-30_23-32-05",
+            "content": "@@ -475,26 +475,14 @@\n int(\n-rotacao(r, \n slice)\n-)\n , %22%5B\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_23-32-50",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc rotacao(r int, slice []int) [] int{\n    n := len(slice)\n    if n == 0 {\n            return slice\n        }\n        r = r % n\n        return append(slice[n-r:], slice[:n-r]...)\n    }\n\nfunc main() {\n    var t, r int\n    fmt.Scan(&t, &r)\n    slice := make([]int, t)\n    for i := 0; i < t; i++{\n        //fmt.Scan(&x)\n        //slice = append(slice, x)\n        fmt.Scan(&slice[i])\n    }\n    //---\nstr := strings.Trim(fmt.Sprint(rotacao(r, slice)), \"[]\")\nfmt.Println(\"[ \" + str + \" ]\")\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}

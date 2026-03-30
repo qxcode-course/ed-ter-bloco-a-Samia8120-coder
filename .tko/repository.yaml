@@ -23,6 +23,7 @@ tasks:
   ed@baruel: '{self:1, rate:100, study:60, guided:1}'
   ed@gomos: '{self:1, rate:100, study:90, friend:Sophia Munis}'
   ed@apagando: '{self:1, rate:100, study:60, friend:Kayky Martins}'
+  ed@rotacoes: '{self:1, rate:100, study:150, concept:1, refactor:1}'
 flags:
   panel: 0
   inbox: 1

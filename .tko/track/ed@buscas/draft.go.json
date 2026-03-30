@@ -7,8 +7,68 @@
         },
         {
             "label": "2026-03-30_19-00-07",
-            "content": "package main\n\nimport \"fmt\"\n\ntype str struct {\n}\n\nfunc main() {\n\tvar t1, t2 int\n\tfmt.Scan(&t1)\n\tvetor_consulta := [...]string{}\n\tfor i := 0; i < t1; i++ {\n\t\tfmt.Scan(&vetor_consulta[i])\n\t}\n\n\tfmt.Scan(&t2)\n\tvetor_busca := [...]string{}\n\tfor i := 0; i < t2; i++ {\n\t\tfmt.Scan(&vetor_busca[i])\n\t}\n}\n",
+            "content": "@@ -21,18 +21,16 @@\n  %22fmt%22%0A%0A\n-//\n type str\n@@ -43,10 +43,8 @@\n t %7B%0A\n-//\n %7D%0A%0Af\n",
             "lines": "21"
+        },
+        {
+            "label": "2026-03-30_19-16-08",
+            "content": "@@ -130,25 +130,25 @@\n %7D%0A%09for i := \n-1\n+0\n ; i %3C t1; i+\n@@ -241,17 +241,17 @@\n or i := \n-1\n+0\n ; i %3C t2\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-30_19-16-37",
+            "content": "@@ -111,18 +111,19 @@\n lta := %5B\n-t1\n+...\n %5Dstring%7B\n@@ -130,25 +130,25 @@\n %7D%0A%09for i := \n-0\n+1\n ; i %3C t1; i+\n@@ -218,18 +218,19 @@\n sca := %5B\n-t2\n+...\n %5Dstring%7B\n@@ -245,9 +245,9 @@\n  := \n-0\n+1\n ; i \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-30_19-17-23",
+            "content": "@@ -114,26 +114,20 @@\n  := \n-make(%5B\n+%5Bt1\n %5Dstring\n-, t1)\n+%7B%7D\n %0A%09fo\n@@ -220,26 +220,20 @@\n  := \n-make(%5B\n+%5Bt2\n %5Dstring\n-, t2)\n+%7B%7D\n %0A%09fo\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-30_19-22-19",
+            "content": "@@ -21,16 +21,18 @@\n  %22fmt%22%0A%0A\n+//\n type str\n@@ -45,213 +45,10 @@\n t %7B%0A\n-%09palavras string%0A%09num int%0A%7D%0A%0Afunc matchingStrings (t1 int) %7B%0A%09vetor_consulta := make(map%5Bint%5Dstring)%0A%09for i := 0; i %3C t1; i++ %7B%0A%09%09var palavra string%0A%09%09fmt.Scan(&palavra)%0A%09%09vetor_consulta%5Bi%5D = palavra%0A%09%7D%09 %0A\n+//\n %7D%0A%0Af\n@@ -63,20 +63,8 @@\n () %7B\n-%0A%0A%09//entrada\n %0A%09va\n@@ -96,27 +96,105 @@\n 1)%0A%09\n-matchingStrings(t1)\n+vetor_consulta := make(%5B%5Dstring, t1)%0A%09for i := 0; i %3C t1; i++ %7B%0A%09%09fmt.Scan(&vetor_consulta%5Bi%5D)%0A%09%7D\n %0A%0A%09f\n@@ -232,16 +232,19 @@\n ke(%5B%5Dstr\n+ing\n , t2)%0A%09f\n@@ -303,21 +303,6 @@\n %0A%09%7D%0A\n-%09%0A%09//operacoes%0A\n %7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-30_20-07-46",
+            "content": "@@ -97,16 +97,8 @@\n (t1 \n-int, t2 \n int)\n@@ -144,23 +144,8 @@\n ng)%0A\n-%09fmt.Scan(&t1)%0A\n %09for\n@@ -241,16 +241,99 @@\n lavra%0A%09%7D\n+%09 %0A%7D%0A%0Afunc main() %7B%0A%0A%09//entrada%0A%09var t1, t2 int%0A%09fmt.Scan(&t1)%0A%09matchingStrings(t1)\n %0A%0A%09fmt.S\n@@ -434,82 +434,8 @@\n )%0A%09%7D\n-%0A%0A%7D%0A%0Afunc main() %7B%0A%0A%09//entrada%0A%09var t1, t2 int%0A%09matchingStrings(t1, t2)%0A%0A%09\n %0A%09%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-30_20-14-26",
+            "content": "@@ -268,34 +268,8 @@\n a%0A%09%7D\n-%0Afmt.Print(vetor_consulta)\n %0A%0A%09f\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_20-15-48",
+            "content": "@@ -21,16 +21,63 @@\n  %22fmt%22%0A%0A\n+type str struct %7B%0A%09palavras string%0A%09num int%0A%7D%0A%0A\n func mat\n@@ -264,16 +264,42 @@\n lavra%0A%09%7D\n+%0Afmt.Print(vetor_consulta)\n %0A%0A%09fmt.S\n@@ -333,19 +333,16 @@\n ke(%5B%5Dstr\n-ing\n , t2)%0A%09f\n@@ -415,16 +415,17 @@\n ain() %7B%0A\n+%0A\n %09//entra\n@@ -469,10 +469,27 @@\n 1, t2)%0A%0A\n+%09%0A%09%0A%09//operacoes%0A\n %7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-30_20-20-12",
+            "content": "@@ -332,103 +332,8 @@\n %09%7D%0A%0A\n-%09var num int%0A%09for i := 0; i %3C len(vetor_consulta%5Bnum%5D); i++%7B%0A%09%09fmt.Print(vetor_consulta%5Bi%5D)%0A%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_20-28-17",
+            "content": "@@ -333,25 +333,41 @@\n %7D%0A%0A%09\n-fo\n+va\n r num \n-:= range \n+int%0A%09for i := 0; i %3C len(\n veto\n@@ -376,17 +376,27 @@\n consulta\n- \n+%5Bnum%5D); i++\n %7B%0A%09%09fmt.\n@@ -404,19 +404,26 @@\n rint\n-f(%22%25s%22, num\n+(vetor_consulta%5Bi%5D\n )%0A%09%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-30_20-45-23",
+            "content": "@@ -66,66 +66,8 @@\n  %7B%0A%09\n-fmt.Scan(&t1)%0A%09palavras := make(%5B%5D%5B%5Dmap%5Bint%5Dstring, 1)%0A%09//\n veto\n@@ -107,83 +107,71 @@\n )%0A%09f\n-or i := range palavras%5Bt1%5D\n+mt.Scan(&t1)%0A%09for i := 0; i %3C t1; i++\n  %7B%0A%09%09\n+var \n palavra\n-s%5Bi%5D = make(%5B%5Dmap%5Bint%5D\n+ \n string\n-, 1)\n %0A%09%09\n-//\n fmt.\n@@ -187,21 +187,12 @@\n avra\n-s%5Bi%5D%5Bi%5D\n )%0A%09%09\n-//\n veto\n@@ -220,106 +220,10 @@\n ra%0A%09\n-%09for j := range palavras%5Bt1%5D %7B%0A%09%09%09palavras%5Bi%5D%5Bj%5D = make(map%5Bint%5Dstring)%0A%09%09%7D%0A%09%7D%0Afmt.Print(palavras)\n+%7D%0A\n %0A%09fm\n@@ -329,16 +329,76 @@\n %5D)%0A%09%7D%0A%0A%09\n+for num := range vetor_consulta %7B%0A%09%09fmt.Printf(%22%25s%22, num)%0A%09%7D\n %0A%7D%0A%0Afunc\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-30_21-11-23",
+            "content": "@@ -114,17 +114,17 @@\n string, \n-2\n+1\n )%0A%09//vet\n@@ -229,17 +229,17 @@\n string, \n-2\n+1\n )%0A%09%09//fm\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_21-11-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc matchingStrings (t1 int, t2 int) {\n\tfmt.Scan(&t1)\n\tpalavras := make([][]map[int]string, 2)\n\t//vetor_consulta := make(map[int]string)\n\tfor i := range palavras[t1] {\n\t\tpalavras[i] = make([]map[int]string, 2)\n\t\t//fmt.Scan(&palavras[i][i])\n\t\t//vetor_consulta[i] = palavra\n\t\tfor j := range palavras[t1] {\n\t\t\tpalavras[i][j] = make(map[int]string)\n\t\t}\n\t}\nfmt.Print(palavras)\n\tfmt.Scan(&t2)\n\tvetor_busca := make([]string, t2)\n\tfor i := 0; i < t2; i++ {\n\t\tfmt.Scan(&vetor_busca[i])\n\t}\n\n\t\n}\n\nfunc main() {\n\t//entrada\n\tvar t1, t2 int\n\tmatchingStrings(t1, t2)\n\n}\n",
+            "lines": "32"
         }
     ]
 }

@@ -2,20 +2,27 @@ package main
 
 import "fmt"
 
-type str struct {
-}
-
-func main() {
-	var t1, t2 int
+func matchingStrings (t1 int, t2 int) {
 	fmt.Scan(&t1)
-	vetor_consulta := [...]string{}
+	//palavras := [][]any{}
+	vetor_consulta := make(map[int]string)
 	for i := 0; i < t1; i++ {
-		fmt.Scan(&vetor_consulta[i])
+		var palavra string
+		fmt.Scan(&palavra)
+		vetor_consulta[i] = palavra
 	}
 
 	fmt.Scan(&t2)
-	vetor_busca := [...]string{}
+	vetor_busca := make([]string, t2)
 	for i := 0; i < t2; i++ {
 		fmt.Scan(&vetor_busca[i])
 	}
+
+}
+
+func main() {
+	//entrada
+	var t1, t2 int
+	matchingStrings(t1, t2)
+
 }
