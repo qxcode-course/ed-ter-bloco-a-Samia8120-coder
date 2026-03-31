@@ -67,8 +67,18 @@
         },
         {
             "label": "2026-03-30_21-11-47",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc matchingStrings (t1 int, t2 int) {\n\tfmt.Scan(&t1)\n\tpalavras := make([][]map[int]string, 2)\n\t//vetor_consulta := make(map[int]string)\n\tfor i := range palavras[t1] {\n\t\tpalavras[i] = make([]map[int]string, 2)\n\t\t//fmt.Scan(&palavras[i][i])\n\t\t//vetor_consulta[i] = palavra\n\t\tfor j := range palavras[t1] {\n\t\t\tpalavras[i][j] = make(map[int]string)\n\t\t}\n\t}\nfmt.Print(palavras)\n\tfmt.Scan(&t2)\n\tvetor_busca := make([]string, t2)\n\tfor i := 0; i < t2; i++ {\n\t\tfmt.Scan(&vetor_busca[i])\n\t}\n\n\t\n}\n\nfunc main() {\n\t//entrada\n\tvar t1, t2 int\n\tmatchingStrings(t1, t2)\n\n}\n",
+            "content": "@@ -47,297 +47,201 @@\n gs (\n-consulta %5B%5Dstring, busca %5B%5Dstring) %5B%5Dint%7B%0A%09mapa := make(map%5Bstring%5Dint)%0A%09for _, palavra := range consulta %7B%0A%09%09mapa%5Bpalavra%5D++%0A%09%7D%0A%09juncao := make(%5B%5Dint, len(busca))%0A%09for i, palavra := range busca %7B%0A%09%09juncao%5Bi%5D = mapa%5Bpalavra%5D%0A%09%7D%0A%09return juncao%0A%7D%0A%0Afunc main() %7B%0A%09//entrada%0A%09var t1, t2 int\n+t1 int, t2 int) %7B%0A%09fmt.Scan(&t1)%0A%09palavras := make(%5B%5D%5B%5Dmap%5Bint%5Dstring, 2)%0A%09//vetor_consulta := make(map%5Bint%5Dstring)%0A%09for i := range palavras%5Bt1%5D %7B%0A%09%09palavras%5Bi%5D = make(%5B%5Dmap%5Bint%5Dstring, 2)\n %0A%09%09\n+//\n fmt.\n@@ -250,110 +250,155 @@\n an(&\n-t1)%0A%09vetor_consulta := make(%5B%5Dstring, t1)%0A\n+palavras%5Bi%5D%5Bi%5D)%0A%09%09//vetor_consulta%5Bi%5D = palavra%0A%09\n %09for \n-i\n+j\n  := \n-0; i %3C t1; i++ %7B%0A%09%09fmt.Scan(&vetor_consulta%5Bi%5D)%0A%09%7D\n+range palavras%5Bt1%5D %7B%0A%09%09%09palavras%5Bi%5D%5Bj%5D = make(map%5Bint%5Dstring)%0A%09%09%7D%0A%09%7D%0Afmt.Print(palavras)\n %0A%09fm\n@@ -508,196 +508,77 @@\n %7D%0A%0A%09\n-juncao := matchingStrings(vetor_consulta, vetor_busca)%0A%09for i, qtd := range juncao %7B%0A%09%09if i == len(juncao)-1%7B%0A%09%09%09fmt.Printf(%22%25d%22, qtd)%0A%09%09%09break%0A%09%09%7D%0A%09%09fmt.Printf(%22%25d%22, qtd)%0A%09%7D%0A%09fmt.Println()\n+%0A%7D%0A%0Afunc main() %7B%0A%09//entrada%0A%09var t1, t2 int%0A%09matchingStrings(t1, t2)%0A\n %0A%7D%0A\n",
             "lines": "32"
+        },
+        {
+            "label": "2026-03-31_00-19-09",
+            "content": "@@ -719,17 +719,16 @@\n intf(%22%25d\n- \n %22, qtd)%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-31_00-19-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc matchingStrings (consulta []string, busca []string) []int{\n\tmapa := make(map[string]int)\n\tfor _, palavra := range consulta {\n\t\tmapa[palavra]++\n\t}\n\tjuncao := make([]int, len(busca))\n\tfor i, palavra := range busca {\n\t\tjuncao[i] = mapa[palavra]\n\t}\n\treturn juncao\n}\n\nfunc main() {\n\t//entrada\n\tvar t1, t2 int\n\t\tfmt.Scan(&t1)\n\tvetor_consulta := make([]string, t1)\n\tfor i := 0; i < t1; i++ {\n\t\tfmt.Scan(&vetor_consulta[i])\n\t}\n\tfmt.Scan(&t2)\n\tvetor_busca := make([]string, t2)\n\tfor i := 0; i < t2; i++ {\n\t\tfmt.Scan(&vetor_busca[i])\n\t}\n\n\tjuncao := matchingStrings(vetor_consulta, vetor_busca)\n\tfor i, qtd := range juncao {\n\t\tif i == len(juncao)-1{\n\t\t\tfmt.Printf(\"%d\", qtd)\n\t\t\tbreak\n\t\t}\n\t\tfmt.Printf(\"%d \", qtd)\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "40"
         }
     ]
 }

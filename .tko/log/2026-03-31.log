@@ -1,0 +1,5 @@
+2026-03-31 00:07:44, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 00:19:09, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:40
+2026-03-31 00:19:31, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:40
+2026-03-31 00:20:41, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 00:21:55, SELF, v:1, k:ed@buscas, self:1, rate:100, study:210, friend:Kayky Martins
