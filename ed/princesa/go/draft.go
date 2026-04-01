@@ -1,20 +1,14 @@
 package main
 import "fmt"
 
-type Soldado struct{
-    vivo, espada int
+func printcoisinhas(){
+    
 }
 
-func matar(){
-    //mata ai
-}
-func cacar_vivo(){
-    //caça vivo e da a espada
-}
 func main() {
     var tamanho, posicao int
     fmt.Scan(&tamanho, &posicao)
-    vet := make([]Soldado, tamanho)
+    vet := make([]int, 0, tamanho)
     for i := range tamanho {
         fmt.Scan(vet[i])
     }
