@@ -12,8 +12,28 @@
         },
         {
             "label": "2026-04-01_14-34-24",
-            "content": "package main\nimport \"fmt\"\n\nfunc div(vetor[]int) []int{\n    mapa := make(map[int]int)\n    var f int\n    for i := range vetor {\n        f = vetor[i] / 2\n    }\n    for _, resto := range vetor{\n        mapa[f] = resto % 2\n    }\n    vet := make([]int, len(vetor))\n    for i, resto := range vetor {\n        vet[i] = mapa[resto]\n    } \n    return vet\n}\n/*\nfunc contrario(vetor[]int) []int{\n    for  {\n        //contrario\n    }\n    return vetor\n}\n*/\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    vetor := make([]int, num)\n    for i := range num{\n        fmt.Scan(&vetor[i])\n    }\n    fmt.Print(div(vetor))\n    //contrario(vetor)\n}\n",
+            "content": "@@ -510,24 +510,82 @@\n %5B%5Dint, num)%0A\n+    for i := range num%7B%0A        fmt.Scan(&vetor%5Bi%5D)%0A    %7D%0A\n     fmt.Prin\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-04-06_18-07-10",
+            "content": "@@ -23,89 +23,36 @@\n mt%22%0A\n-//eu boto cada divisao aonde??%0Afunc div(num int) %5B%5Dint%7B%0A    vet := make(\n+%0Afunc div(vetor%5B%5Dint) \n %5B%5Dint\n-, 0)\n+%7B\n %0A   \n@@ -86,21 +86,17 @@\n     var \n-resto\n+f\n  int%0A   \n@@ -104,27 +104,8 @@\n for \n-%7B%0A%0A    %7D%0A    /*for \n i :=\n@@ -320,18 +320,17 @@\n o%5D%0A    %7D\n-*/\n+ \n %0A    ret\n@@ -488,18 +488,16 @@\n um)%0A    \n-//\n vetor :=\n@@ -532,19 +532,21 @@\n int(div(\n-num\n+vetor\n ))%0A    /\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-06_18-20-55",
+            "content": "@@ -79,18 +79,16 @@\n nt%7B%0A    \n-//\n vet := m\n@@ -105,18 +105,16 @@\n  0)%0A    \n-//\n mapa := \n@@ -135,18 +135,16 @@\n nt)%0A    \n-//\n var rest\n@@ -163,73 +163,8 @@\n r %7B%0A\n-        if num == 0 %7B%0A            break%0A        %7Delse%7B%0A%0A        %7D\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-06_18-44-58",
+            "content": "@@ -103,24 +103,26 @@\n int, 0)%0A    \n+//\n mapa := make\n@@ -135,24 +135,26 @@\n nt%5Dint)%0A    \n+//\n var resto, i\n@@ -154,17 +154,8 @@\n esto\n-, inteiro\n  int\n@@ -184,9 +184,10 @@\n num \n-%3C\n+==\n  0 %7B\n@@ -224,26 +224,8 @@\n se%7B%0A\n-            mapa%5B%5D\n %0A   \n@@ -487,16 +487,111 @@\n n vet%0A%7D%0A\n+/*%0Afunc contrario(vetor%5B%5Dint) %5B%5Dint%7B%0A    for  %7B%0A        //contrario%0A    %7D%0A    return vetor%0A%7D%0A*/\n %0Afunc ma\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_19-33-20",
+            "content": "package main\nimport \"fmt\"\n//eu boto cada divisao aonde??\nfunc div(num int) []int{\n    //vet := make([]int, 0)\n    mapa := make(map[int]int)\n    var resto, inteiro int\n    for {\n        if num < 0 {\n            break\n        }else{\n            mapa[]\n        }\n    }\n    /*for i := range vetor {\n        f = vetor[i] / 2\n    }\n    for _, resto := range vetor{\n        mapa[f] = resto % 2\n    }\n    vet := make([]int, len(vetor))\n    for i, resto := range vetor {\n        vet[i] = mapa[resto]\n    }*/\n    return vet\n}\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    //vetor := make([]int, num)\n    fmt.Print(div(num))\n    //contrario(vetor)\n}\n",
+            "lines": "34"
         }
     ]
 }
