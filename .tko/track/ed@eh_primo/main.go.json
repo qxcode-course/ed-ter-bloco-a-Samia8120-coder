@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_00-24-31",
+            "content": "@@ -177,24 +177,8 @@\n div \n-%7C%7C x %25 div == 1 \n %7B%0A%09%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-08_00-26-28",
+            "content": "@@ -151,16 +151,28 @@\n  div%0A%09if\n+ div == 1 %7C%7C\n  x == di\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-08_00-27-03",
+            "content": "@@ -160,18 +160,8 @@\n x ==\n- 1 %7C%7C x ==\n  div\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-08_00-27-29",
+            "content": "@@ -162,34 +162,11 @@\n == 1\n-%7B%0A%09%09return false%0A%09%7Delse if\n+ %7C%7C\n  x =\n@@ -175,10 +175,10 @@\n div \n-&&\n+%7C%7C\n  x %25\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-08_00-29-22",
+            "content": "@@ -134,18 +134,16 @@\n bool %7B%0A%09\n-//\n _, _ = x\n@@ -158,12 +158,12 @@\n f x \n-%3C 2 \n+== 1\n %7B%0A%09%09\n@@ -181,54 +181,43 @@\n e%0A%09%7D\n-%0A%09for i := 2; i*i %3C= x; i++ %7B%0A%09%09if x%25i\n+else if x == div && x %25 div\n  == \n-0\n+1 \n %7B%0A\n-%09\n %09%09re\n@@ -225,33 +225,39 @@\n urn \n-false%0A%09%09%7D%0A%09%7D%0A%09return true\n+true%0A%09%7Delse%7B%0A%09%09return false;%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-08_00-43-23",
+            "content": "@@ -134,16 +134,18 @@\n bool %7B%0A%09\n+//\n _, _ = x\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-08_00-44-12",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int, div int) bool {\n\t_, _ = x, div\n\tif x < 2 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= x; i++ {\n\t\tif x%i == 0{\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tif eh_primo(x, 2) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "28"
+        }
+    ]
+}
