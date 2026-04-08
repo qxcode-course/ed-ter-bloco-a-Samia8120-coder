@@ -32,8 +32,18 @@
         },
         {
             "label": "2026-04-06_19-33-20",
-            "content": "package main\nimport \"fmt\"\n//eu boto cada divisao aonde??\nfunc div(num int) []int{\n    //vet := make([]int, 0)\n    mapa := make(map[int]int)\n    var resto, inteiro int\n    for {\n        if num < 0 {\n            break\n        }else{\n            mapa[]\n        }\n    }\n    /*for i := range vetor {\n        f = vetor[i] / 2\n    }\n    for _, resto := range vetor{\n        mapa[f] = resto % 2\n    }\n    vet := make([]int, len(vetor))\n    for i, resto := range vetor {\n        vet[i] = mapa[resto]\n    }*/\n    return vet\n}\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    //vetor := make([]int, num)\n    fmt.Print(div(num))\n    //contrario(vetor)\n}\n",
+            "content": "@@ -23,28 +23,163 @@\n mt%22%0A\n-%0Afunc div(num int)%7B%0A\n+//eu boto cada divisao aonde??%0Afunc div(num int) %5B%5Dint%7B%0A    //vet := make(%5B%5Dint, 0)%0A    mapa := make(map%5Bint%5Dint)%0A    var resto, inteiro int%0A    for %7B%0A    \n     \n@@ -189,10 +189,9 @@\n num \n-==\n+%3C\n  0 %7B\n@@ -203,162 +203,445 @@\n     \n-return%0A    %7D%0A    quo := num / 2%0A    resto := num %25 2%0A%0A    div(quo)%0A    println(quo, resto)%0A%7D%0A%0Afunc main() %7B%0A    var num int%0A    fmt.Scan(&num)%0A    div(num\n+    break%0A        %7Delse%7B%0A            mapa%5B%5D%0A        %7D%0A    %7D%0A    /*for i := range vetor %7B%0A        f = vetor%5Bi%5D / 2%0A    %7D%0A    for _, resto := range vetor%7B%0A        mapa%5Bf%5D = resto %25 2%0A    %7D%0A    vet := make(%5B%5Dint, len(vetor))%0A    for i, resto := range vetor %7B%0A        vet%5Bi%5D = mapa%5Bresto%5D%0A    %7D*/%0A    return vet%0A%7D%0A%0Afunc main() %7B%0A    var num int%0A    fmt.Scan(&num)%0A    //vetor := make(%5B%5Dint, num)%0A    fmt.Print(div(num))%0A    //contrario(vetor\n )%0A%7D%0A\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-04-08_00-56-36",
+            "content": "@@ -140,13 +140,9 @@\n     \n-fmt.P\n+p\n rint\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-08_00-57-08",
+            "content": "package main\nimport \"fmt\"\n\nfunc div(num int){\n    if num == 0 {\n        return\n    }\n    quo := num / 2\n    resto := num % 2\n\n    div(quo)\n    fmt.Println(quo, resto)\n}\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    div(num)\n}\n",
+            "lines": "19"
         }
     ]
 }
