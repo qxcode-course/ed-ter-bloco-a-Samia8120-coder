@@ -5,7 +5,10 @@ import (
 )
 
 func mdc(a, b int) int {
-	return 0
+	if b == 0 {
+		return a
+	}
+	return mdc(b, a%b)
 }
 
 func main() {
