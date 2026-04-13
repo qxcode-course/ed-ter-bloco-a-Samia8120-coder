@@ -1,0 +1,209 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_12-10-22",
+            "content": "@@ -296,18 +296,17 @@\n 50, 250)\n-%0A%09\n+ \n // move \n@@ -336,23 +336,8 @@\n 500%0A\n-%09for range 4 %7B%0A\n %09pen\n@@ -448,27 +448,8 @@\n els%0A\n-%09pen.Right(90)%0A%09%7D%0A%09\n %0A%09pe\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-13_12-12-18",
+            "content": "@@ -418,23 +418,8 @@\n ima%0A\n-%09pen.Right(90)%0A\n %09pen\n@@ -461,16 +461,29 @@\n pixels%0A%09\n+pen.Right(90)\n %0A%09%7D%0A%09%0A%09p\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_12-12-51",
+            "content": "@@ -425,16 +425,17 @@\n n.Right(\n+9\n 0)%0A%09pen.\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_12-13-12",
+            "content": "@@ -364,16 +364,17 @@\n Heading(\n+9\n 0)      \n@@ -425,17 +425,16 @@\n n.Right(\n-9\n 0)%0A%09pen.\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_12-13-29",
+            "content": "@@ -301,27 +301,8 @@\n 50)%0A\n-%09pen.SetHeading(0)%0A\n %09// \n@@ -349,16 +349,33 @@\n ge 4 %7B%0A%09\n+pen.SetHeading(0)\n         \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_12-14-25",
+            "content": "@@ -287,23 +287,23 @@\n osition(\n+2\n 5\n-0\n 0, \n+2\n 5\n-0\n 0)%0A%09pen.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_12-14-54",
+            "content": "@@ -291,14 +291,14 @@\n ion(\n-1\n+5\n 00, \n-1\n+5\n 00)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_12-15-19",
+            "content": "@@ -274,27 +274,8 @@\n lho%0A\n-%09pen.SetHeading(0)%0A\n %09pen\n@@ -298,16 +298,33 @@\n , 100)%0A%09\n+pen.SetHeading(0)\n %0A%09// mov\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_12-15-44",
+            "content": "@@ -446,9 +446,9 @@\n alk(\n-3\n+1\n 00) \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-16-28",
+            "content": "@@ -420,32 +420,29 @@\n cima\n-~%0A%09%09\n+%0A\n %09pen.\n-Walk(30\n+Right(9\n 0)%0A%09pen.\n Righ\n@@ -437,27 +437,25 @@\n 0)%0A%09pen.\n-Right(90)%0A%09\n+Walk(300)\n         \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-16-54",
+            "content": "@@ -358,24 +358,8 @@\n 500%0A\n-%09coisa := 300.0%0A\n %09for\n@@ -370,16 +370,24 @@\n ge 4 %7B%0A%09\n+        \n // coloc\n@@ -418,16 +418,18 @@\n a cima~%0A\n+%09%09\n %09pen.Wal\n@@ -434,34 +434,12 @@\n alk(\n-coisa)%0A%09coisa = coisa - 10\n+300)\n %0A%09pe\n@@ -450,17 +450,16 @@\n ght(90)%0A\n-%0A\n %09       \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_12-21-15",
+            "content": "@@ -375,16 +375,24 @@\n .0%0A%09for \n+range 4 \n %7B%0A%09// co\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-21-56",
+            "content": "@@ -379,19 +379,8 @@\n for \n-coisa %3E 10 \n %7B%0A%09/\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-22-45",
+            "content": "@@ -467,11 +467,10 @@\n a - \n+1\n 0\n-.5\n %0A%09pe\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-23-01",
+            "content": "@@ -463,16 +463,18 @@\n coisa - \n+0.\n 5%0A%09pen.R\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-23-20",
+            "content": "@@ -323,67 +323,117 @@\n %0A%09%0A%09\n-coisa := 300.0%0A%09for coisa %3E 10 %7B%0A%09pen.SetLineWidth(coisa/4)\n+// move o pincel para x 250, y 500%0A%09coisa := 300.0%0A%09for coisa %3E 10 %7B%0A%09// coloca o pincel apontando para cima~\n %0A%09pe\n@@ -479,16 +479,52 @@\n ight(90)\n+%0A%0A%09             // anda 100 pixels%0A%09\n %0A%09%7D%0A%09%0A%09p\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-27-27",
+            "content": "@@ -376,18 +376,17 @@\n h(coisa/\n-30\n+4\n )%0A%09pen.W\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-27-37",
+            "content": "@@ -377,17 +377,17 @@\n (coisa/3\n-5\n+0\n )%0A%09pen.W\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-27-47",
+            "content": "@@ -376,18 +376,18 @@\n h(coisa/\n+3\n 5\n-0\n )%0A%09pen.W\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-28-23",
+            "content": "@@ -380,11 +380,10 @@\n isa/\n-0.\n 5\n+0\n )%0A%09p\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-28-39",
+            "content": "@@ -376,18 +376,19 @@\n h(coisa/\n-5\n 0\n+.5\n )%0A%09pen.W\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-29-04",
+            "content": "@@ -222,17 +222,16 @@\n GB(255, \n-5\n 0, 0)   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-29-39",
+            "content": "@@ -230,10 +230,8 @@\n 50, \n-12\n 0)  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-29-54",
+            "content": "@@ -226,19 +226,19 @@\n 55, 50, \n-255\n+120\n )     //\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-30-14",
+            "content": "@@ -350,17 +350,18 @@\n coisa %3E \n-5\n+10\n  %7B%0A%09pen.\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-31-15",
+            "content": "@@ -222,17 +222,16 @@\n GB(255, \n-1\n 50, 255)\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-31-50",
+            "content": "@@ -411,16 +411,19 @@\n isa \n-*\n = \n-0.50 \n+coisa - 5\n %0A%09pe\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-34-18",
+            "content": "@@ -416,10 +416,11 @@\n = 0.\n-97\n+50 \n %0A%09pe\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-34-47",
+            "content": "@@ -414,12 +414,12 @@\n  *= \n-3.14\n+0.97\n %0A%09pe\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-35-18",
+            "content": "@@ -414,12 +414,12 @@\n  *= \n-0.97\n+3.14\n %0A%09pe\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-35-28",
+            "content": "@@ -114,143 +114,8 @@\n %0A%7D%0A%0A\n-func embua(pen *Pen, coisa float64)%7B%0A%09for coisa %3E 5 %7B%0A%09pen.SetLineWidth(coisa/50)%0A%09pen.Walk(coisa)%0A%09coisa *= 0.97%0A%09pen.Right(90)%0A%09%7D%0A%7D%0A%0A\n func\n@@ -343,25 +343,101 @@\n .0%0A%09\n-embua(pen, coisa)\n+for coisa %3E 5 %7B%0A%09pen.SetLineWidth(coisa/50)%0A%09pen.Walk(coisa)%0A%09coisa *= 0.97%0A%09pen.Right(90)%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_12-39-18",
+            "content": "@@ -151,35 +151,8 @@\n 4)%7B%0A\n-%09if coisa %3C 1%7B%0A%09%09return%0A%09%7D%0A\n %09for\n@@ -213,23 +213,8 @@\n sa)%0A\n-%09pen.Right(90)%0A\n %09coi\n@@ -225,16 +225,29 @@\n = 0.97%0A%09\n+pen.Right(90)\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_12-42-39",
+            "content": "@@ -174,16 +174,33 @@\n turn%0A%09%7D%0A\n+%09for coisa %3E 5 %7B%0A\n %09pen.Set\n@@ -267,33 +267,19 @@\n = 0.97%0A%09\n-embua(pen, coisa)\n+%0A%09%7D\n %0A%7D%0A%0Afunc\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_12-43-21",
+            "content": "@@ -223,74 +223,8 @@\n sa)%0A\n-%09var dummy rune%0A%09fmt.Scanf(%22%25c%22, &dummy)%0A%09pen.SavePNG(%22tree.png%22)%0A\n %09pen\n@@ -520,16 +520,41 @@\n oisa)%0A%09%0A\n+%09pen.SavePNG(%22tree.png%22)%0A\n %09fmt.Pri\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_12-47-19",
+            "content": "@@ -223,33 +223,8 @@\n sa)%0A\n-%09pen.SavePNG(%22tree.png%22)%0A\n %09var\n@@ -260,16 +260,41 @@\n &dummy)%0A\n+%09pen.SavePNG(%22tree.png%22)%0A\n %09pen.Rig\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_12-47-49",
+            "content": "@@ -198,17 +198,17 @@\n h(coisa/\n-3\n+5\n 0)%0A%09pen.\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_12-49-56",
+            "content": "@@ -160,17 +160,16 @@\n oisa %3C 1\n-0\n %7B%0A%09%09retu\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_12-51-13",
+            "content": "@@ -221,18 +221,16 @@\n coisa)%0A%09\n-//\n pen.Save\n@@ -246,18 +246,16 @@\n .png%22)%0A%09\n-//\n var dumm\n@@ -262,18 +262,16 @@\n y rune%0A%09\n-//\n fmt.Scan\n@@ -591,33 +591,8 @@\n )%0A%09%0A\n-%09pen.SavePNG(%22tree.png%22)%0A\n %09fmt\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_12-51-56",
+            "content": "@@ -345,66 +345,8 @@\n sa)%0A\n-%09pen.SetRGB(20, 20, 20)%0A%09pen.Right(-90)%0A%09pen.Walk(-coisa)%0A\n %7D%0A%0Af\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-13_12-55-42",
+            "content": "@@ -179,35 +179,8 @@\n %0A%09%7D%0A\n-%09pen.SetRGB(255, 150, 255)%0A\n %09pen\n@@ -497,16 +497,42 @@\n  altura%0A\n+%09pen.SetRGB(255, 150, 255)\n      // \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-13_12-57-26",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc embua(pen *Pen, coisa float64){\n\tif coisa < 10{\n\t\treturn\n\t}\n\tpen.SetRGB(255, 150, 255)\n\tpen.SetLineWidth(coisa/30)\n\tpen.Walk(coisa)\n\t//pen.SavePNG(\"tree.png\")\n\t//var dummy rune\n\t//fmt.Scanf(\"%c\", &dummy)\n\tpen.Right(90)\n\tcoisa *= 0.97\n\tembua(pen, coisa)\n\tpen.SetRGB(20, 20, 20)\n\tpen.Right(-90)\n\tpen.Walk(-coisa)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n     // muda a cor do pincel para vermelho\n\tpen.SetHeading(0)\n\tpen.SetPosition(100, 100)\n\t\n\tcoisa := 300.0\n\tembua(pen, coisa)\n\t\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "41"
+        }
+    ]
+}

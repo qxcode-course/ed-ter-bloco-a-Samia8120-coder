@@ -2,8 +2,58 @@
     "patches": [
         {
             "label": "2026-04-07_13-33-53",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.Left(30)              // dobra 30 graus para esquerda\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\tpen.Right(60)             // gira para direita 60 graus\n\tpen.Walk(150)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t\tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t\tpen.Up()\n\t\tpen.Walk(-30) // volta sem riscar\n\t\tpen.Down()\n\n\t\tpen.Left(36) // gira\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -458,9 +458,9 @@\n eft(\n-4\n+3\n 0)  \n",
             "lines": "39"
+        },
+        {
+            "label": "2026-04-08_14-41-59",
+            "content": "@@ -502,16 +502,33 @@\n esquerda\n+%0A%09pen.Walk(100)  \n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-08_14-42-28",
+            "content": "@@ -756,17 +756,17 @@\n wCircle(\n-5\n+1\n 0) //des\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-43-16",
+            "content": "@@ -548,17 +548,17 @@\n wCircle(\n-4\n+5\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-43-51",
+            "content": "@@ -454,17 +454,17 @@\n en.Left(\n-5\n+4\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-44-51",
+            "content": "@@ -454,17 +454,17 @@\n en.Left(\n-9\n+5\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-45-16",
+            "content": "@@ -454,17 +454,17 @@\n en.Left(\n-5\n+9\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-47-06",
+            "content": "@@ -548,18 +548,17 @@\n wCircle(\n-30\n+4\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-47-50",
+            "content": "@@ -548,17 +548,18 @@\n wCircle(\n-1\n+30\n 0)      \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-08_14-47-58",
+            "content": "@@ -443,16 +443,449 @@\n 0 pixels\n+%0A%09pen.Left(50)              // dobra 30 graus para esquerda           // anda 100 pixels%0A%09pen.DrawCircle(10)        // desenha um c%C3%ADrculo de raio 50%0A%09pen.Right(60)             // gira para direita 60 graus%0A%09pen.Walk(150)%0A%09for range 10 %7B%0A%09%09pen.Up()%0A%09%09pen.Walk(30) // anda sem riscar%0A%09%09pen.Down()%0A%0A%09%09pen.DrawCircle(50) //desenha um circulo pequeno%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(-30) // volta sem riscar%0A%09%09pen.Down()%0A%0A%09%09pen.Left(36) // gira%0A%09%7D\n %0A%0A%09pen.S\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_12-08-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "21"
         }
     ]
 }
