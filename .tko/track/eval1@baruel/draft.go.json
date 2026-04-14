@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-03-45",
+            "content": "@@ -23,270 +23,8 @@\n mt%22%0A\n-%0Afunc fig(totalfigalbum int, totalfigbaruel int)%7B%0A    album := make(%5B%5Dint, totalfigalbum)%0A    baruel := make(%5B%5Dint, totalfigbaruel)%0A    //as q ja tem -%3Efigs repetidas -%3E figs faltando%0A    for i := 0; i %3C totalfigbaruel; i++%7B%0A        fmt.Scan(baruel%5Bi%5D)%0A    %7D%0A%7D%0A%0A\n func\n@@ -142,41 +142,8 @@\n     \n+ \n-fig(totalfigalbum, totalfigbaruel)\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-14_14-13-19",
+            "content": "@@ -72,18 +72,16 @@\n nt)%7B%0A   \n-//\n  album :\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_14-13-32",
+            "content": "@@ -76,21 +76,10 @@\n %0A   \n- tam := 0%0A   \n+//\n  alb\n@@ -157,79 +157,8 @@\n el)%0A\n-    iguais := make(%5B%5Dint, tam)%0A    var figanterior int%0A    var fig int%0A\n     \n@@ -284,224 +284,8 @@\n   %7D%0A\n-    for i := 0; i %3C totalfigbaruel; i++%7B%0A        figanterior = baruel%5Bi-1%5D%0A        fig = baruel%5Bi%5D%0A        if figanterior == fig%7B%0A            iguais%5Btam%5D = fig%0A            tam++%0A        %7D%0A    %7D%0A    fmt.Print(iguais)%0A\n %7D%0A%0Af\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_14-19-23",
+            "content": "@@ -86,18 +86,16 @@\n = 0%0A    \n-//\n album :=\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_14-19-30",
+            "content": "package main\nimport \"fmt\"\n\nfunc fig(totalfigalbum int, totalfigbaruel int){\n    tam := 0\n    //album := make([]int, totalfigalbum)\n    baruel := make([]int, totalfigbaruel)\n    iguais := make([]int, tam)\n    var figanterior int\n    var fig int\n    //as q ja tem ->figs repetidas -> figs faltando\n    for i := 0; i < totalfigbaruel; i++{\n        fmt.Scan(baruel[i])\n    }\n    for i := 0; i < totalfigbaruel; i++{\n        figanterior = baruel[i-1]\n        fig = baruel[i]\n        if figanterior == fig{\n            iguais[tam] = fig\n            tam++\n        }\n    }\n    fmt.Print(iguais)\n}\n\nfunc main() {\n    var totalfigalbum, totalfigbaruel int\n    fmt.Scan(&totalfigalbum)\n    fmt.Scan(&totalfigbaruel)\n    fig(totalfigalbum, totalfigbaruel)\n}\n",
+            "lines": "31"
+        }
+    ]
+}

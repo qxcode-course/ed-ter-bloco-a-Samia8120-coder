@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-28-13",
+            "content": "@@ -62,191 +62,6 @@\n &N)%0A\n-%09idenEntraram := make(%5B%5Dint, N)%0A%09for i := range N%7B%0A%09%09fmt.Scan(idenEntraram%5Bi%5D)%0A%09%7D%0A%09var M int%0A%09fmt.Scan(&M)%0A%09idenSairam := make(%5B%5Dint, M)%0A%09for i := range M%7B%0A%09%09fmt.Scan(idenSairam%5Bi%5D)%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-14_13-32-52",
+            "content": "@@ -1,20 +1,4 @@\n-//passa 2 vet, %0A\n pack\n@@ -23,278 +23,8 @@\n mt%22%0A\n-func fila(idenEntraram%5B%5Dint, idenSairam%5B%5Dint, N int, M int) %5B%5Dint%7B%0A%09coisa := make(%5B%5Dint, 0)%0A%09var tam int%0A%09for i := 0; i %3C N; i++%7B%0A%09%09for j := 0; j %3C M; j++%7B%0A%09%09%09if  idenEntraram%5Bi%5D != idenSairam%5Bj%5D%7B%0A%09%09%09%09coisa%5Btam%5D = idenEntraram%5Bi%5D%09%09%0A%09%09%09%09tam++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return coisa%0A%7D%0A\n func\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-14_13-48-50",
+            "content": "@@ -94,18 +94,24 @@\n , M int)\n+ %5B%5Dint\n %7B%0A\n-\n %09coisa :\n@@ -294,24 +294,20 @@\n %09%7D%0A%09\n-fmt.Print(\n+return \n coisa\n-)\n %0A%7D%0Af\n@@ -530,47 +530,9 @@\n i%5D)%0A\n+\n %09%7D%0A\n-%09fila(idenEntraram, idenSairam, N, M)%0A\n %7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_13-50-01",
+            "content": "@@ -126,16 +126,19 @@\n 0)%0A%09\n-tam := 0\n+var tam int\n %0A%09fo\n@@ -208,17 +208,17 @@\n aram%5Bi%5D \n-=\n+!\n = idenSa\n@@ -231,67 +231,8 @@\n %5D%7B%0A%09\n-%09%09%09idenEntraram%5Bi%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if idenEntraram%5Bi%5D != 0%7B%0A\n %09%09%09c\n@@ -258,17 +258,20 @@\n raram%5Bi%5D\n-%0A\n+%09%09%0A%09\n %09%09%09tam++\n@@ -271,16 +271,21 @@\n %09%09tam++%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_13-53-17",
+            "content": "@@ -260,41 +260,8 @@\n %09%09%7D%0A\n-%09%7D%0A%09for i := range idenEntraram%7B%0A\n %09%09if\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_13-54-19",
+            "content": "@@ -348,16 +348,25 @@\n aram%5Bi%5D%0A\n+%09%09%09tam++%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_13-54-28",
+            "content": "@@ -97,18 +97,16 @@\n  int)%7B%0A%09\n-//\n coisa :=\n@@ -122,18 +122,16 @@\n nt, 0)%0A%09\n-//\n tam := 0\n@@ -323,18 +323,21 @@\n %0A%09%09%09\n-fmt.Print(\n+coisa%5Btam%5D = \n iden\n@@ -351,17 +351,16 @@\n m%5Bi%5D\n-)\n %0A%09%09%7D%0A%09%7D%0A\n %7D%0Afu\n@@ -355,16 +355,34 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09fmt.Print(coisa)%0A\n %7D%0Afunc m\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_13-56-13",
+            "content": "@@ -269,37 +269,42 @@\n %7D%0A%09for i := \n-0; i %3C N; i++\n+range idenEntraram\n %7B%0A%09%09if idenE\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_13-57-09",
+            "content": "@@ -431,37 +431,31 @@\n )%0A%09for i := \n-0; i %3C N; i++\n+range N\n %7B%0A%09%09fmt.Scan\n@@ -544,21 +544,15 @@\n  := \n-0; i %3C M; i++\n+range M\n %7B%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-36-21",
+            "content": "@@ -317,21 +317,16 @@\n != 0%7B%0A%09%09\n-%7D%0A%09%7D%0A\n %09fmt.Pri\n@@ -340,17 +340,27 @@\n Entraram\n-)\n+%5Bi%5D)%0A%09%09%7D%0A%09%7D\n %0A%7D%0Afunc \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-40-07",
+            "content": "@@ -97,16 +97,18 @@\n  int)%7B%0A%09\n+//\n coisa :=\n@@ -124,16 +124,18 @@\n nt, 0)%0A%09\n+//\n tam := 0\n@@ -188,24 +188,25 @@\n  j++%7B%0A%09%09%09if \n+ \n idenEntraram\n@@ -319,38 +319,8 @@\n  0%7B%0A\n-%09%09%09coisa%5Bi%5D = idenEntraram%5Bi%5D%0A\n %09%09%7D%0A\n@@ -333,21 +333,28 @@\n t.Print(\n-coisa\n+idenEntraram\n )%0A%7D%0Afunc\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-42-05",
+            "content": "@@ -122,18 +122,16 @@\n nt, 0)%0A%09\n-//\n tam := 0\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_14-42-12",
+            "content": "@@ -122,16 +122,18 @@\n nt, 0)%0A%09\n+//\n tam := 0\n@@ -133,16 +133,16 @@\n am := 0%0A\n-\n %09for i :\n@@ -158,16 +158,41 @@\n N; i++%7B%0A\n+%09%09for j := 0; j %3C M; j++%7B\n %0A%09%09%09if i\n@@ -220,17 +220,17 @@\n nSairam%5B\n-i\n+j\n %5D%7B%0A%09%09%09%09i\n@@ -248,17 +248,21 @@\n %5Bi%5D = 0%0A\n+%09%09%09%7D\n %0A\n-\n %09%09%7D%0A%09%7D%0A%09\n@@ -321,19 +321,17 @@\n %09%09coisa%5B\n-tam\n+i\n %5D = iden\n@@ -346,17 +346,8 @@\n %5Bi%5D%0A\n-%09%09%09tam++%0A\n %09%09%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_14-43-26",
+            "content": "@@ -87,14 +87,21 @@\n , N \n+int, M \n int)%7B%0A\n-\n %09coi\n@@ -156,16 +156,17 @@\n N; i++%7B%0A\n+%0A\n %09%09%09if id\n@@ -197,16 +197,16 @@\n ram%5Bi%5D%7B%0A\n-\n %09%09%09%09iden\n@@ -221,16 +221,17 @@\n %5Bi%5D = 0%0A\n+%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-43-44",
+            "content": "@@ -609,12 +609,15 @@\n airam, N\n+, M\n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-43-53",
+            "content": "@@ -134,34 +134,29 @@\n or i := \n-range idenEntraram\n+0; i %3C N; i++\n %7B%0A%09%09%09if \n@@ -234,26 +234,21 @@\n  := \n-range idenEntraram\n+0; i %3C N; i++\n %7B%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-44-24",
+            "content": "@@ -76,16 +76,23 @@\n Sairam%5B%5D\n+int, N \n int)%7B%0A%09c\n@@ -616,12 +616,15 @@\n enSairam\n+, N\n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-44-42",
+            "content": "@@ -107,16 +107,26 @@\n int, 0)%0A\n+%09tam := 0%0A\n %09for i :\n@@ -173,9 +173,9 @@\n %5Bi%5D \n-!\n+=\n = id\n@@ -195,44 +195,117 @@\n %09%09%09%09\n-coisa%5Bi%5D = idenEntraram%5Bi%5D - idenSai\n+idenEntraram%5Bi%5D = 0%0A%09%09%7D%0A%09%7D%0A%09for i := range idenEntraram%7B%0A%09%09if idenEntraram%5Bi%5D != 0%7B%0A%09%09%09coisa%5Btam%5D = idenEntra\n ram%5B\n@@ -309,21 +309,29 @@\n am%5Bi%5D%0A%09%09\n-%7D%0A\n+%09tam++%0A%09\n %09%7D%0A\n+%09%7D\n %0A%09fmt.Pr\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-49-05",
+            "content": "@@ -1,11 +1,10 @@\n //\n- \n passa 2 \n@@ -7,16 +7,17 @@\n a 2 vet,\n+ \n %0Apackage\n@@ -26,27 +26,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A\n func\n@@ -87,58 +87,13 @@\n )%7B%0A%09\n-var tam int%0A%09removiveis := make(%5B%5Dint, 0)%0A%09//ficar\n+coisa\n  := \n@@ -159,17 +159,17 @@\n aram%5Bi%5D \n-=\n+!\n = idenSa\n@@ -185,22 +185,15 @@\n %09%09%09%09\n-removiveis%5Btam\n+coisa%5Bi\n %5D = \n@@ -211,94 +211,33 @@\n m%5Bi%5D\n-%0A%09%09%09%09tam++%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C tam; i++%7B%0A%09%09if removiveis%5Bi%5D != idenEntra\n+ - idenSai\n ram%5Bi%5D\n-%7B\n %0A%09%09\n+%7D%0A%09%7D%0A%0A\n %09fmt\n@@ -247,29 +247,14 @@\n int(\n-idenEntraram)%0A%09%09%7D%0A%09%7D%0A\n+coisa)\n %0A%7D%0Af\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-55-39",
+            "content": "// passa 2 vet,\npackage main\n\nimport (\n\t\"fmt\"\n)\nfunc fila(idenEntraram[]int, idenSairam[]int){\n\tvar tam int\n\tremoviveis := make([]int, 0)\n\t//ficar := make([]int, 0)\n\tfor i := range idenEntraram{\n\t\t\tif idenEntraram[i] == idenSairam[i]{\n\t\t\t\tremoviveis[tam] = idenEntraram[i]\n\t\t\t\ttam++\n\t\t}\n\t}\n\tfor i := 0; i < tam; i++{\n\t\tif removiveis[i] != idenEntraram[i]{\n\t\t\tfmt.Print(idenEntraram)\n\t\t}\n\t}\n\n}\nfunc main() {\n\tvar N int\n\tfmt.Scan(&N)\n\tidenEntraram := make([]int, N)\n\tfor i := 0; i < N; i++{\n\t\tfmt.Scan(idenEntraram[i])\n\t}\n\tvar M int\n\tfmt.Scan(&M)\n\tidenSairam := make([]int, M)\n\tfor i := 0; i < M; i++{\n\t\tfmt.Scan(idenSairam[i])\n\t}\n\tfila(idenEntraram, idenSairam)\n}\n",
+            "lines": "38"
+        }
+    ]
+}

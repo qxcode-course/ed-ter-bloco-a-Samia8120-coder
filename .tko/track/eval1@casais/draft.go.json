@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-17-18",
+            "content": "@@ -10,10 +10,8 @@\n ain%0A\n-//\n impo\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_13-17-27",
+            "content": "@@ -6,16 +6,18 @@\n ge main%0A\n+//\n import %22\n@@ -43,45 +43,7 @@\n     \n-var tcasais int%0A    fmt.Scan(&tcasais)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_13-18-14",
+            "content": "@@ -23,191 +23,8 @@\n mt%22%0A\n-%0Afunc coisa(tcasais int)%7B%0A    var animal int%0A    descasados:= make(%5B%5Dint, tcasais)%0A    for i := 0; i %3C tcasais; i++%7B%0A        fmt.Scan(&animal)%0A        descasados%5Bi%5D = animal%0A    %7D%0A%7D%0A%0A\n func\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-14_13-23-55",
+            "content": "package main\nimport \"fmt\"\n\nfunc coisa(tcasais int){\n    var animal int\n    descasados:= make([]int, tcasais)\n    for i := 0; i < tcasais; i++{\n        fmt.Scan(&animal)\n        descasados[i] = animal\n    }\n}\n\nfunc main() {\n    var tcasais int\n    fmt.Scan(&tcasais)\n}\n",
+            "lines": "16"
+        }
+    ]
+}
