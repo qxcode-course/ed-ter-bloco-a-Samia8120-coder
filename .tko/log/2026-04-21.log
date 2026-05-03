@@ -1,0 +1,8 @@
+2026-04-21 13:39:26, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-21 13:39:31, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-21 13:39:33, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-21 13:39:31, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-21 14:47:20, MOVE, v:1, k:ed@n_rainhas, mode:DOWN
+2026-04-21 14:47:22, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-04-21 14:47:20, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-04-21 14:47:20, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
