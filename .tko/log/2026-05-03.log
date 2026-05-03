@@ -49,3 +49,5 @@
 2026-05-03 00:49:58, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:49
 2026-05-03 00:50:05, MOVE, v:1, k:ed@bettersearch, mode:BACK
 2026-05-03 00:50:31, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:20, concept:1, refactor:1
+2026-05-03 00:49:58, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-03 00:49:42, MOVE, v:1, k:ed@bettersearch, mode:EDIT
