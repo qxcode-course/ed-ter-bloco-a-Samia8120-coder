@@ -154,3 +154,15 @@
 2026-05-03 19:20:13, MOVE, v:1, k:ed@treinando, mode:EDIT
 2026-05-03 19:33:35, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33
 2026-05-03 19:33:37, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-05-03 22:02:17, MOVE, v:1, k:ed@vetbuild, mode:DOWN
+2026-05-03 22:02:22, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-03 22:02:41, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-05-03 22:02:17, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-03 22:02:17, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-03 22:02:17, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-03 22:02:17, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-03 22:02:41, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-03 22:16:43, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-05-03 22:16:42, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-03 22:21:59, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-05-03 22:22:10, MOVE, v:1, k:ed@setbuild, mode:BACK
