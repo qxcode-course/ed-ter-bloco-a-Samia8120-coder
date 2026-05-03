@@ -22,17 +22,24 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
-- ed@backtrack
+- ed@bfs
 - ed@vector
-- ed@map_set
+- ed@rec
+- ed@list
 - ed@basic
+- ed@map_set
+- eval1@eval1
+- ed@tree
+- ed@backtrack
+- ed@dfs
+- ed@sandbox
+- ed@linear
 flags:
   inbox: all
   panel: graph
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@multiset
-selected_index: 53
+selected: ed@treinando
+selected_index: 20

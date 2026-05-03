@@ -9,39 +9,75 @@ import (
 )
 
 func tostr(vet []int) string {
-	_ = vet
-	return ""
+	if len(vet) == 0 {
+		return "[]"
+	}
+	strs := []string{}
+	for _, v := range vet {
+		strs = append(strs, strconv.Itoa(v))
+	}
+	return "[" + strings.Join(strs, " ") + "]"
 }
 
 func tostrrev(vet []int) string {
-	_ = vet
-	return ""
+	if len(vet) == 0 {
+		return "[]"
+	}
+	strs := []string{}
+	for i := len(vet) - 1; i >= 0; i-- {
+		strs = append(strs, strconv.Itoa(vet[i]))
+	}
+	return "[" + strings.Join(strs, " ") + "]"
 }
 
 // reverse: inverte os elementos do slice
 func reverse(vet []int) {
-	_ = vet
+	for i, j := 0, len(vet)-1; i < j; i, j = i+1, j-1 {
+		vet[i], vet[j] = vet[j], vet[i]
+	}
 }
 
 // sum: soma dos elementos do slice
 func sum(vet []int) int {
-	_ = vet
-	return 0
+	total := 0
+	for _, v := range vet {
+		total += v
+	}
+	return total
 }
 
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 0
+	}
+	result := 1
+	for _, v := range vet {
+		result *= v
+	}
+	return result
 }
 
-// min: retorna o índice e valor do menor valor
-// crie uma função recursiva interna do modelo
-// var rec func(v []int) (int, int)
-// para fazer uma recursão que retorna valor e índice
+// min: retorna o índice do menor valor
 func min(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return -1
+	}
+
+	var rec func(v []int) (int, int)
+	rec = func(v []int) (int, int) {
+		if len(v) == 1 {
+			return 0, v[0]
+		}
+		idx, val := rec(v[1:])
+		if v[0] <= val {
+			return 0, v[0]
+		}
+		return idx + 1, val
+	}
+
+	idx, _ := rec(vet)
+	return idx
 }
 
 func main() {
