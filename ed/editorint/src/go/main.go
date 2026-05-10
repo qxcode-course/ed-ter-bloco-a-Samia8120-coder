@@ -32,21 +32,46 @@ func (e *Editor) KeyLeft() {
 }
 
 func (e *Editor) KeyEnter() {
+	nova := NewList[rune]()
+	e.lines.Insert(e.line.Next(), nova)
+	e.line = e.line.next
+	e.cursor = nova.Front()
 }
 
 func (e *Editor) KeyRight() {
+	if e.cursor != e.line.Value.Back() {
+		e.cursor = e.cursor.Next()
+		return
+	}
 }
 
 func (e *Editor) KeyUp() {
+	if e.line == e.lines.Front(){
+		return
+	}
+	e.line = e.line.Prev()
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyDown() {
+	if e.line == e.lines.Back() {
+		return
+	}
+	e.line = e.line.Next()
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyBackspace() {
+	if e.cursor != e.line.Value.Front(){
+		anterior := e.cursor.prev
+		e.line.Value.Erase(anterior)
+	}
 }
 
 func (e *Editor) KeyDelete() {
+	if e.cursor != e.line.Value.End() {
+		e.cursor = e.line.Value.Erase(e.cursor)
+	}
 }
 
 func main() {

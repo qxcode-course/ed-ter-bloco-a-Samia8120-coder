@@ -22,18 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@basic
-- ed@dfs
-- ed@bfs
-- eval1@eval1
-- ed@tree
-- ed@map_set
-- ed@rec
 - ed@list
-- ed@vector
-- ed@backtrack
-- ed@linear
-- ed@sandbox
 flags:
   inbox: all
   panel: graph
@@ -41,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
-selected_index: 51
+selected: ed@editorint
+selected_index: 14
