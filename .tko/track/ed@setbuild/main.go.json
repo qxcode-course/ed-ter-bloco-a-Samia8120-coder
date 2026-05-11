@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2026-05-03_15-17-25",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\t// v := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\t\t// v = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t// for _, part := range parts[1:] {\n\t\t\t// \tvalue, _ := strconv.Atoi(part)\n\t\t\t// }\n\t\tcase \"show\":\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -45,621 +45,17 @@\n %0A%09%22s\n-ort%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Set struct %7B%0A%09data %5B%5Dint%0A%7D%0A%0Afunc NewSet(capacity int) *Set %7B%0A%09return &Set%7Bdata: make(%5B%5Dint, 0, capacity)%7D%0A%7D%0A%0Afunc (s *Set) Insert(values ...int) %7B%0A%09for _, val := range values %7B%0A%09%09idx := sort.Search(len(s.data), func(i int) bool %7Breturn s.data%5Bi%5D %3E= val%7D)%0A%09%09if idx %3C len(s.data) && s.data%5Bidx%5D == val %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09s.data = append(s.data, 0)%0A%09%09copy(s.data%5Bidx+1:%5D, s.data%5Bidx:%5D)%0A%09%09s.data%5Bidx%5D = val%0A%09%7D%0A%7D%0A%0Afunc (s *Set) Contains(val int) bool %7B%0A%09idx := sort.Search(len(s.data), func(i int) bool %7B return s.data%5Bi%5D %3E= val%7D)%0A%09return idx %3C len(s.data) && s.data%5Bidx%5D == val%0A%7D%0A%0A\n+trings%22%0A)\n %0A%0Afu\n@@ -129,16 +129,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -372,24 +372,27 @@\n  %22init%22:%0A%09%09%09\n+// \n value, _ := \n@@ -417,16 +417,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n@@ -458,16 +458,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -497,16 +497,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -535,16 +535,19 @@\n art)%0A%09%09%09\n+// \n %7D%0A%09%09case\n@@ -570,24 +570,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -634,16 +634,19 @@\n ns%22:%0A%09%09%09\n+// \n value, _\n",
             "lines": "45"
+        },
+        {
+            "label": "2026-05-11_22-04-32",
+            "content": "@@ -658,318 +658,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Erase(val int) bool %7B%0A%09idx := sort.Search(len(s.data), func(i int) bool %7B return s.data%5Bi%5D %3E= val%7D)%0A%09if idx %3C len(s.data) && s.data%5Bidx%5D == val %7B%0A%09%09s.data = append(s.data%5B:idx%5D, s.data%5Bidx+1:%5D...)%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc (s *Set) Clear() %7B%0A%09s.data = make(%5B%5Dint, 0, cap(s.data))%0A%7D%0A%0A\n %0A%0Afu\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-11_22-10-29",
+            "content": "@@ -36,17 +36,8 @@\n mt%22%0A\n-%09%22image%22%0A\n %09%22os\n@@ -968,264 +968,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Show() %7B%0A%09if len(s.data) == 0 %7B%0A%09%09fmt.Println(%22%5B%5D%22)%0A%09%09return%0A%09%7D%0A%09var b strings.Builder%0A%09b.WriteByte('%5B')%0A%09for i, var := range s.data %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09b.WriteString(', ')%0A%09%09%7D%0A%09%09fmt.Fprint(&b, v)%0A%09%7D%0A%09b.WriteByte('%5D')%0A%09fmt.Println(b.String())%0A%7D\n %0A%0Afu\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-05-11_22-16-19",
+            "content": "@@ -32,16 +32,25 @@\n %0A%09%22fmt%22%0A\n+%09%22image%22%0A\n %09%22os%22%0A%09%22\n@@ -306,33 +306,32 @@\n nc(i int) bool %7B\n- \n return s.data%5Bi%5D\n@@ -333,25 +333,24 @@\n ta%5Bi%5D %3E= val\n- \n %7D)%0A%09%09if idx \n@@ -605,25 +605,24 @@\n ta%5Bi%5D %3E= val\n- \n %7D)%0A%09return i\n@@ -774,17 +774,16 @@\n %5D %3E= val\n- \n %7D)%0A%09if i\n@@ -1101,16 +1101,18 @@\n for i, v\n+ar\n  := rang\n@@ -1156,12 +1156,12 @@\n ing(\n-%22, %22\n+', '\n )%0A%09%09\n@@ -1313,17 +1313,21 @@\n %0A%0A%09v\n-ar v *Set\n+ := NewSet(0)\n %0A%09fo\n@@ -1552,24 +1552,21 @@\n it%22:%0A%09%09%09\n-capacity\n+value\n , _ := s\n@@ -1601,24 +1601,21 @@\n  NewSet(\n-capacity\n+value\n )%0A%09%09case\n@@ -1700,28 +1700,8 @@\n rt)%0A\n-%09%09%09%09v.Insert(value)%0A\n %09%09%09%7D\n@@ -1720,20 +1720,8 @@\n w%22:%0A\n-%09%09%09v.Show()%0A\n %09%09ca\n@@ -1774,79 +1774,8 @@\n 1%5D)%0A\n-%09%09%09if !v.Erase(value) %7B%0A%09%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%09%7D%0A\n %09%09ca\n@@ -1831,42 +1831,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(v.Contains(value))%0A\n %09%09ca\n@@ -1843,17 +1843,16 @@\n clear%22:%0A\n-%0A\n %09%09defaul\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-05-11_22-24-44",
+            "content": "@@ -1834,39 +1834,46 @@\n mt.Println(%22\n-value not found\n+fail: comando invalido\n %22)%0A%09%09%09%7D%0A%09%09ca\n@@ -2007,23 +2007,30 @@\n ln(%22\n-value not found\n+fail: comando invalido\n %22)%0A%09\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-11_22-25-39",
+            "content": "@@ -1972,20 +1972,8 @@\n r%22:%0A\n-%09%09%09v.Clear()\n %0A%09%09d\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-11_22-26-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Set struct {\n\tdata []int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{data: make([]int, 0, capacity)}\n}\n\nfunc (s *Set) Insert(values ...int) {\n\tfor _, val := range values {\n\t\tidx := sort.Search(len(s.data), func(i int) bool { return s.data[i] >= val })\n\t\tif idx < len(s.data) && s.data[idx] == val {\n\t\t\tcontinue\n\t\t}\n\t\ts.data = append(s.data, 0)\n\t\tcopy(s.data[idx+1:], s.data[idx:])\n\t\ts.data[idx] = val\n\t}\n}\n\nfunc (s *Set) Contains(val int) bool {\n\tidx := sort.Search(len(s.data), func(i int) bool { return s.data[i] >= val })\n\treturn idx < len(s.data) && s.data[idx] == val\n}\n\nfunc (s *Set) Erase(val int) bool {\n\tidx := sort.Search(len(s.data), func(i int) bool { return s.data[i] >= val })\n\tif idx < len(s.data) && s.data[idx] == val {\n\t\ts.data = append(s.data[:idx], s.data[idx+1:]...)\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc (s *Set) Clear() {\n\ts.data = make([]int, 0, cap(s.data))\n}\n\nfunc (s *Set) Show() {\n\tif len(s.data) == 0 {\n\t\tfmt.Println(\"[]\")\n\t\treturn\n\t}\n\tvar b strings.Builder\n\tb.WriteByte('[')\n\tfor i, v := range s.data {\n\t\tif i > 0 {\n\t\t\tb.WriteString(\", \")\n\t\t}\n\t\tfmt.Fprint(&b, v)\n\t}\n\tb.WriteByte(']')\n\tfmt.Println(b.String())\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar v *Set\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tcapacity, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewSet(capacity)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tv.Show()\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tif !v.Erase(value) {\n\t\t\t\tfmt.Println(\"value not found\")\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(v.Contains(value))\n\t\tcase \"clear\":\n\t\t\tv.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"value not found\")\n\t\t}\n\t}\n}\n",
+            "lines": "109"
         }
     ]
 }

@@ -22,7 +22,10 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@backtrack
 - ed@list
+- ed@vector
+- ed@map_set
 - ed@basic
 flags:
   inbox: all
@@ -31,5 +34,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@controlz
-selected_index: 20
+selected: ed@editorint
+selected_index: 41
