@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_21-57-49",
+            "content": "@@ -211,270 +211,4 @@\n %7D%0A%7D%0A\n-%0Afunc gerarPermutacoes(s string) %5B%5Dstring %7B%0A    n := len(s)%0A    if n == 0 %7B%0A        return %5B%5Dstring%7B%7D%0A    %7D%0A%0A    usado := make(%5B%5Dbool, n)%0A    agora := make(%5B%5Dbyte, n)%0A    resultado := %5B%5Dstring%7B%7D%0A%0A    backtrack(s, usado, agora, 0, &resultado)%0A    return resultado%0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-17_22-01-58",
+            "content": "@@ -477,194 +477,4 @@\n %0A%7D%0A%0A\n-func backtrack(s string, usado %5B%5Dbool, agora %5B%5Dbyte, pos int, resultado *%5B%5Dstring) %7B%0A    if pos == len(s) %7B%0A        *resultado = append(*resultado, string(agora))%0A        return%0A    %7D    %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-17_22-05-01",
+            "content": "@@ -655,225 +655,8 @@\n urn%0A\n-    %7D%0A    for i := 0; i %3C len(s); i++ %7B%0A        if !usado%5Bi%5D %7B%0A            usado%5Bi%5D = true%0A            agora%5Bpos%5D = s%5Bi%5D%0A            backtrack(s, usado, agora, pos+1, resultado)%0A            usado%5Bi%5D = false%0A        %7D%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-17_22-09-02",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"sort\"\n)\n\nfunc main() {\n    var s string\n    fmt.Scan(&s)\n\n    perms := gerarPermutacoes(s)\n    sort.Strings(perms)\n\n    for _, p := range perms {\n        fmt.Println(p)\n    }\n}\n\nfunc gerarPermutacoes(s string) []string {\n    n := len(s)\n    if n == 0 {\n        return []string{}\n    }\n\n    usado := make([]bool, n)\n    agora := make([]byte, n)\n    resultado := []string{}\n\n    backtrack(s, usado, agora, 0, &resultado)\n    return resultado\n}\n\nfunc backtrack(s string, usado []bool, agora []byte, pos int, resultado *[]string) {\n    if pos == len(s) {\n        *resultado = append(*resultado, string(agora))\n        return\n    }\n    for i := 0; i < len(s); i++ {\n        if !usado[i] {\n            usado[i] = true\n            agora[pos] = s[i]\n            backtrack(s, usado, agora, pos+1, resultado)\n            usado[i] = false\n        }\n    }    \n}\n",
+            "lines": "46"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_21-00-28",
+            "content": "@@ -280,574 +280,12 @@\n %0A%7D%0A%0A\n+//\n func\n- solve(grid %5B%5D%5B%5Drune, index int, n int) bool%7B%0A    if index == n*n %7B%0A        return true%0A    %7D%0A    lin := index / n%0A    col := index %25 n%0A%0A    if grid%5Blin%5D%5Bcol%5D != '.'%7B%0A        return solve(grid, index+1, n)%0A    %7D%0A%0A    subTam := int(math.Sqrt(float64(n)))%0A%0A    for num := 1; num %3C= n; num++ %7B%0A        digit := rune('0' + num)%0A        if isValid(grid, lin, col, digit, n, subTam) %7B%0A            grid%5Blin%5D%5Bcol%5D = digit%0A            if solve(grid, index+1, n) %7B%0A                return true%0A            %7D%0A            grid%5Blin%5D%5Bcol%5D = '.'%0A        %7D%0A    %7D%0A    return false%0A%7D\n  %0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-17_21-20-18",
+            "content": "@@ -848,499 +848,6 @@\n se%0A%7D\n-%0A%0Afunc isValid(grid %5B%5D%5B%5Drune, lin, col int, digit rune, n int, subTam int) bool %7B%0A    for c := 0; c %3C 0; c++ %7B%0A        if grid%5Blin%5D%5Bc%5D == digit %7B%0A            return false%0A        %7D%0A    %7D%0A    %0A    startLin := (lin / subTam) * subTam%0A    startCol := (col / subTam) * subTam%0A%0A    for l := startLin; l %3C startLin + subTam; l++ %7B%0A        for c := startCol; c %3C startCol + subTam; c++ %7B%0A            if grid%5Bl%5D%5Bc%5D == digit %7B%0A                return false%0A            %7D%0A        %7D%0A    %7D%0A    return true%0A%7D\n+ \n %0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-17_21-29-50",
+            "content": "@@ -1343,187 +1343,4 @@\n e%0A%7D%0A\n-%0Afunc printGrid(grid %5B%5D%5B%5Drune, n int) %7B%0A    for i := 0; i %3C n; i++ %7B%0A        for j := 0; j %3C n; j++ %7B%0A            fmt.Printf(%22%25c%22, grid%5Bi%5D%5Bj%5D)%0A        %7D%0A        fmt.Println()%0A    %7D%0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-17_21-31-57",
+            "content": "@@ -877,20 +877,16 @@\n une, lin\n- int\n , col in\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-17_21-35-10",
+            "content": "@@ -950,17 +950,17 @@\n  0; c %3C \n-n\n+0\n ; c++ %7B%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-17_21-35-44",
+            "content": "@@ -873,24 +873,28 @@\n %5D%5B%5Drune, lin\n+ int\n , col int, d\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-17_21-36-01",
+            "content": "@@ -1040,114 +1040,8 @@\n    %0A\n-    for r := 0; r %3C n; r++ %7B%0A        if grid%5Br%5D%5Bcol%5D == digit %7B%0A            return false%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-17_21-37-34",
+            "content": "package main\nimport(\n    \"fmt\"\n    \"math\"\n)\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    grid := make([][]rune, n)\n    for i := 0; i < n; i++ {\n        var line string\n        fmt.Scan(&line)\n        grid[i] = []rune(line)\n    }\n\n    solve(grid, 0, n)\n    printGrid(grid, n)\n}\n\nfunc solve(grid [][]rune, index int, n int) bool{\n    if index == n*n {\n        return true\n    }\n    lin := index / n\n    col := index % n\n\n    if grid[lin][col] != '.'{\n        return solve(grid, index+1, n)\n    }\n\n    subTam := int(math.Sqrt(float64(n)))\n\n    for num := 1; num <= n; num++ {\n        digit := rune('0' + num)\n        if isValid(grid, lin, col, digit, n, subTam) {\n            grid[lin][col] = digit\n            if solve(grid, index+1, n) {\n                return true\n            }\n            grid[lin][col] = '.'\n        }\n    }\n    return false\n}\n\nfunc isValid(grid [][]rune, lin, col int, digit rune, n int, subTam int) bool {\n    for c := 0; c < n; c++ {\n        if grid[lin][c] == digit {\n            return false\n        }\n    }\n    \n    for r := 0; r < n; r++ {\n        if grid[r][col] == digit {\n            return false\n        }\n    }\n\n    startLin := (lin / subTam) * subTam\n    startCol := (col / subTam) * subTam\n\n    for l := startLin; l < startLin + subTam; l++ {\n        for c := startCol; c < startCol + subTam; c++ {\n            if grid[l][c] == digit {\n                return false\n            }\n        }\n    }\n    return true\n}\n\nfunc printGrid(grid [][]rune, n int) {\n    for i := 0; i < n; i++ {\n        for j := 0; j < n; j++ {\n            fmt.Printf(\"%c\", grid[i][j])\n        }\n        fmt.Println()\n    }\n}\n",
+            "lines": "80"
+        }
+    ]
+}

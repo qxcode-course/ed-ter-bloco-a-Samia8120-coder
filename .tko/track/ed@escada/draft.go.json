@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-03-10_14-02-19",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -41,38 +41,28 @@\n     \n-var n int%0A    fmt.Scan(&n)%0A    \n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-17_20-43-11",
+            "content": "@@ -68,132 +68,11 @@\n &n)%0A\n-%0A\n     \n-if n == 1 %7C%7C n == 2 %7B%0A        fmt.Print(1)%0A        return%0A    %7D%0A    if n == 3%7B%0A        fmt.Print(2)%0A        return%0A    %7D\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-17_20-45-02",
+            "content": "@@ -113,13 +113,9 @@\n int(\n-%221%5Cn%22\n+1\n )%0A  \n@@ -170,13 +170,9 @@\n int(\n-%222%5Cn%22\n+2\n )%0A  \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-17_20-45-45",
+            "content": "@@ -201,151 +201,7 @@\n    %7D\n-%0A%0A    a, b, c := 1, 1, 2 %0A    var res int%0A    for i := 4; i %3C= n; i++ %7B%0A        res = a + c%0A        a, b, c = b, c, res%0A    %7D%0A    fmt.Print(res)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-17_20-48-40",
+            "content": "@@ -344,14 +344,8 @@\n (res\n-, %22%5Cn%22\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-17_20-49-08",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    if n == 1 || n == 2 {\n        fmt.Print(\"1\\n\")\n        return\n    }\n    if n == 3{\n        fmt.Print(\"2\\n\")\n        return\n    }\n\n    a, b, c := 1, 1, 2 \n    var res int\n    for i := 4; i <= n; i++ {\n        res = a + c\n        a, b, c = b, c, res\n    }\n    fmt.Print(res, \"\\n\")\n}\n",
+            "lines": "23"
         }
     ]
 }

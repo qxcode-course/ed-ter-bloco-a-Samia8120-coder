@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_20-37-27",
+            "content": "@@ -364,95 +364,7 @@\n    %7D\n-%0A%0A    if dp%5Bk%5D %7B%0A        fmt.Print(%22true%22)%0A    %7D else %7B%0A        fmt.Print(%22false%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-05-17_20-38-59",
+            "content": "@@ -400,18 +400,16 @@\n nt(%22true\n-%5Cn\n %22)%0A    %7D\n@@ -444,10 +444,8 @@\n alse\n-%5Cn\n %22)%0A \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-17_20-39-15",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    nums := make([]int, n)\n    for i := 0; i < n; i++{\n        fmt.Scan(&nums[i])\n    }\n\n    dp := make([]bool, k+1)\n    dp[0] = true\n\n    for _, val := range nums {\n        for s := k; s >= val; s-- {\n            if dp[s-val] {\n                dp[s] = true\n            }\n        } \n    }\n\n    if dp[k] {\n        fmt.Print(\"true\\n\")\n    } else {\n        fmt.Print(\"false\\n\")\n    }\n}\n",
+            "lines": "28"
+        }
+    ]
+}
