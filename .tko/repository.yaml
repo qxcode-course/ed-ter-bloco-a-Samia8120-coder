@@ -20,15 +20,15 @@ sources:
   quests: null
 expanded:
 - ed@bfs
-- ed@dfs
-- ed@tree
-- ed@map_set
 - ed@linear
-- ed@rec
-- ed@vector
-- ed@list
-- ed@basic
+- ed@tree
 - ed@backtrack
+- ed@list
+- ed@vector
+- ed@basic
+- ed@map_set
+- ed@rec
+- ed@dfs
 flags:
   inbox: all
   panel: graph
@@ -36,5 +36,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@ilhas
-selected_index: 90
+selected: ed@distancia
+selected_index: 45
