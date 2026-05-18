@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_20-00-08",
+            "content": "@@ -308,16 +308,8 @@\n unc(\n-r, c int\n ) %7B%0A\n@@ -360,183 +360,10 @@\n 0'%0A%09\n-%0A%0A%09for len(queue) %3E 0 %7B%0A%09%09curr := queue%5B0%5D%0A%09%09queue = queue%5B1:%5D%0A%09%09row, col := curr%5B0%5D, curr%5B1%5D%0A%0A%09%09if row-1 %3E= 0 && grid%5Brow-1%5D%5Bcol%5D == '1' %7B%0A%09%09%09grid%5Brow-1%5D%5Bcol%5D = '0'%0A%09%09%7D%0A%09%7D%0A%09\n %7D\n+%0A\n %0A%7D%0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-18_20-09-40",
+            "content": "@@ -534,175 +534,8 @@\n '0'%0A\n-%09%09%09queue = append(queue, %5B2%5Dint%7Brow-1, col%7D)%0A%09%09%7D%0A%09%09if row+1 %3C rows && grid%5Brow+1%5D%5Bcol%5D == '1' %7B%0A%09%09%09grid%5Brow+1%5D%5Bcol%5D = '0'%0A%09%09%09queue = append(queue, %5B2%5Dint%7Brow+1, col%7D)%0A\n %09%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-18_20-14-27",
+            "content": "@@ -705,140 +705,8 @@\n %09%09%7D%0A\n-%09%09if col-1 %3E= '0' && grid%5Brow%5D%5Bcol-1%5D == '1' %7B%0A%09%09%09grid%5Brow%5D%5Bcol-1%5D = '0'%0A%09%09%09queue = append(queue, %5B2%5Dint%7Brow, col-1%7D)%0A%09%09%7D%0A%09%09//if %7B%7D%0A\n %09%7D%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-18_20-22-04",
+            "content": "@@ -366,17 +366,16 @@\n  '0'%0A%09%0A%0A\n-%09\n %09for len\n@@ -390,17 +390,16 @@\n %3E 0 %7B%0A%09%09\n-%09\n curr := \n@@ -407,17 +407,16 @@\n ueue%5B0%5D%0A\n-%09\n %09%09queue \n@@ -429,17 +429,16 @@\n e%5B1:%5D%0A%09%09\n-%09\n row, col\n@@ -459,17 +459,16 @@\n urr%5B1%5D%0A%0A\n-%09\n %09%09if row\n@@ -499,33 +499,32 @@\n ol%5D == '1' %7B%0A%09%09%09\n-%09\n grid%5Brow-1%5D%5Bcol%5D\n@@ -522,33 +522,32 @@\n w-1%5D%5Bcol%5D = '0'%0A\n-%09\n %09%09%09queue = appen\n@@ -573,28 +573,26 @@\n -1, col%7D)%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%09if row+1 %3C\n@@ -621,33 +621,32 @@\n ol%5D == '1' %7B%0A%09%09%09\n-%09\n grid%5Brow+1%5D%5Bcol%5D\n@@ -644,33 +644,32 @@\n w+1%5D%5Bcol%5D = '0'%0A\n-%09\n %09%09%09queue = appen\n@@ -697,24 +697,22 @@\n , col%7D)%0A\n-%09\n %09%09%7D%0A%09%09\n-%09\n if col-1\n@@ -740,33 +740,32 @@\n col-1%5D == '1' %7B%0A\n-%09\n %09%09%09grid%5Brow%5D%5Bcol\n@@ -769,33 +769,32 @@\n col-1%5D = '0'%0A%09%09%09\n-%09\n queue = append(q\n@@ -825,149 +825,25 @@\n )%0A%09%09\n-%09\n %7D%0A%09%09\n-%09if col+1 %3C cols && grid%5Brow%5D%5Bcol+1%5D == '1' %7B%0A%09%09%09%09grid%5Brow%5D%5Bcol+1%5D = '0'%0A%09%09%09%09queue = append(queue, %5B2%5Dint%7Brow, col+1%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09for\n+//if %7B%7D%0A%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-18_20-27-01",
+            "content": "@@ -981,144 +981,8 @@\n %09for\n- i := 0; i %3C rows; i++ %7B%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == '1' %7B%0A%09%09%09%09islands++%0A%09%09%09%09bfs(i, j)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return islands\n %0A%7D%0A%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-18_20-31-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\t\n\trows, cols := len(grid), len(grid[0])\n\tislands := 0\n\tbfs := func(r, c int) {\n\t\tqueue := [][2]int{{r, c}}\n\t\tgrid[r][c] = '0'\n\t\n\n\t\tfor len(queue) > 0 {\n\t\t\tcurr := queue[0]\n\t\t\tqueue = queue[1:]\n\t\t\trow, col := curr[0], curr[1]\n\n\t\t\tif row-1 >= 0 && grid[row-1][col] == '1' {\n\t\t\t\tgrid[row-1][col] = '0'\n\t\t\t\tqueue = append(queue, [2]int{row-1, col})\n\t\t\t}\n\t\t\tif row+1 < rows && grid[row+1][col] == '1' {\n\t\t\t\tgrid[row+1][col] = '0'\n\t\t\t\tqueue = append(queue, [2]int{row+1, col})\n\t\t\t}\n\t\t\tif col-1 >= '0' && grid[row][col-1] == '1' {\n\t\t\t\tgrid[row][col-1] = '0'\n\t\t\t\tqueue = append(queue, [2]int{row, col-1})\n\t\t\t}\n\t\t\tif col+1 < cols && grid[row][col+1] == '1' {\n\t\t\t\tgrid[row][col+1] = '0'\n\t\t\t\tqueue = append(queue, [2]int{row, col+1})\n\t\t\t}\n\t\t}\n\t}\n\n\tfor i := 0; i < rows; i++ {\n\t\tfor j := 0; j < cols; j++ {\n\t\t\tif grid[i][j] == '1' {\n\t\t\t\tislands++\n\t\t\t\tbfs(i, j)\n\t\t\t}\n\t\t}\n\t}\n\treturn islands\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "72"
+        }
+    ]
+}

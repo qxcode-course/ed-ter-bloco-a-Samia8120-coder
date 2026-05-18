@@ -7,8 +7,38 @@
         },
         {
             "label": "2026-03-28_23-04-03",
-            "content": "package main\nimport \"fmt\"\n\ntype Soldado struct{\n    vivo, espada int\n}\n\nfunc matar(){\n    //mata ai\n}\nfunc cacar_vivo(){\n    //ca\u00e7a vivo e da a espada\n}\nfunc main() {\n    var tamanho, posicao int\n    fmt.Scan(&tamanho, &posicao)\n    vet := make([]Soldado, tamanho)\n    for i := range tamanho {\n        fmt.Scan(vet[i])\n    }\n\n    ax := 0\n    for ax > 1{\n        //coisos\n        for {\n            \n        }\n    }\n\n}\n",
+            "content": "@@ -17,397 +17,401 @@\n ort \n-(%0A    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A    %22strconv%22%0A    %22strings%22%0A)%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)\n+%22fmt%22%0A%0Atype Soldado struct%7B%0A    vivo, espada int%0A%7D%0A%0Afunc matar()%7B%0A    //mata ai%0A%7D%0Afunc cacar_vivo()%7B%0A    //ca%C3%A7a vivo e da a espada%0A%7D%0Afunc main() %7B%0A    var tamanho, posicao int\n %0A    \n-scanner.Scan()%0A    linha := scanner.Text()%0A    partes := strings.Fields(linha)%0A%0A    if len(partes) %3C 2 %7B%0A        return%0A    %7D%0A%0A    n, _ := strconv.Atoi(partes%5B0%5D)%0A    e, _ := strconv.Atoi(partes%5B1%5D)%0A%0A    josephusRemocao(n, e)%0A%7D%0A%0Afunc josephusRemocao(n, e int) %7B\n+fmt.Scan(&tamanho, &posicao)%0A    vet := make(%5B%5DSoldado, tamanho)%0A    for i := range tamanho %7B%0A        fmt.Scan(vet%5Bi%5D)%0A    %7D%0A%0A    ax := 0%0A    for ax %3E 1%7B%0A        //coisos%0A        for %7B%0A            %0A        %7D\n %0A    \n+%7D%0A\n %0A%7D%0A\n",
             "lines": "30"
+        },
+        {
+            "label": "2026-05-18_19-11-15",
+            "content": "@@ -367,26 +367,8 @@\n  e)%0A\n-    fmt.Println()%0A\n %7D%0A%0Af\n@@ -399,11 +399,15 @@\n  int) %7B%0A\n+    \n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-18_19-11-37",
+            "content": "@@ -421,92 +421,7 @@\n ) %7B%0A\n-    vivos := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        vivos%5Bi%5D = i+1%0A    %7D\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-18_19-15-52",
+            "content": "@@ -363,16 +363,34 @@\n o(n, e)%0A\n+    fmt.Println()%0A\n %7D%0A%0Afunc \n@@ -474,16 +474,16 @@\n ; i++ %7B%0A\n+\n         \n@@ -506,339 +506,7 @@\n    %7D\n-%0A%0A    pos := e - 1%0A    imprimir := func() %7B%0A        fmt.Print(%22%5B %22)%0A        for i, val := range vivos%7B%0A            if i == pos %7B%0A                fmt.Printf(%22%25d%3E %22, val)%0A            %7D else %7B%0A                fmt.Printf(%22%25d %22, val)%0A            %7D%0A        %7D%0A        fmt.Print(%22%5D%22)%0A    %7D%0A%0A    for len(vivos) %3E 1 %7B%0A        imprimir()%0A    %7D\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-18_19-24-21",
+            "content": "@@ -815,210 +815,12 @@\n r()%0A\n-%0A        proximo := (pos + 1) %25 len(vivos)%0A        vivos = append(vivos%5B:proximo%5D, vivos%5Bproximo+1:%5D...)%0A%0A        if len(vivos) %3E 0 %7B%0A            pos = proximo %25 len(vivos)%0A        %7D%0A    %7D%0A    imprimir()\n+    %7D\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-18_19-29-17",
+            "content": "@@ -758,10 +758,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-18_19-29-56",
+            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n    \"strings\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    linha := scanner.Text()\n    partes := strings.Fields(linha)\n\n    if len(partes) < 2 {\n        return\n    }\n\n    n, _ := strconv.Atoi(partes[0])\n    e, _ := strconv.Atoi(partes[1])\n\n    josephusRemocao(n, e)\n}\n\nfunc josephusRemocao(n, e int) {\n    vivos := make([]int, n)\n    for i := 0; i < n; i++ {\n        vivos[i] = i+1\n    }\n\n    pos := e - 1\n    imprimir := func() {\n        fmt.Print(\"[ \")\n        for i, val := range vivos{\n            if i == pos {\n                fmt.Printf(\"%d> \", val)\n            } else {\n                fmt.Printf(\"%d \", val)\n            }\n        }\n        fmt.Println(\"]\")\n    }\n\n    for len(vivos) > 1 {\n        imprimir()\n\n        proximo := (pos + 1) % len(vivos)\n        vivos = append(vivos[:proximo], vivos[proximo+1:]...)\n\n        if len(vivos) > 0 {\n            pos = proximo % len(vivos)\n        }\n    }\n    imprimir()\n}\n",
+            "lines": "56"
         }
     ]
 }
