@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_21-29-11",
+            "content": "@@ -336,81 +336,14 @@\n    %7D\n- else %7B%0A            fmt.Printf(%22%25d%22, v)%0A        %7D%0A    %7D%0A    println(%22 %5D%22)\n+%0A    %7D\n %0A%7D%0Af\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-19_21-37-13",
+            "content": "@@ -430,217 +430,7 @@\n     \n-var N, E, F int%0A    fmt.Scan(&N, &E, &F)%0A%0A    vals := make(%5B%5Dint, N)%0A    for i := 1; i %3C= N; i++ %7B%0A        sinal := F%0A        if i %25 2 == 0 %7B%0A            sinal = -F%0A        %7D%0A        vals%5Bi-1%5D = i * sinal%0A    %7D\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-19_21-47-20",
+            "content": "@@ -641,386 +641,6 @@\n   %7D%0A\n-%0A    swordIdx := E - 1%0A    print(vals, swordIdx)%0A%0A    for len(vals) %3E 1 %7B%0A        n := len(vals)%0A        atual := vals%5BswordIdx%5D%0A%0A        if atual %3E 0 %7B%0A            target := (swordIdx + 1) %25 n%0A            nextDead := (target + 1) %25 n%0A            vals = append(vals%5B:target%5D, vals%5Btarget+1:%5D...)%0A%0A            if nextDead %3E target %7B%0A                %0A            %7D%0A        %7D%0A    %7D%0A%7D%0A\n+%7D\n %0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-19_21-56-02",
+            "content": "@@ -847,319 +847,12 @@\n     \n-prevDead := (target + 1) %25 n%0A            vals = append(vals%5B:target%5D, vals%5Btarget+1:%5D...)%0A%0A            if prevDead %3E target %7B%0A                swordIdx = prevDead - 1%0A            %7D else %7B%0A                swordIdx = prevDead%0A            %7D%0A        %7D else %7B%0A            target := (swordIdx - 1) %25 n%0A            prev\n+next\n Dead\n@@ -863,17 +863,17 @@\n (target \n--\n++\n  1) %25 n%0A\n@@ -953,12 +953,12 @@\n  if \n-prev\n+next\n Dead\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-19_22-03-04",
+            "content": "@@ -843,20 +843,20 @@\n         \n-next\n+prev\n Dead := \n@@ -949,20 +949,20 @@\n      if \n-next\n+prev\n Dead %3E t\n@@ -992,28 +992,28 @@\n  swordIdx = \n-next\n+prev\n Dead - 1%0A   \n@@ -1061,12 +1061,12 @@\n x = \n-next\n+prev\n Dead\n@@ -1296,142 +1296,32 @@\n     \n-swordIdx = prevDead - 1%0A            %7D else %7B%0A                swordIdx = prevDead%0A            %7D%0A        %7D%0A        print(vals, swordIdx)\n+%0A            %7D%0A        %7D\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-19_22-05-30",
+            "content": "@@ -79,17 +79,16 @@\n t(%22%5B %22)%0A\n-%0A\n     for \n@@ -388,29 +388,25 @@\n %7D%0A    %7D%0A    \n-fmt.P\n+p\n rintln(%22 %5D%22)\n@@ -408,17 +408,16 @@\n %22 %5D%22)%0A%7D%0A\n-%0A\n func mai\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-19_22-07-50",
+            "content": "@@ -1134,28 +1134,24 @@\n swordIdx - 1\n- + n\n ) %25 n%0A      \n@@ -1183,12 +1183,8 @@\n  - 1\n- + n\n ) %25 \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-05-19_22-10-44",
+            "content": "package main\nimport \"fmt\"\n\nfunc print(vals []int, swordIdx int) {\n    fmt.Print(\"[ \")\n\n    for i, v := range vals {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        if i == swordIdx {\n            if v > 0 {\n                fmt.Printf(\"%d>\", v)\n            } else {\n                fmt.Printf(\"<%d\", v)\n            }\n        } else {\n            fmt.Printf(\"%d\", v)\n        }\n    }\n    fmt.Println(\" ]\")\n}\n\nfunc main() {\n    var N, E, F int\n    fmt.Scan(&N, &E, &F)\n\n    vals := make([]int, N)\n    for i := 1; i <= N; i++ {\n        sinal := F\n        if i % 2 == 0 {\n            sinal = -F\n        }\n        vals[i-1] = i * sinal\n    }\n\n    swordIdx := E - 1\n    print(vals, swordIdx)\n\n    for len(vals) > 1 {\n        n := len(vals)\n        atual := vals[swordIdx]\n\n        if atual > 0 {\n            target := (swordIdx + 1) % n\n            nextDead := (target + 1) % n\n            vals = append(vals[:target], vals[target+1:]...)\n\n            if nextDead > target {\n                swordIdx = nextDead - 1\n            } else {\n                swordIdx = nextDead\n            }\n        } else {\n            target := (swordIdx - 1 + n) % n\n            prevDead := (target - 1 + n) % n\n            vals = append(vals[:target], vals[target+1:]...)\n\n            if prevDead > target {\n                swordIdx = prevDead - 1\n            } else {\n                swordIdx = prevDead\n            }\n        }\n        print(vals, swordIdx)\n    }\n}\n\n",
+            "lines": "68"
+        }
+    ]
+}

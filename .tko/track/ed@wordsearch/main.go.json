@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2026-05-17_22-11-12",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\t_, _ = grid, word\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "content": "@@ -168,163 +168,25 @@\n  %7B%0A%09\n-m := len(grid)%0A%09if m == 0 %7B%0A%09%09return false%0A%09%7D%0A%09n := len(grid%5B0%5D)%0A%09visited := make(%5B%5D%5B%5Dbool, m)%0A%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, n)%0A%09%7D\n+_, _ = grid, word\n %0A%09re\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-05-19_20-26-59",
+            "content": "@@ -325,546 +325,20 @@\n %09%7D%0A%09\n-%0A%09var dfs func(i, j, idx int) bool %0A%09dfs = func(i, j, idx int) bool %7B%0A%09%09if idx == len(word) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09if i %3C 0 %7C%7C i %3E= m %7C%7C j %3C 0 %7C%7C j %3E= n %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09if visited%5Bi%5D%5Bj%5D %7C%7C grid%5Bi%5D%5Bj%5D != word%5Bidx%5D %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09visited%5Bi%5D%5Bj%5D = true%0A%0A%09%09if dfs(i+1, j, idx+1) %7C%7C dfs(i-1, j, idx+1) %7C%7C dfs(i, j+1, idx+1) %7C%7C dfs(i, j-1, idx+1) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09visited%5Bi%5D%5Bj%5D = false%0A%09%09return false%09%0A%09%7D%0A%0A%09for i := 0 ; i %3C m; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == word%5B0%5D && dfs(i, j, 0) %7B%0A%09%09%09%09%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+return false\n %0A%7D%0A%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-19_20-53-06",
+            "content": "@@ -847,27 +847,16 @@\n ) %7B%0A%09%09%09%09\n-return true\n %0A%09%09%09%7D%0A%09%09\n@@ -860,30 +860,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-19_20-53-37",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\tm := len(grid)\n\tif m == 0 {\n\t\treturn false\n\t}\n\tn := len(grid[0])\n\tvisited := make([][]bool, m)\n\n\tfor i := range visited {\n\t\tvisited[i] = make([]bool, n)\n\t}\n\t\n\tvar dfs func(i, j, idx int) bool \n\tdfs = func(i, j, idx int) bool {\n\t\tif idx == len(word) {\n\t\t\treturn true\n\t\t}\n\t\tif i < 0 || i >= m || j < 0 || j >= n {\n\t\t\treturn false\n\t\t}\n\t\tif visited[i][j] || grid[i][j] != word[idx] {\n\t\t\treturn false\n\t\t}\n\t\tvisited[i][j] = true\n\n\t\tif dfs(i+1, j, idx+1) || dfs(i-1, j, idx+1) || dfs(i, j+1, idx+1) || dfs(i, j-1, idx+1) {\n\t\t\treturn true\n\t\t}\n\t\tvisited[i][j] = false\n\t\treturn false\t\n\t}\n\n\tfor i := 0 ; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif grid[i][j] == word[0] && dfs(i, j, 0) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "66"
         }
     ]
 }

@@ -12,11 +12,11 @@ func tostr(vet []int) string {
 	if len(vet) == 0 {
 		return "[]"
 	}
-	strs := []string{}
-	for _, v := range vet {
-		strs = append(strs, strconv.Itoa(v))
+	strs := make([]string, len(vet))
+	for i, v := range vet {
+		strs[i] = strconv.Itoa(v)
 	}
-	return "[" + strings.Join(strs, " ") + "]"
+	return "[" + strings.Join(strs, ", ") + "]"
 }
 
 func tostrrev(vet []int) string {
@@ -27,7 +27,7 @@ func tostrrev(vet []int) string {
 	for i := len(vet) - 1; i >= 0; i-- {
 		strs = append(strs, strconv.Itoa(vet[i]))
 	}
-	return "[" + strings.Join(strs, " ") + "]"
+	return "[" + strings.Join(strs, ", ") + "]"
 }
 
 // reverse: inverte os elementos do slice
@@ -49,13 +49,9 @@ func sum(vet []int) int {
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
 	if len(vet) == 0 {
-		return 0
+		return 1
 	}
-	result := 1
-	for _, v := range vet {
-		result *= v
-	}
-	return result
+	return vet[0] * mult(vet[1:])
 }
 
 // min: retorna o índice do menor valor
