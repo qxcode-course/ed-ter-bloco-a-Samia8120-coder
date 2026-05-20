@@ -13,46 +13,46 @@ func numIslands(grid [][]byte) int {
 		return 0
 	}
 	
-	rows, cols := len(grid), len(grid[0])
-	islands := 0
-	bfs := func(r, c int) {
-		queue := [][2]int{{r, c}}
+	linhas, colunas := len(grid), len(grid[0])
+	ilhas := 0
+	busca := func(r, c int) {
+		fila := [][2]int{{r, c}}
 		grid[r][c] = '0'
 	
 
-		for len(queue) > 0 {
-			curr := queue[0]
-			queue = queue[1:]
-			row, col := curr[0], curr[1]
+		for len(fila) > 0 {
+			primeiro := fila[0]
+			fila = fila[1:]
+			lin, col := primeiro[0], primeiro[1]
 
-			if row-1 >= 0 && grid[row-1][col] == '1' {
-				grid[row-1][col] = '0'
-				queue = append(queue, [2]int{row-1, col})
+			if lin-1 >= 0 && grid[lin-1][col] == '1' {
+				grid[lin-1][col] = '0'
+				fila = append(fila, [2]int{lin-1, col})
 			}
-			if row+1 < rows && grid[row+1][col] == '1' {
-				grid[row+1][col] = '0'
-				queue = append(queue, [2]int{row+1, col})
+			if lin+1 < linhas && grid[lin+1][col] == '1' {
+				grid[lin+1][col] = '0'
+				fila = append(fila, [2]int{lin+1, col})
 			}
-			if col-1 >= '0' && grid[row][col-1] == '1' {
-				grid[row][col-1] = '0'
-				queue = append(queue, [2]int{row, col-1})
+			if col-1 >= '0' && grid[lin][col-1] == '1' {
+				grid[lin][col-1] = '0'
+				fila = append(fila, [2]int{lin, col-1})
 			}
-			if col+1 < cols && grid[row][col+1] == '1' {
-				grid[row][col+1] = '0'
-				queue = append(queue, [2]int{row, col+1})
+			if col+1 < colunas && grid[lin][col+1] == '1' {
+				grid[lin][col+1] = '0'
+				fila = append(fila, [2]int{lin, col+1})
 			}
 		}
 	}
 
-	for i := 0; i < rows; i++ {
-		for j := 0; j < cols; j++ {
+	for i := 0; i < linhas; i++ {
+		for j := 0; j < colunas; j++ {
 			if grid[i][j] == '1' {
-				islands++
-				bfs(i, j)
+				ilhas++
+				busca(i, j)
 			}
 		}
 	}
-	return islands
+	return ilhas
 }
 
 // Não modifique a função main

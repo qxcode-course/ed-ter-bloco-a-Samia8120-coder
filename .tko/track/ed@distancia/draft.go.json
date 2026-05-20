@@ -27,6 +27,61 @@
         },
         {
             "label": "2026-05-18_22-39-02",
+            "content": "@@ -1000,17 +1000,16 @@\n + 1; j %3C\n-=\n  n && j-\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-41-11",
+            "content": "@@ -1000,16 +1000,17 @@\n + 1; j %3C\n+=\n  n && j-\n@@ -1014,17 +1014,16 @@\n  j-idx %3C\n-=\n  L; j++ \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-41-24",
+            "content": "@@ -857,16 +857,17 @@\n = 0; d %3C\n+=\n  L; d++ \n@@ -1013,16 +1013,17 @@\n  j-idx %3C\n+=\n  L; j++ \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-41-48",
+            "content": "@@ -857,17 +857,16 @@\n = 0; d %3C\n-=\n  L; d++ \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-42-34",
+            "content": "@@ -334,17 +334,16 @@\n = 0; i %3C\n-=\n  10; i++\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-43-36",
+            "content": "@@ -334,16 +334,17 @@\n = 0; i %3C\n+=\n  10; i++\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-44-00",
+            "content": "@@ -814,10 +814,8 @@\n     \n-//\n retu\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-46-42",
+            "content": "@@ -802,32 +802,34 @@\n old%0A            \n+//\n return false%0A   \n@@ -844,18 +844,16 @@\n         \n-//\n for d :=\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-47-50",
+            "content": "@@ -838,24 +838,26 @@\n  %7D%0A%0A        \n+//\n for d := 0; \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_13-53-34",
+            "content": "@@ -67,68 +67,8 @@\n %0A)%0A%0A\n-func la(a int) bool %7B%0A    fmt.Println(a)%0A    return true%0A%7D%0A%0A\n func\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-20_14-03-27",
+            "content": "@@ -63,16 +63,76 @@\n onv%22%0A)%0A%0A\n+func la(a int) bool %7B%0A    fmt.Println(a)%0A    return true%0A%7D%0A%0A\n func mai\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-20_14-03-58",
             "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    s := scanner.Text()\n    n := len(s)\n    scanner.Scan()\n\n    L, _ := strconv.Atoi(scanner.Text())\n    ans := make([]byte, n)\n    copy(ans, s)\n\n    lastPos := make([]int, 10)\n    for i := 0; i < 10; i++ {\n        lastPos[i] = -1000\n    }\n\n    var dfs func(int) bool\n    dfs = func(idx int) bool{\n        if idx == n {\n            return true\n        }\n        if ans[idx] != '.' {\n            d := int(ans[idx] - '0')\n            if idx-lastPos[d] < L {\n                return false\n            }\n\n            old := lastPos[d]\n            lastPos[d] = idx\n            if dfs(idx + 1){\n                return true\n            }\n\n            lastPos[d] = old\n            return false\n        }\n\n        for d := 0; d <= L; d++ {\n            if idx-lastPos[d] < L {\n                continue\n            }\n\n            ok := true\n            for j := idx + 1; j < n && j-idx < L; j++ {\n                if ans[j] != '.' && int(ans[j]-'0') == d {\n                    ok = false\n                    break\n                }\n            }\n\n            if !ok {\n                continue\n            }\n            ans[idx] = byte('0' + d)\n            old := lastPos[d]\n            lastPos[d] = idx\n\n            if dfs(idx + 1) {\n                return true\n            }\n            ans[idx] = '.'\n            lastPos[d] = old\n        }\n        return false\n    }\n    dfs(0)\n    fmt.Println(string(ans))\n}\n",
             "lines": "76"
         }
