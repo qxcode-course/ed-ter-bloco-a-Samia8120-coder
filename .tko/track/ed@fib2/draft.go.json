@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-22_22-13-17",
+            "content": "@@ -24,21 +24,20 @@\n t%22%0A%0Avar \n-valor\n+memo\n  %5B41%5Dint\n@@ -42,222 +42,8 @@\n nt%0A%0A\n-func f(n int) int %7B%0A    if n == 1 %7C%7C n == 2 %7B%0A        return 1%0A    %7D%0A    if n == 3 %7B%0A        return 2%0A    %7D%0A    if valor%5Bn%5D != 0 %7B%0A        return valor%5Bn%5D%0A    %7D%0A%0A    valor%5Bn%5D = f(n-2) + f(n-3)%0A    return valor%5Bn%5D%0A%7D\n %0A%0Afu\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-05-22_22-17-24",
+            "content": "@@ -320,12 +320,8 @@\n tln(\n-f(n)\n )%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-05-22_22-17-42",
+            "content": "package main\nimport \"fmt\"\n\nvar valor [41]int\n\nfunc f(n int) int {\n    if n == 1 || n == 2 {\n        return 1\n    }\n    if n == 3 {\n        return 2\n    }\n    if valor[n] != 0 {\n        return valor[n]\n    }\n\n    valor[n] = f(n-2) + f(n-3)\n    return valor[n]\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    fmt.Println(f(n))\n}\n",
+            "lines": "25"
+        }
+    ]
+}
