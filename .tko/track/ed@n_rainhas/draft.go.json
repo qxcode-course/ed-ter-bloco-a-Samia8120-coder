@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-21_23-55-22",
+            "content": "@@ -771,10 +771,8 @@\n     \n-//\n back\n@@ -780,24 +780,26 @@\n rack(0)%0A    \n+//\n fmt.Println(\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-21_23-57-41",
+            "content": "@@ -167,24 +167,20 @@\n -1)%0A    \n-solucoes\n+cont\n  := 0%0A%0A \n@@ -276,24 +276,20 @@\n         \n-solucoes\n+cont\n ++%0A     \n@@ -435,17 +435,16 @@\n  coluna%0A\n-%0A\n         \n@@ -763,24 +763,26 @@\n %7D%0A    %7D%0A    \n+//\n backtrack(0)\n@@ -802,16 +802,12 @@\n tln(\n-solucoes\n+cont\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_00-00-45",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    cols := make([]bool, n)\n    diag1 := make([]bool, 2 * n-1)\n    diag2 := make([]bool, 2 * n-1)\n    solucoes := 0\n\n    var backtrack func(int)\n    backtrack = func(linha int) {\n        if linha == n {\n            solucoes++\n            return\n        }\n\n        for coluna := 0; coluna < n; coluna++ {\n            d1 := linha - coluna + n - 1\n            d2 := linha + coluna\n\n            if cols[coluna] || diag1[d1] || diag2[d2] {\n                continue\n            }\n\n            cols[coluna] = true\n            diag1[d1] = true\n            diag2[d2] = true\n            backtrack(linha + 1)\n            cols[coluna] = false\n            diag1[d1] = false\n            diag2[d2] = false\n        }\n    }\n    backtrack(0)\n    fmt.Println(solucoes)\n}\n",
+            "lines": "38"
+        }
+    ]
+}
