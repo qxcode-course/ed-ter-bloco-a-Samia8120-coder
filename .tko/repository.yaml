@@ -19,20 +19,20 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@backtrack
 - ed@rec
+- ed@map_set
+- ed@dfs
+- ed@list
 - ed@basic
 - ed@vector
-- ed@list
-- ed@dfs
-- ed@map_set
-- ed@backtrack
 - ed@linear
 flags:
   inbox: all
   panel: skills
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@sudoku
-selected_index: 47
+selected: ed@especiais
+selected_index: 13

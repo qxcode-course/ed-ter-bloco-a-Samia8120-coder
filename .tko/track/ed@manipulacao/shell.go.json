@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_14-26-43",
+            "content": "@@ -99,128 +99,27 @@\n  %7B%0A%09\n-resultado := %5B%5Dint%7B%7D%0A%0A%09for _, v := range vet %7B%0A%09%09if v %3E 0 %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-05-23_14-44-32",
+            "content": "@@ -261,139 +261,27 @@\n  %7B%0A%09\n-resultado := %5B%5Dint%7B%7D%0A%0A%09for _, v := range vet %7B%0A%09%09if v %3C 0 && -v %3C 10 %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-05-23_14-46-33",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -429,22 +429,15 @@\n  %7B%0A%09\n-sort.Ints(\n+_ = \n vet\n-)\n %0A%09re\n@@ -437,27 +437,27 @@\n vet%0A%09return \n-vet\n+nil\n %0A%7D%0A%0Afunc sor\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-05-23_14-50-47",
+            "content": "@@ -503,57 +503,27 @@\n  %7B%0A%09\n-sort.SliceStable(vet, func(i, j int) bool %7B%0A%09%09%0A%09%7D\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-05-23_14-54-38",
+            "content": "@@ -549,180 +549,11 @@\n %7B%0A%09%09\n-moduloI := vet%5Bi%5D%0A%09%09if moduloI %3C 0 %7B%0A%09%09%09moduloI = -moduloI%0A%09%09%7D%0A%0A%09%09moduloJ := vet%5Bj%5D%0A%09%09if moduloJ %3C 0 %7B%0A%09%09%09moduloJ = -moduloJ%0A%09%09%7D%0A%0A%09%09return moduloI %3C moduloJ%0A%09%7D)%0A%09return vet\n+%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-23_15-02-05",
+            "content": "@@ -758,102 +758,27 @@\n  %7B%0A%09\n-n := len(\n+_ = \n vet\n-)\n %0A%09re\n-v := make(%5B%5Dint, n)%0A%0A%09for i, v := range vet %7B%0A%09%09rev%5Bn-1-i%5D = v%0A%09%7D%0A%09return rev\n+turn nil\n %0A%7D%0A%0A\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-23_15-08-43",
+            "content": "@@ -772,18 +772,16 @@\n et)%0A%09rev\n-er\n  := make\n@@ -822,18 +822,16 @@\n  %7B%0A%09%09rev\n-er\n %5Bn-1-i%5D \n@@ -848,18 +848,16 @@\n turn rev\n-er\n %0A%7D%0A%0Afunc\n@@ -888,180 +888,27 @@\n  %7B%0A%09\n-visto := make(map%5Bint%5Dbool)%0A%09resultado := %5B%5Dint%7B%7D%0A%0A%09for _, v := range vet %7B%0A%09%09if !visto%5Bv%5D %7B%0A%09%09%09visto%5Bv%5D = true%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-23_15-17-35",
+            "content": "@@ -1104,177 +1104,27 @@\n  %7B%0A%09\n-count := make(map%5Bint%5Dint)%0A%09resultado := %5B%5Dint%7B%7D%0A%0A%09for _, v := range vet %7B%0A%09%09if count%5Bv%5D %3E= 1 %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%09count%5Bv%5D++%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-05-23_15-22-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tresultado := []int{}\n\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tresultado := []int{}\n\n\tfor _, v := range vet {\n\t\tif v < 0 && -v < 10 {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc sortVet(vet []int) []int {\n\tsort.Ints(vet)\n\treturn vet\n}\n\nfunc sortStress(vet []int) []int {\n\tsort.SliceStable(vet, func(i, j int) bool {\n\t\tmoduloI := vet[i]\n\t\tif moduloI < 0 {\n\t\t\tmoduloI = -moduloI\n\t\t}\n\n\t\tmoduloJ := vet[j]\n\t\tif moduloJ < 0 {\n\t\t\tmoduloJ = -moduloJ\n\t\t}\n\n\t\treturn moduloI < moduloJ\n\t})\n\treturn vet\n}\n\nfunc reverse(vet []int) []int {\n\tn := len(vet)\n\trever := make([]int, n)\n\n\tfor i, v := range vet {\n\t\trever[n-1-i] = v\n\t}\n\treturn rever\n}\n\nfunc unique(vet []int) []int {\n\tvisto := make(map[int]bool)\n\tresultado := []int{}\n\n\tfor _, v := range vet {\n\t\tif !visto[v] {\n\t\t\tvisto[v] = true\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc repeated(vet []int) []int {\n\tcount := make(map[int]int)\n\tresultado := []int{}\n\n\tfor _, v := range vet {\n\t\tif count[v] >= 1 {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t\tcount[v]++\n\t}\n\treturn resultado\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "152"
+        }
+    ]
+}
