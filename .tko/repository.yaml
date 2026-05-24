@@ -19,20 +19,20 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@vector
 - ed@backtrack
+- ed@rec
+- ed@dfs
+- ed@map_set
 - ed@linear
 - ed@basic
-- ed@dfs
-- ed@vector
-- ed@rec
-- ed@map_set
 - ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bitcoin
-selected_index: 40
+selected: ed@fractais_png
+selected_index: 41

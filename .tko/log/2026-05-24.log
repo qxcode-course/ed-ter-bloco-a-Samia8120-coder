@@ -32,3 +32,100 @@
 2026-05-24 00:27:14, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:100, size:16
 2026-05-24 00:27:20, MOVE, v:1, k:ed@padroes3, mode:BACK
 2026-05-24 00:27:35, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:15
+2026-05-24 13:32:11, MOVE, v:1, k:ed@bitcoin, mode:DOWN
+2026-05-24 13:32:21, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-05-24 13:32:36, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:5
+2026-05-24 13:33:32, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:32:11, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:32:35, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:36:19, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:39:40, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:18
+2026-05-24 13:41:23, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:39:39, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:42:25, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:23
+2026-05-24 13:42:46, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:24
+2026-05-24 13:46:08, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:42:45, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:47:44, EXEC, v:1, k:ed@bitcoin, mode:FULL, size:33, fail:COMP
+2026-05-24 13:49:58, EXEC, v:1, k:ed@bitcoin, mode:FULL, size:35, fail:COMP
+2026-05-24 13:51:00, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:51:44, EXEC, v:1, k:ed@bitcoin, mode:FULL, size:35, fail:COMP
+2026-05-24 13:51:55, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:35
+2026-05-24 13:52:34, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:35
+2026-05-24 13:55:55, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:52:33, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 13:58:52, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:37
+2026-05-24 13:59:02, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-05-24 13:59:08, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-05-24 13:59:11, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-05-24 13:59:22, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-05-24 13:59:25, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0
+2026-05-24 13:59:24, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 14:04:29, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:0, size:37
+2026-05-24 14:04:42, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100, size:37
+2026-05-24 14:04:45, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-05-24 14:05:10, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-05-24 14:05:13, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100
+2026-05-24 14:05:12, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 14:17:04, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100
+2026-05-24 14:17:05, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-05-24 14:17:25, SELF, v:1, k:ed@bitcoin, self:1, rate:100, study:50, concept:1
+2026-05-24 14:18:04, MOVE, v:1, k:ed@santo, mode:PICK
+2026-05-24 14:18:16, EXEC, v:1, k:ed@santo, mode:FREE, size:5
+2026-05-24 14:18:23, EXEC, v:1, k:ed@santo, mode:FULL, rate:0
+2026-05-24 14:18:16, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:18:23, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:18:48, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:37:05, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:37:13, EXEC, v:1, k:ed@santo, mode:FULL, size:11, fail:COMP
+2026-05-24 14:38:30, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:14
+2026-05-24 14:42:06, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:38:30, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:44:12, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:15
+2026-05-24 14:46:20, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:15
+2026-05-24 14:46:30, MOVE, v:1, k:ed@santo, mode:BACK
+2026-05-24 14:46:38, MOVE, v:1, k:ed@santo, mode:PICK
+2026-05-24 14:46:40, EXEC, v:1, k:ed@santo, mode:FULL, rate:100, size:15
+2026-05-24 14:46:43, MOVE, v:1, k:ed@santo, mode:BACK
+2026-05-24 14:46:54, SELF, v:1, k:ed@santo, self:1, rate:100, study:30, refactor:1
+2026-05-24 14:50:14, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-05-24 14:50:25, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:5
+2026-05-24 14:46:40, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-05-24 14:50:24, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-24 14:50:24, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-24 15:16:12, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-24 15:20:30, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:30
+2026-05-24 15:20:27, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-24 15:20:28, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-24 15:24:39, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:34
+2026-05-24 15:25:01, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-05-24 15:25:08, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-05-24 15:25:11, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0
+2026-05-24 15:28:13, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100, size:34
+2026-05-24 15:28:21, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-05-24 15:28:36, SELF, v:1, k:ed@enesimo, self:1, rate:100, study:40
+2026-05-24 15:29:17, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-05-24 15:29:27, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100
+2026-05-24 15:29:27, MOVE, v:1, k:ed@bitcoin, mode:EDIT
+2026-05-24 15:42:03, EXEC, v:1, k:ed@bitcoin, mode:FULL, rate:100
+2026-05-24 15:42:04, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-05-24 15:43:36, MOVE, v:1, k:ed@escada, mode:PICK
+2026-05-24 15:43:51, EXEC, v:1, k:ed@escada, mode:FULL, rate:100
+2026-05-24 15:43:50, MOVE, v:1, k:ed@escada, mode:EDIT
+2026-05-24 15:43:51, MOVE, v:1, k:ed@escada, mode:EDIT
+2026-05-24 15:51:42, EXEC, v:1, k:ed@escada, mode:FULL, rate:100
+2026-05-24 15:51:43, MOVE, v:1, k:ed@escada, mode:BACK
+2026-05-24 15:52:17, SELF, v:1, k:ed@escada, self:1, rate:100, study:25, concept:1
+2026-05-24 15:52:59, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-05-24 15:53:09, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-24 15:53:09, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-24 15:53:09, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-24 16:06:19, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-24 16:06:21, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-05-24 16:06:30, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-05-24 16:06:32, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-24 16:06:32, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-24 16:06:32, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-24 16:47:01, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-05-24 16:47:04, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-24 16:47:05, MOVE, v:1, k:ed@fractais_png, mode:BACK

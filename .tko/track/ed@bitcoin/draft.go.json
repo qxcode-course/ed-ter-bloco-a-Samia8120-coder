@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_13-32-36",
+            "content": "@@ -23,193 +23,53 @@\n mt%22%0A\n-%0Avar k int%0Avar memo map%5Bint%5Dint%0A%0Afunc contador(n int) int %7B%0A    if n %3C= k %7B%0A        return 1%0A    %7D%0A    return 0%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    fmt.Print(contador(n)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-24_13-39-40",
+            "content": "@@ -126,117 +126,16 @@\n     \n-if v, ok := memo%5Bn%5D; ok %7B%0A        return v%0A    %7D%0A%0A    res := contador((n+1)/2) + contador(n/2)%0A    return res\n+return 0\n %0A%7D%0A%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-24_13-42-25",
+            "content": "@@ -221,26 +221,8 @@\n /2)%0A\n-    memo%5Bn%5D = res%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-24_13-42-46",
+            "content": "@@ -10,58 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22\n-%0A%09%22bufio%22%0A    %22os%22%0A    %22strconv%22%0A)\n %0A%0Ava\n@@ -275,139 +275,34 @@\n     \n-scanner := bufio.NewScanner(os.Stdin)%0A    scanner.Split(bufio.ScanWords)%0A    n, _ := strconv.ParseInt(scanner.Text(), 10, 64)%0A%0A    \n+var n int%0A    fmt.Scan(&n)\n %0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-24_13-47-44",
+            "content": "@@ -439,113 +439,13 @@\n 64)%0A\n+%0A\n     \n-scanner.Scan()%0A    k, _ := strconv.ParseInt(scanner.Text(), 10, 64)%0A    %0A    memo = make(map%5Bint%5Dint)\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-24_13-49-58",
+            "content": "@@ -67,18 +67,16 @@\n ar k int\n-64\n %0Avar mem\n@@ -84,24 +84,20 @@\n  map%5Bint\n-64\n %5Dint\n-64\n %0A%0Afunc c\n@@ -113,17 +113,13 @@\n  int\n-64\n ) int\n-64\n  %7B%0A \n@@ -539,16 +539,12 @@\n %5Bint\n-64\n %5Dint\n-64\n )%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-24_13-51-44",
+            "content": "@@ -472,10 +472,8 @@\n     \n-//\n k, _\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-24_13-51-55",
+            "content": "@@ -472,13 +472,16 @@\n     \n+//\n k, _ \n+:\n = st\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-24_13-52-34",
+            "content": "@@ -20,25 +20,22 @@\n t (%0A\n-    %22bufio%22%0A%09%22fmt\n+%09%22fmt%22%0A%09%22bufio\n %22%0A  \n@@ -227,22 +227,16 @@\n %0A    res\n-ultado\n  := cont\n@@ -282,22 +282,16 @@\n n%5D = res\n-ultado\n %0A    ret\n@@ -301,14 +301,8 @@\n  res\n-ultado\n %0A%7D%0A%0A\n@@ -396,28 +396,8 @@\n ds)%0A\n-    scanner.Scan()%0A%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-24_13-58-52",
+            "content": "@@ -513,10 +513,8 @@\n     \n-//\n k, _\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-24_14-04-29",
+            "content": "@@ -509,16 +509,18 @@\n n()%0A    \n+//\n k, _ = s\n@@ -614,10 +614,8 @@\n rint\n-ln\n (con\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-24_14-04-42",
+            "content": "package main\n\nimport (\n    \"bufio\"\n\t\"fmt\"\n    \"os\"\n    \"strconv\"\n)\n\nvar k int64\nvar memo map[int64]int64\n\nfunc contador(n int64) int64 {\n    if n <= k {\n        return 1\n    }\n    if v, ok := memo[n]; ok {\n        return v\n    }\n\n    resultado := contador((n+1)/2) + contador(n/2)\n    memo[n] = resultado\n    return resultado\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Split(bufio.ScanWords)\n    scanner.Scan()\n\n    n, _ := strconv.ParseInt(scanner.Text(), 10, 64)\n    scanner.Scan()\n    k, _ = strconv.ParseInt(scanner.Text(), 10, 64)\n    \n    memo = make(map[int64]int64)\n    fmt.Println(contador(n))\n}\n",
+            "lines": "37"
+        }
+    ]
+}
