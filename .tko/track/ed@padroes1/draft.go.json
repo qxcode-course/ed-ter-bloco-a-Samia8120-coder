@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_23-45-32",
+            "content": "@@ -41,59 +41,35 @@\n     \n-var n int%0A    fmt.Scan(&n)%0A    fmt.Println(8*n + 12\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-23_23-54-28",
+            "content": "@@ -23,109 +23,8 @@\n mt%22%0A\n-%0Afunc quadrados(n int)int %7B%0A    if n == 1 %7B%0A        return 20%0A    %7D%0A    return quadrados(n-1) + 8%0A%7D%0A%0A\n func\n@@ -81,21 +81,19 @@\n rint\n-(quadrados(n)\n+ln(8*n + 12\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-24_00-15-33",
+            "content": "@@ -182,10 +182,8 @@\n rint\n-ln\n (qua\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-24_00-15-44",
+            "content": "package main\nimport \"fmt\"\n\nfunc quadrados(n int)int {\n    if n == 1 {\n        return 20\n    }\n    return quadrados(n-1) + 8\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    fmt.Println(quadrados(n))\n}\n",
+            "lines": "15"
+        }
+    ]
+}

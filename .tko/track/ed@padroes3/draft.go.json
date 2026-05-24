@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_00-10-11",
+            "content": "@@ -134,10 +134,8 @@\n rint\n-ln\n (res\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-05-24_00-10-24",
+            "content": "@@ -23,179 +23,105 @@\n mt%22%0A\n-%0A\n func\n- pontos(n,\n  m\n- int) int\n+ain()\n  %7B%0A    \n-if m == 1 %7B%0A        return 1%0A    %7D%0A    %0A    return pontos(n, m-1) + (n-2)*(m-1) + 1%0A%7D%0A%0Afunc main() %7B%0A    var n, m int%0A    fmt.Scan(&n, &m)\n+var n, m int%0A    fmt.Scan(&n, &m)%0A%0A    resultado := ((n-2) * m * (m-1)) / 2 + m\n %0A   \n@@ -134,21 +134,20 @@\n rint\n-(pontos(n, m)\n+ln(resultado\n )%0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-05-24_00-27-00",
+            "content": "@@ -208,10 +208,8 @@\n rint\n-ln\n (pon\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-24_00-27-14",
+            "content": "package main\nimport \"fmt\"\n\nfunc pontos(n, m int) int {\n    if m == 1 {\n        return 1\n    }\n    \n    return pontos(n, m-1) + (n-2)*(m-1) + 1\n}\n\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n    fmt.Println(pontos(n, m))\n}\n",
+            "lines": "16"
+        }
+    ]
+}
