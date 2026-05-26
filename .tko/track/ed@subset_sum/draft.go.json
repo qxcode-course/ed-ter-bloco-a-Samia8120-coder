@@ -12,8 +12,13 @@
         },
         {
             "label": "2026-05-17_20-39-15",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    nums := make([]int, n)\n    for i := 0; i < n; i++{\n        fmt.Scan(&nums[i])\n    }\n\n    dp := make([]bool, k+1)\n    dp[0] = true\n\n    for _, val := range nums {\n        for s := k; s >= val; s-- {\n            if dp[s-val] {\n                dp[s] = true\n            }\n        } \n    }\n\n    if dp[k] {\n        fmt.Print(\"true\\n\")\n    } else {\n        fmt.Print(\"false\\n\")\n    }\n}\n",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n",
             "lines": "28"
+        },
+        {
+            "label": "2026-05-26_13-49-54",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    nums := make([]int, n)\n    for i := 0; i < n; i++{\n        fmt.Scan(&nums[i])\n    }\n\n    dp := make([]bool, k+1)\n    dp[0] = true\n\n    for _, val := range nums {\n        for s := k; s >= val; s-- {\n            if dp[s-val] {\n                dp[s] = true\n            }\n        } \n    }\n\n    if dp[k] {\n        fmt.Print(\"true\\n\")\n    } else {\n        fmt.Print(\"false\\n\")\n    }\n}\n",
+            "lines": "29"
         }
     ]
 }

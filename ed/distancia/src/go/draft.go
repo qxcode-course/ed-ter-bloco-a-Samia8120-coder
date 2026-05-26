@@ -1,34 +1,52 @@
 package main
-import (
-    "bufio"
-    "fmt"
-    "os"
-    "strconv"
-)
+
+import "fmt"
+
+func inserir(line []rune, indice int, num int, lim int,prox int) bool {
+    for i := indice + 1; i < indice + 1 + prox; i++ {
+        if i < len(line) && line[i] == rune(num) + '0' {
+            return false
+        }
+    }
+    for i := indice - prox; i < indice; i++ {
+        if i >= 0 && line[i] == rune(num) + '0'{
+            return false
+        }
+    }
+    return true
+}
+
+func distancia(line []rune, indice int, lim int, prox int) bool {
+    if len(line) == indice {
+        fmt.Println(string(line))
+        return true
+    }
+    if line[indice] != '.' {
+        return distancia(line, indice + 1, lim, prox)
+    }
+
+    for i := 0; i <= lim; i++ {
+        if inserir(line, indice, i, lim, prox) {
+            line[indice] = rune(i) + '0'
+
+            if distancia(line, indice + 1, lim, prox) {
+                return true
+            }
+        }
+    }
+    line[indice] = '.'
+    return false
+}
 
 func main() {
-    scanner := bufio.NewScanner(os.Stdin)
-    scanner.Scan()
-    s := scanner.Text()
-    n := len(s)
-    scanner.Scan()
+    limite := 0
+    entrada := ""
+    indice := 0
+    
+    fmt.Scanln(&entrada)
+    fmt.Scanln(&limite)
 
-    L, _ := strconv.Atoi(scanner.Text())
-    ans := []byte(s)
+    linha := []rune(entrada)
 
-    for i := 0; i < L && i < n; i++ {
-        if ans[i] == '.' {
-            ans[i] = '0'
-        }
-    }
-
-    padrao := s[:L]
-    for i := 0; i < n; i++ {
-        if s[i] != '.' {
-            ans[i] = s[i]
-        } else {
-            ans[i] = padrao[i%L]
-        }
-    }
-    fmt.Println(string(ans))
+    distancia(linha, indice, limite, limite)
 }

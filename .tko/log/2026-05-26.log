@@ -2,3 +2,46 @@
 2026-05-26 00:03:08, MOVE, v:1, k:ed@distancia, mode:BACK
 2026-05-26 00:03:53, MOVE, v:1, k:ed@subset_sum, mode:PICK
 2026-05-26 00:04:01, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-26 13:11:06, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-26 13:18:29, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-26 13:18:59, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-26 13:23:27, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:28:12, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:33:02, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:33:39, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:52
+2026-05-26 13:33:52, EXEC, v:1, k:ed@distancia, mode:FULL, size:52, fail:COMP
+2026-05-26 13:34:00, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:52
+2026-05-26 13:34:12, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-26 13:35:18, SELF, v:1, k:ed@distancia, self:1, rate:100, study:180, friend:Juliana, concept:1
+2026-05-26 13:36:53, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-26 13:37:02, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-26 13:37:23, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-26 13:43:42, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-26 13:49:54, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:29
+2026-05-26 13:49:55, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-26 13:50:25, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-26 14:06:08, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100
+2026-05-26 14:06:09, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-26 14:07:17, MOVE, v:1, k:ed@padroes1, mode:PICK
+2026-05-26 14:19:08, EXEC, v:1, k:ed@padroes1, mode:FULL, rate:100
+2026-05-26 14:19:09, MOVE, v:1, k:ed@padroes1, mode:BACK
+2026-05-26 14:21:21, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-05-26 14:41:00, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-05-26 18:52:05, MOVE, v:1, k:ed@casais, mode:PICK
+2026-05-26 18:59:10, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-26 19:04:30, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:23
+2026-05-26 19:04:22, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-26 19:04:30, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-26 19:09:08, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:23
+2026-05-26 19:09:33, EXEC, v:1, k:ed@casais, mode:FULL, rate:75, size:23
+2026-05-26 19:09:31, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-26 19:09:33, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-26 19:12:54, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:23
+2026-05-26 19:12:56, MOVE, v:1, k:ed@casais, mode:BACK
+2026-05-26 19:13:28, SELF, v:1, k:ed@casais, self:1, rate:100
+2026-05-26 19:14:07, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-05-26 19:14:09, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-26 19:14:11, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-05-26 19:14:45, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-26 19:14:53, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-26 19:14:55, MOVE, v:1, k:ed@editorint, mode:BACK

@@ -97,8 +97,23 @@
         },
         {
             "label": "2026-05-26_00-02-24",
-            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    s := scanner.Text()\n    n := len(s)\n    scanner.Scan()\n\n    L, _ := strconv.Atoi(scanner.Text())\n    ans := []byte(s)\n\n    for i := 0; i < L && i < n; i++ {\n        if ans[i] == '.' {\n            ans[i] = '0'\n        }\n    }\n\n    padrao := s[:L]\n    for i := 0; i < n; i++ {\n        if s[i] != '.' {\n            ans[i] = s[i]\n        } else {\n            ans[i] = padrao[i%L]\n        }\n    }\n    fmt.Println(string(ans))\n}\n",
+            "content": "@@ -10,645 +10,261 @@\n ain%0A\n-%0A\n import \n-%22fmt%22%0A%0Afunc inserir(line %5B%5Drune, indice int, num int, lim int,prox int) bool %7B%0A    for i := indice + 1; i %3C indice + 1 + prox; i++ %7B%0A        if i %3C len(line) && line%5Bi%5D == rune(num) + '0' %7B%0A            return false%0A        %7D%0A    %7D%0A    for i := indice - prox; i %3C indice; i++ %7B%0A        if i %3E= 0 && line%5Bi%5D == rune(num) + '0'%7B%0A            return false%0A        %7D%0A    %7D%0A    return true%0A%7D%0A%0Afunc distancia(line %5B%5Drune, indice int, lim int, prox int) bool %7B%0A    if len(line) == indice %7B%0A        fmt.Println(string(line))%0A        return true%0A    %7D%0A    if line%5Bindice%5D != '.' %7B%0A        return distancia(line, indice + 1, lim, prox)%0A    %7D\n+(%0A    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A    %22strconv%22%0A)%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    scanner.Scan()%0A    s := scanner.Text()%0A    n := len(s)%0A    scanner.Scan()%0A%0A    L, _ := strconv.Atoi(scanner.Text())%0A    ans := %5B%5Dbyte(s)\n %0A%0A  \n@@ -284,13 +284,19 @@\n  i %3C\n-= lim\n+ L && i %3C n\n ; i+\n@@ -314,96 +314,57 @@\n  if \n-inserir(line, indice, i, lim, prox) %7B%0A            line%5Bindice%5D = rune(i) +\n+ans%5Bi%5D == '.' %7B%0A            ans%5Bi%5D =\n  '0'%0A\n-%0A\n         \n     \n@@ -363,97 +363,90 @@\n     \n+%7D%0A\n     \n-if distancia(line, indice + 1, lim, prox) %7B%0A                return true%0A            %7D\n+%7D%0A%0A    padrao := s%5B:L%5D%0A    for i := 0; i %3C n; i++ %7B%0A        if s%5Bi%5D != '.' %7B\n %0A   \n@@ -454,127 +454,91 @@\n     \n-%7D%0A\n     \n-%7D%0A    line%5Bindice%5D = '.'%0A    return false%0A%7D%0A%0Afunc main() %7B%0A    limite := 0%0A    entrada := %22%22%0A    indice := 0\n+ans%5Bi%5D = s%5Bi%5D%0A        %7D else %7B%0A            ans%5Bi%5D = padrao%5Bi%25L%5D%0A        %7D\n %0A    \n+%7D\n %0A   \n@@ -546,123 +546,27 @@\n fmt.\n-Scanln(&entrada)%0A    fmt.Scanln(&limite)%0A%0A    linha := %5B%5Drune(entrada)%0A%0A    distancia(linha, indice, limite, limite\n+Println(string(ans)\n )%0A%7D%0A\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-05-26_13-33-38",
+            "content": "@@ -67,16 +67,25 @@\n num int,\n+ lim int,\n prox int\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-26_13-33-52",
+            "content": "@@ -67,25 +67,16 @@\n num int,\n- lim int,\n prox int\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-26_13-34-00",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc inserir(line []rune, indice int, num int, lim int,prox int) bool {\n    for i := indice + 1; i < indice + 1 + prox; i++ {\n        if i < len(line) && line[i] == rune(num) + '0' {\n            return false\n        }\n    }\n    for i := indice - prox; i < indice; i++ {\n        if i >= 0 && line[i] == rune(num) + '0'{\n            return false\n        }\n    }\n    return true\n}\n\nfunc distancia(line []rune, indice int, lim int, prox int) bool {\n    if len(line) == indice {\n        fmt.Println(string(line))\n        return true\n    }\n    if line[indice] != '.' {\n        return distancia(line, indice + 1, lim, prox)\n    }\n\n    for i := 0; i <= lim; i++ {\n        if inserir(line, indice, i, lim, prox) {\n            line[indice] = rune(i) + '0'\n\n            if distancia(line, indice + 1, lim, prox) {\n                return true\n            }\n        }\n    }\n    line[indice] = '.'\n    return false\n}\n\nfunc main() {\n    limite := 0\n    entrada := \"\"\n    indice := 0\n    \n    fmt.Scanln(&entrada)\n    fmt.Scanln(&limite)\n\n    linha := []rune(entrada)\n\n    distancia(linha, indice, limite, limite)\n}\n",
+            "lines": "52"
         }
     ]
 }
