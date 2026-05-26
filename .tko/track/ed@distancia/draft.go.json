@@ -82,8 +82,23 @@
         },
         {
             "label": "2026-05-20_14-03-58",
-            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    s := scanner.Text()\n    n := len(s)\n    scanner.Scan()\n\n    L, _ := strconv.Atoi(scanner.Text())\n    ans := make([]byte, n)\n    copy(ans, s)\n\n    lastPos := make([]int, 10)\n    for i := 0; i < 10; i++ {\n        lastPos[i] = -1000\n    }\n\n    var dfs func(int) bool\n    dfs = func(idx int) bool{\n        if idx == n {\n            return true\n        }\n        if ans[idx] != '.' {\n            d := int(ans[idx] - '0')\n            if idx-lastPos[d] < L {\n                return false\n            }\n\n            old := lastPos[d]\n            lastPos[d] = idx\n            if dfs(idx + 1){\n                return true\n            }\n\n            lastPos[d] = old\n            return false\n        }\n\n        for d := 0; d <= L; d++ {\n            if idx-lastPos[d] < L {\n                continue\n            }\n\n            ok := true\n            for j := idx + 1; j < n && j-idx < L; j++ {\n                if ans[j] != '.' && int(ans[j]-'0') == d {\n                    ok = false\n                    break\n                }\n            }\n\n            if !ok {\n                continue\n            }\n            ans[idx] = byte('0' + d)\n            old := lastPos[d]\n            lastPos[d] = idx\n\n            if dfs(idx + 1) {\n                return true\n            }\n            ans[idx] = '.'\n            lastPos[d] = old\n        }\n        return false\n    }\n    dfs(0)\n    fmt.Println(string(ans))\n}\n",
+            "content": "@@ -863,9 +863,9 @@\n  %3C= \n-9\n+L\n ; d+\n",
             "lines": "76"
+        },
+        {
+            "label": "2026-05-25_22-49-01",
+            "content": "@@ -247,35 +247,59 @@\n     \n-padrao := s%5B:L%5D%0A    %0A    an\n+ans := make(%5B%5Dbyte, n)%0A    copy(ans, s)%0A%0A    lastPo\n s :=\n@@ -302,31 +302,31 @@\n s := make(%5B%5D\n-byte, n\n+int, 10\n )%0A    for i \n@@ -335,17 +335,18 @@\n  0; i %3C \n-n\n+10\n ; i++ %7B%0A\n@@ -357,14 +357,165 @@\n     \n-if \n+lastPos%5Bi%5D = -1000%0A    %7D%0A%0A    var dfs func(int) bool%0A    dfs = func(idx int) bool%7B%0A        if idx == n %7B%0A            return true%0A        %7D%0A        if an\n s%5Bi\n+dx\n %5D !=\n@@ -537,38 +537,706 @@\n     \n-ans%5Bi%5D = s%5Bi%5D%0A        %7D else %7B\n+d := int(ans%5Bidx%5D - '0')%0A            if idx-lastPos%5Bd%5D %3C L %7B%0A                return false%0A            %7D%0A%0A            old := lastPos%5Bd%5D%0A            lastPos%5Bd%5D = idx%0A            if dfs(idx + 1)%7B%0A                return true%0A            %7D%0A%0A            lastPos%5Bd%5D = old%0A            return false%0A        %7D%0A%0A        for d := 0; d %3C= 9; d++ %7B%0A            if idx-lastPos%5Bd%5D %3C L %7B%0A                continue%0A            %7D%0A%0A            ok := true%0A            for j := idx + 1; j %3C n && j-idx %3C L; j++ %7B%0A                if ans%5Bj%5D != '.' && int(ans%5Bj%5D-'0') == d %7B%0A                    ok = false%0A                    break%0A                %7D%0A            %7D%0A%0A            if !ok %7B%0A                continue%0A            %7D\n %0A   \n@@ -1253,39 +1253,263 @@\n ns%5Bi\n+dx\n %5D = \n-padrao%5Bi%25L%5D%0A        %7D%0A    %7D\n+byte('0' + d)%0A            old := lastPos%5Bd%5D%0A            lastPos%5Bd%5D = idx%0A%0A            if dfs(idx + 1) %7B%0A                return true%0A            %7D%0A            ans%5Bidx%5D = '.'%0A            lastPos%5Bd%5D = old%0A        %7D%0A        return false%0A    %7D%0A    dfs(0)\n %0A   \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-25_23-38-28",
+            "content": "@@ -247,152 +247,55 @@\n     \n-ans := %5B%5Dbyte(s)%0A%0A    for i := 0; i %3C L && i %3C n; i++ %7B%0A        if ans%5Bi%5D == '.' %7B%0A            ans%5Bi%5D = '0'%0A        %7D%0A    %7D%0A%0A    padrao := s%5B:L%5D\n+padrao := s%5B:L%5D%0A    %0A    ans := make(%5B%5Dbyte, n)\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-26_00-02-24",
+            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    s := scanner.Text()\n    n := len(s)\n    scanner.Scan()\n\n    L, _ := strconv.Atoi(scanner.Text())\n    ans := []byte(s)\n\n    for i := 0; i < L && i < n; i++ {\n        if ans[i] == '.' {\n            ans[i] = '0'\n        }\n    }\n\n    padrao := s[:L]\n    for i := 0; i < n; i++ {\n        if s[i] != '.' {\n            ans[i] = s[i]\n        } else {\n            ans[i] = padrao[i%L]\n        }\n    }\n    fmt.Println(string(ans))\n}\n",
+            "lines": "34"
         }
     ]
 }

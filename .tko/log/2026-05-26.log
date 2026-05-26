@@ -1,0 +1,4 @@
+2026-05-26 00:02:24, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:34
+2026-05-26 00:03:08, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-26 00:03:53, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-26 00:04:01, MOVE, v:1, k:ed@subset_sum, mode:BACK

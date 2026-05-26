@@ -1,0 +1,20 @@
+2026-05-25 22:24:28, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-05-25 22:24:30, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-05-25 22:24:31, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-05-25 22:25:44, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-05-25 22:25:46, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-05-25 22:25:47, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-05-25 22:29:18, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-25 22:25:45, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-25 22:25:46, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-25 22:34:35, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 22:49:01, EXEC, v:1, k:ed@distancia, mode:FULL, rate:28, size:76
+2026-05-25 22:49:01, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:29:07, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:34:33, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:38:28, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:28
+2026-05-25 23:38:22, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:38:28, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:48:55, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0
+2026-05-25 23:48:55, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 23:53:13, MOVE, v:1, k:ed@distancia, mode:EDIT
