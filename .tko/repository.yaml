@@ -18,13 +18,14 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@linear
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@basic
-selected_index: 0
+selected: ed@bufferring
+selected_index: 7
