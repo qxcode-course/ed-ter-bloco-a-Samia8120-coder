@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-02_22-06-44",
+            "content": "@@ -7,18 +7,16 @@\n e main%0A%0A\n-//\n type Sta\n@@ -34,18 +34,16 @@\n truct %7B%0A\n-//\n %09data %5B%5D\n@@ -48,10 +48,8 @@\n %5B%5DT%0A\n-//\n %7D%0A%0Af\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-02_22-49-50",
+            "content": "@@ -122,18 +122,16 @@\n T%7B%7D%7D%0A%7D%0A%0A\n-//\n func (s \n@@ -157,18 +157,16 @@\n ue T) %7B%0A\n-//\n %09s.data \n@@ -189,18 +189,16 @@\n  value)%0A\n-//\n %7D%0A%0Afunc \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-02_22-50-13",
+            "content": "@@ -49,26 +49,24 @@\n ta %5B%5DT%0A//%7D%0A%0A\n-//\n func NewStac\n@@ -88,18 +88,16 @@\n ck%5BT%5D %7B%0A\n-//\n %09return \n@@ -119,18 +119,16 @@\n  %5B%5DT%7B%7D%7D%0A\n-//\n %7D%0A%0A//fun\n@@ -308,26 +308,24 @@\n data)-1%5D%0A%7D%0A%0A\n-//\n func (s *Sta\n@@ -348,18 +348,16 @@\n  bool %7B%0A\n-//\n %09return \n@@ -373,18 +373,16 @@\n a) == 0%0A\n-//\n %7D%0A%0Afunc \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-02_22-52-24",
+            "content": "@@ -7,16 +7,18 @@\n e main%0A%0A\n+//\n type Sta\n@@ -36,16 +36,18 @@\n truct %7B%0A\n+//\n %09data %5B%5D\n@@ -48,19 +48,23 @@\n ata %5B%5DT%0A\n+//\n %7D%0A%0A\n+//\n func New\n@@ -90,16 +90,18 @@\n ck%5BT%5D %7B%0A\n+//\n %09return \n@@ -123,19 +123,23 @@\n  %5B%5DT%7B%7D%7D%0A\n+//\n %7D%0A%0A\n+//\n func (s \n@@ -165,16 +165,18 @@\n ue T) %7B%0A\n+//\n %09s.data \n@@ -199,16 +199,18 @@\n  value)%0A\n+//\n %7D%0A%0Afunc \n@@ -314,24 +314,26 @@\n data)-1%5D%0A%7D%0A%0A\n+//\n func (s *Sta\n@@ -356,16 +356,18 @@\n  bool %7B%0A\n+//\n %09return \n@@ -383,16 +383,18 @@\n a) == 0%0A\n+//\n %7D%0A%0Afunc \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-02_23-07-42",
+            "content": "package main\n\ntype Stack[T any] struct {\n\tdata []T\n}\n\nfunc NewStack[T any]() *Stack[T] {\n\treturn &Stack[T]{data: []T{}}\n}\n\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value)\n}\n\nfunc (s *Stack[T]) Top() T {\n\tif len(s.data) == 0 {\n\t\tpanic(\"stack is empty\")\n\t}\n\treturn s.data[len(s.data)-1]\n}\n\nfunc (s *Stack[T]) IsEmpty() bool {\n\treturn len(s.data) == 0\n}\n\nfunc (s *Stack[T]) Pop() T {\n\tif s.IsEmpty() {\n\t\tpanic(\"stack is empty\")\n\t}\n\tvalue := s.data[len(s.data)-1]\n\ts.data = s.data[:len(s.data)-1]\n\treturn value\n}\n",
+            "lines": "33"
+        }
+    ]
+}

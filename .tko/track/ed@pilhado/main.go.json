@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-02_22-06-44",
+            "content": "@@ -45,39 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0A\n func\n@@ -145,24 +145,25 @@\n ar linha\n+s\n , coluna\n  int%0A%09fm\n@@ -154,16 +154,17 @@\n , coluna\n+s\n  int%0A%09fm\n@@ -193,16 +193,17 @@\n , &linha\n+s\n , &colun\n@@ -203,16 +203,17 @@\n  &coluna\n+s\n )%0A%0A%09labe\n@@ -241,16 +241,17 @@\n e, linha\n+s\n )%0A%09comec\n@@ -312,16 +312,17 @@\n  %3C linha\n+s\n ; i++ %7B%0A\n@@ -403,16 +403,17 @@\n %3C coluna\n+s\n ; j++ %7B%0A\n@@ -575,16 +575,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09visitad\n@@ -609,16 +609,17 @@\n l, linha\n+s\n )%0A%09for i\n@@ -679,662 +679,12 @@\n luna\n+s\n )%0A%09%7D\n-%0A%09%0A%09caminhoStack := NewStack%5BPos%5D()%0A%09visitado%5Bcomeco.l%5D%5Bcomeco.c%5D = true%0A%09dire := %5B%5DPos%7B%7B-1, 0%7D, %7B1, 0%7D, %7B0, -1%7D, %7B0, 1%7D%7D%0A%0A%09for !caminhoStack.IsEmpty() %7B%0A%09%09agora := caminhoStack.Top()%0A%0A%09%09if agora.l == final.l && agora.c == final.c %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09var vizinho %5B%5DPos%0A%09%09for _, d := range dire %7B%0A%09%09%09nl, nc := agora.l+d.l, agora.c+d.c%0A%0A%09%09%09if nl %3E= 0 && nl %3C linha && nc %3E= 0 && nc %3C coluna && laberinto%5Bnl%5D%5Bnc%5D != '#' && !visitado%5Bnl%5D%5Bnc%5D %7B%0A%09%09%09%09vizinho = append(vizinho, Pos%7Bnl, nc%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if len(vizinho) %3E 0 %7B%0A%09%09%09proximo := vizinho%5B0%5D%0A%09%09%09visitado%5Bproximo.l%5D%5Bproximo.c%5D = true%0A%09%09%09caminhoStack.Push(proximo)%0A%09%09%7D else %7B%0A%09%09%09caminhoStack.Pop()%0A%09%09%7D%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-02_22-32-02",
+            "content": "@@ -1357,323 +1357,6 @@\n %09%7D%0A%0A\n-%09var rota %5B%5DPos%0A%0A%09for !caminhoStack.IsEmpty() %7B%0A%09%09rota = append(rota, caminhoStack.Pop())%0A%09%7D%0A%0A%09for i, j := 0, len(rota)-1; i %3C j; i, j = i+1, j-1 %7B%0A%09%09rota%5Bi%5D, rota%5Bj%5D = rota%5Bj%5D, rota%5Bi%5D%0A%09%7D%0A%0A%09for _, p := range rota %7B%0A%09%09laberinto%5Bp.l%5D%5Bp.c%5D = '.'%0A%09%7D%0A%0A%09for i := 0; i %3C linha; i++ %7B%0A%09%09fmt.Println(string(laberinto%5Bi%5D))%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-06-02_22-38-53",
+            "content": "@@ -50,210 +50,30 @@\n ype \n-Stack%5BT any%5D struct %7B%0A%09data %5B%5DT%0A%7D%0A%0Atype Pos struct %7B%0A%09l, c int%0A%7D%0A%0Afunc NovaStack%5BT any%5D() *Stack%5BT%5D %7B%0A%09return &Stack%5BT%5D%7Bdata: %5B%5DT%7B%7D%7D%0A%7D%0A%0Afunc (s *Stack%5BT%5D) Push(value T) %7B%0A%09s.data = append(s.data, value)\n+Pos struct %7B%0A%09l, c int\n %0A%7D%0A%0A\n@@ -726,11 +726,10 @@\n := N\n-ova\n+ew\n Stac\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-06-02_22-48-15",
+            "content": "@@ -77,24 +77,55 @@\n data %5B%5DT%0A%7D%0A%0A\n+type Pos struct %7B%0A%09l, c int%0A%7D%0A%0A\n func NovaSta\n@@ -256,39 +256,8 @@\n %0A%7D%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0A\n func\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-02_22-49-50",
+            "content": "@@ -87,18 +87,19 @@\n %0A%0Afunc N\n-ew\n+ova\n Stack%5BT \n@@ -225,72 +225,8 @@\n %0A%7D%0A%0A\n-func (s *Stack%5BT%5D) IsEmpty() bool %7B%0A%09return len(s.data) == 0%0A%7D%0A%0A\n type\n@@ -902,18 +902,19 @@\n ack := N\n-ew\n+ova\n Stack%5BPo\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-02_22-52-24",
+            "content": "@@ -224,119 +224,8 @@\n %0A%7D%0A%0A\n-func (s *Stack%5BT%5D) Top() T %7B%0A%09if len(s.data) == 0 %7B%0A%09%09panic(%22stack vazia%22)%0A%09%7D%0A%09return s.data%5Blen(s.data)-1%5D%0A%7D%0A%0A\n func\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-06-02_23-04-29",
+            "content": "@@ -51,17 +51,16 @@\n pe Stack\n-k\n %5BT any%5D \n@@ -91,11 +91,10 @@\n nc N\n-ova\n+ew\n Stac\n@@ -110,17 +110,16 @@\n ) *Stack\n-k\n %5BT%5D %7B%0A%09r\n@@ -130,17 +130,16 @@\n n &Stack\n-k\n %5BT%5D%7Bdata\n@@ -173,17 +173,16 @@\n T%5D) Push\n-i\n (value T\n@@ -242,17 +242,16 @@\n %5BT%5D) Top\n-i\n () T %7B%0A%09\n@@ -357,17 +357,16 @@\n  IsEmpty\n-i\n () bool \n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-06-02_23-07-42",
+            "content": "@@ -45,11 +45,8 @@\n %0A)%0A%0A\n-/*%0A\n type\n@@ -47,24 +47,25 @@\n %0A%0Atype Stack\n+k\n %5BT any%5D stru\n@@ -88,18 +88,19 @@\n %0A%0Afunc N\n-ew\n+ova\n Stack%5BT \n@@ -112,16 +112,17 @@\n ) *Stack\n+k\n %5BT%5D %7B%0A%09r\n@@ -133,16 +133,17 @@\n n &Stack\n+k\n %5BT%5D%7Bdata\n@@ -177,16 +177,17 @@\n T%5D) Push\n+i\n (value T\n@@ -247,16 +247,17 @@\n %5BT%5D) Top\n+i\n () T %7B%0A%09\n@@ -363,16 +363,17 @@\n  IsEmpty\n+i\n () bool \n@@ -405,10 +405,8 @@\n 0%0A%7D%0A\n-*/\n %0Atyp\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-06-02_23-09-23",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n/*\ntype Stack[T any] struct {\n\tdata []T\n}\n\nfunc NewStack[T any]() *Stack[T] {\n\treturn &Stack[T]{data: []T{}}\n}\n\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value)\n}\n\nfunc (s *Stack[T]) Top() T {\n\tif len(s.data) == 0 {\n\t\tpanic(\"stack vazia\")\n\t}\n\treturn s.data[len(s.data)-1]\n}\n\nfunc (s *Stack[T]) IsEmpty() bool {\n\treturn len(s.data) == 0\n}\n*/\ntype Pos struct {\n\tl, c int\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\n\tline := scanner.Text()\n\tvar linha, coluna int\n\tfmt.Sscanf(line, \"%d %d\", &linha, &coluna)\n\n\tlaberinto := make([][]byte, linha)\n\tcomeco := Pos{-1, -1}\n\tfinal := Pos{-1, -1}\n\n\tfor i := 0; i < linha; i++ {\n\t\tscanner.Scan()\n\t\tlaberinto[i] = []byte(scanner.Text())\n\n\t\tfor j := 0; j < coluna; j++ {\n\t\t\tswitch laberinto[i][j] {\n\t\t\tcase 'I':\n\t\t\t\tcomeco = Pos{i, j}\n\t\t\t\tlaberinto[i][j] = ' '\n\t\t\tcase 'F':\n\t\t\t\tfinal = Pos{i, j}\n\t\t\t\tlaberinto[i][j] = ' '\n\t\t\t}\n\t\t}\n\t}\n\tvisitado := make([][]bool, linha)\n\tfor i := range visitado {\n\t\tvisitado[i]  = make([]bool, coluna)\n\t}\n\t\n\tcaminhoStack := NewStack[Pos]()\n\tvisitado[comeco.l][comeco.c] = true\n\tdire := []Pos{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}\n\n\tfor !caminhoStack.IsEmpty() {\n\t\tagora := caminhoStack.Top()\n\n\t\tif agora.l == final.l && agora.c == final.c {\n\t\t\tbreak\n\t\t}\n\n\t\tvar vizinho []Pos\n\t\tfor _, d := range dire {\n\t\t\tnl, nc := agora.l+d.l, agora.c+d.c\n\n\t\t\tif nl >= 0 && nl < linha && nc >= 0 && nc < coluna && laberinto[nl][nc] != '#' && !visitado[nl][nc] {\n\t\t\t\tvizinho = append(vizinho, Pos{nl, nc})\n\t\t\t}\n\t\t}\n\n\t\tif len(vizinho) > 0 {\n\t\t\tproximo := vizinho[0]\n\t\t\tvisitado[proximo.l][proximo.c] = true\n\t\t\tcaminhoStack.Push(proximo)\n\t\t} else {\n\t\t\tcaminhoStack.Pop()\n\t\t}\n\t}\n\n\tvar rota []Pos\n\n\tfor !caminhoStack.IsEmpty() {\n\t\trota = append(rota, caminhoStack.Pop())\n\t}\n\n\tfor i, j := 0, len(rota)-1; i < j; i, j = i+1, j-1 {\n\t\trota[i], rota[j] = rota[j], rota[i]\n\t}\n\n\tfor _, p := range rota {\n\t\tlaberinto[p.l][p.c] = '.'\n\t}\n\n\tfor i := 0; i < linha; i++ {\n\t\tfmt.Println(string(laberinto[i]))\n\t}\n}\n",
+            "lines": "115"
+        }
+    ]
+}
