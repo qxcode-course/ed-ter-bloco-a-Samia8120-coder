@@ -9,3 +9,45 @@
 2026-06-05 00:13:46, MOVE, v:1, k:ed@permutacoes, mode:PICK
 2026-06-05 00:13:47, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100
 2026-06-05 00:13:48, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-05 12:33:15, MOVE, v:1, k:ed@bst_serial, mode:DOWN
+2026-06-05 12:33:17, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 12:33:21, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:74
+2026-06-05 12:33:15, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:33:15, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:33:15, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:33:21, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:42:22, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:46:03, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 12:46:10, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 12:46:11, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:77, fail:COMP
+2026-06-05 12:46:18, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 12:46:29, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 12:50:47, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 12:50:54, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 12:55:50, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:82
+2026-06-05 12:55:50, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 12:55:58, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 12:56:09, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:00:28, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 13:04:38, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:04:39, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:84, fail:COMP
+2026-06-05 13:09:03, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 13:12:51, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:12:55, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:14:45, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:16, size:93
+2026-06-05 13:14:52, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:14:59, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:17:10, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-05 13:21:08, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:21:17, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:24:45, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:24:52, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:24:53, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:16, size:96
+2026-06-05 13:28:19, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:100, size:98
+2026-06-05 13:28:24, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:28:31, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:31:13, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:31:17, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-05 13:35:13, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:100
+2026-06-05 13:35:14, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-05 13:35:37, SELF, v:1, k:ed@bst_serial, self:1, rate:100, study:60, concept:1
