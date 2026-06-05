@@ -6,30 +6,6 @@ import (
 	"os"
 )
 
-/*
-type Stack[T any] struct {
-	data []T
-}
-
-func NewStack[T any]() *Stack[T] {
-	return &Stack[T]{data: []T{}}
-}
-
-func (s *Stack[T]) Push(value T) {
-	s.data = append(s.data, value)
-}
-
-func (s *Stack[T]) Top() T {
-	if len(s.data) == 0 {
-		panic("stack vazia")
-	}
-	return s.data[len(s.data)-1]
-}
-
-func (s *Stack[T]) IsEmpty() bool {
-	return len(s.data) == 0
-}
-*/
 type Pos struct {
 	l, c int
 }
@@ -68,6 +44,7 @@ func main() {
 	
 	caminhoStack := NewStack[Pos]()
 	visitado[comeco.l][comeco.c] = true
+	caminhoStack.Push(comeco)
 	dire := []Pos{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
 
 	for !caminhoStack.IsEmpty() {

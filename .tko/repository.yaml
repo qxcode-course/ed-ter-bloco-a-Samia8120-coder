@@ -19,21 +19,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- sandbox@sandbox
-- ed@map_set
-- ed@tree
-- ed@backtrack
-- ed@linear
-- ed@basic
-- ed@list
-- ed@rec
 - ed@vector
+- ed@backtrack
+- ed@list
+- ed@tree
+- ed@rec
+- ed@map_set
+- ed@basic
+- sandbox@sandbox
+- ed@linear
 flags:
   inbox: all
   panel: graph
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@subset_sum
-selected_index: 73
+selected: ed@n_rainhas
+selected_index: 78

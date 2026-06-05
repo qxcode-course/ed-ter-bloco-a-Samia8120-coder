@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-04_21-36-14",
+            "content": "@@ -367,135 +367,8 @@\n e%7B%7D%0A\n-    for _, cha := range s %7B%0A        switch cha %7B%0A        case '(', '%5B':%0A            stack = append(stack, cha)%0A        %7D%0A    %7D%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-04_21-55-50",
+            "content": "@@ -478,338 +478,8 @@\n ha)%0A\n-        case ')':%0A            if len(stack) == 0 %7C%7C stack%5Blen(stack)-1%5D != '(' %7B%0A                return false%0A            %7D%0A            stack = stack%5B:len(stack)-1%5D%0A        case '%5D':%0A            if len(stack) == 0 %7C%7C stack%5Blen(stack)-1%5D != '%5B' %7B%0A                return false%0A            %7D%0A            stack = stack%5B:len(stack)-1%5D%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-04_22-26-44",
+            "content": "@@ -808,50 +808,8 @@\n -1%5D%0A\n-        default:%0A            return false%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-04_22-27-16",
+            "content": "@@ -280,17 +280,17 @@\n %22nao bal\n-a\n+e\n nceado%22)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-04_22-32-38",
+            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    if scanner.Scan() {\n        s := scanner.Text()\n        \n        if Balanceado(s) {\n            fmt.Println(\"balanceado\")\n        } else {\n            fmt.Println(\"nao balanceado\")\n        }\n    }\n}\n\nfunc Balanceado(s string) bool{\n    stack := []rune{}\n    for _, cha := range s {\n        switch cha {\n        case '(', '[':\n            stack = append(stack, cha)\n        case ')':\n            if len(stack) == 0 || stack[len(stack)-1] != '(' {\n                return false\n            }\n            stack = stack[:len(stack)-1]\n        case ']':\n            if len(stack) == 0 || stack[len(stack)-1] != '[' {\n                return false\n            }\n            stack = stack[:len(stack)-1]\n        default:\n            return false\n        }\n    }\n    return len(stack) == 0\n}\n",
+            "lines": "42"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+2026-06-04 21:24:28, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-04 21:24:43, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-04 21:25:13, MOVE, v:1, k:ed@balanceada, mode:DOWN
+2026-06-04 21:25:15, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 21:25:13, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:25:13, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:27:51, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:34:16, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:36:14, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:50, size:24
+2026-06-04 21:37:30, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 21:37:48, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 21:50:59, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 21:51:20, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 21:55:50, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:0, size:30
+2026-06-04 21:55:44, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:55:49, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 21:58:41, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 22:17:49, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 22:22:18, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 22:26:44, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:50, size:40
+2026-06-04 22:27:16, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:50, size:42
+2026-06-04 22:27:19, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 22:27:36, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 22:27:47, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 22:32:30, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 22:32:37, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-06-04 22:32:38, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:100, size:42
+2026-06-04 22:32:40, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-06-04 22:32:55, SELF, v:1, k:ed@balanceada, self:1, rate:100, study:70, concept:1
+2026-06-04 22:33:18, MOVE, v:1, k:ed@queimando, mode:DOWN
+2026-06-04 22:33:20, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 22:32:38, MOVE, v:1, k:ed@balanceada, mode:EDIT
+2026-06-04 22:33:17, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:33:18, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:33:18, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:33:18, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:41:59, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:44:31, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:48:46, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:85
+2026-06-04 22:49:02, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 22:49:16, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 22:54:00, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 22:55:38, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 22:55:44, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:00:56, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:95
+2026-06-04 23:00:59, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:01:06, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:02:24, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:06:30, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:06:47, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:09:09, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:09:15, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:14:07, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:16:22, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:16:30, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:16:31, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:100
+2026-06-04 23:16:31, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:17:19, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:23:00, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:23:06, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:26:28, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:100
+2026-06-04 23:26:30, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:27:05, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:27:07, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20
+2026-06-04 23:27:07, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:27:50, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:34:20, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:34:25, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:34:26, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:101
+2026-06-04 23:34:29, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:34:31, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:34:26, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:35:16, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-04 23:40:23, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:40:29, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-04 23:40:30, EXEC, v:1, k:ed@queimando, mode:FULL, rate:100, size:102
+2026-06-04 23:40:33, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-04 23:40:58, SELF, v:1, k:ed@queimando, self:1, rate:100, study:70, concept:1
+2026-06-04 23:41:11, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-04 23:42:38, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-04 23:42:46, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-04 23:47:22, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-04 23:47:31, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-04 23:54:45, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-04 23:54:54, MOVE, v:1, k:ed@pilhado, mode:PICK

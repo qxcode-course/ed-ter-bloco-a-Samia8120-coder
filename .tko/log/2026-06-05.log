@@ -1,0 +1,11 @@
+2026-06-05 00:02:08, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-05 00:02:13, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-05 00:02:15, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:124
+2026-06-05 00:02:15, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-05 00:09:48, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:124
+2026-06-05 00:11:41, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:100, size:125
+2026-06-05 00:11:43, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-05 00:12:13, SELF, v:1, k:ed@pilhado, self:1, rate:100, study:135, concept:1, refactor:1
+2026-06-05 00:13:46, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-05 00:13:47, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100
+2026-06-05 00:13:48, MOVE, v:1, k:ed@permutacoes, mode:BACK
