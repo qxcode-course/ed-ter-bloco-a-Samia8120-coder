@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-06_11-51-30",
+            "content": "@@ -219,148 +219,8 @@\n %0A%09%7D%0A\n-%09if value %3C root.Value %7B%0A%09%09root.Left = insert(root.Left, value)%0A%09%7D else if value %3E root.Value %7B%0A%09%09root.Right = insert(root.Right, value)%0A%09%7D%0A\n %09ret\n@@ -284,16 +284,17 @@\n t *Node%0A\n+%09\n %0A%09for _,\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-06-06_11-55-50",
+            "content": "@@ -501,160 +501,8 @@\n %0A%7D%0A%0A\n-func max(node *Node) int %7B%0A%09if node == nil %7B%0A%09%09panic(%22max chamado com n%C3%B3 nil%22)%0A%09%7D%0A%09for node.Right != nil %7B%0A%09%09node = node.Right%0A%09%7D%0A%09return node.Value%0A%7D%0A%0A\n func\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-06_12-05-18",
+            "content": "@@ -700,110 +700,35 @@\n  %7B%0A%09\n-if node == nil %7B%0A%09%09return nil%0A%09%7D%0A%09if value %3C node.Value %7B%0A%09%09node.Left = BstRemove(node.Left\n+// TODO%0A%09_, _ = node\n , value\n-)%0A%09%7D\n %0A%09re\n@@ -733,19 +733,18 @@\n return n\n-ode\n+il\n %0A%7D%0A%0A// -\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-06_12-11-20",
+            "content": "@@ -800,143 +800,8 @@\n ue)%0A\n-%09%7D else if value %3E node.Value %7B%0A%09%09node.Right = BstRemove(node.Right, value)%0A%09%7D else %7B%0A%09%09if node.Left == nil %7B%0A%09%09%09return node.Right%0A%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-06_13-13-46",
+            "content": "@@ -931,58 +931,8 @@\n ght%0A\n-%09%09%7D %0A%09%09if node.Right == nil %7B%0A%09%09%09return node.Left%0A\n %09%09%7D%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-06-06_13-19-19",
+            "content": "@@ -984,77 +984,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09predecessorVal := max(node.Left)%0A%09%09node.Value = predecessorVal%0A%09%09\n %0A%09%7D%0A\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-06-06_13-38-47",
+            "content": "@@ -1053,56 +1053,8 @@\n l%0A%09%09\n-node.Left = BstRemove(node.Left, predecessorVal)\n %0A%09%7D%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-06_13-40-04",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc insert(root *Node, value int) *Node {\n\tif root == nil {\n\t\treturn &Node{Value: value}\n\t}\n\tif value < root.Value {\n\t\troot.Left = insert(root.Left, value)\n\t} else if value > root.Value {\n\t\troot.Right = insert(root.Right, value)\n\t}\n\treturn root\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar root *Node\n\n\tfor _, v := range values {\n\t\troot = insert(root, v)\n\t}\n\treturn root\n}\n\nfunc max(node *Node) int {\n\tif node == nil {\n\t\tpanic(\"max chamado com n\u00f3 nil\")\n\t}\n\tfor node.Right != nil {\n\t\tnode = node.Right\n\t}\n\treturn node.Value\n}\n\nfunc BstRemove(node *Node, value int) *Node {\n\tif node == nil {\n\t\treturn nil\n\t}\n\tif value < node.Value {\n\t\tnode.Left = BstRemove(node.Left, value)\n\t} else if value > node.Value {\n\t\tnode.Right = BstRemove(node.Right, value)\n\t} else {\n\t\tif node.Left == nil {\n\t\t\treturn node.Right\n\t\t} \n\t\tif node.Right == nil {\n\t\t\treturn node.Left\n\t\t}\n\n\t\tpredecessorVal := max(node.Left)\n\t\tnode.Value = predecessorVal\n\t\tnode.Left = BstRemove(node.Left, predecessorVal)\n\t}\n\treturn node\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\tscanner.Scan()\n\ttoRemove, _ := strconv.Atoi(scanner.Text())\n\n\t_ = toRemove // Ignora o valor a ser removido, pois n\u00e3o est\u00e1 implementado\n\troot := BstInsert(values)\n\tfmt.Println(\"original:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\troot = BstRemove(root, toRemove)\n\tfmt.Println(\"modificado:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada da \u00e1rvore modificada\n}\n",
+            "lines": "121"
+        }
+    ]
+}
