@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-06_14-57-39",
+            "content": "@@ -20,492 +20,23 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09%22io%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Afunc main() %7B%0A%09queue := %5B%5Dstring%7B%22A%22, %22B%22, %22C%22, %22D%22, %22E%22, %22F%22, %22G%22, %22H%22, %22I%22, %22J%22, %22K%22, %22L%22, %22M%22, %22N%22, %22O%22, %22P%22%7D%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for i := 0; i %3C 15; i++ %7B%0A%09%09scanner.Scan()%0A%09%09linha := scanner.Text()%0A%09%09partes := strings.Split(linha, %22 %22)%0A%09%09m, _ := strconv.Atoi(partes%5B0%5D)%0A%09%09n, _ := strconv.Atoi(partes%5B1%5D)%0A%0A%09%09time1 := queue%5B0%5D%0A%09%09queue := queue%5B1:%5D%0A%09%09time2 := queue%5B0%5D%0A%09%09queue = queue%5B1:%5D%0A%0A%0A%09%7D%0A%09fmt.Println(queue%5B0%5D)\n+)%0A%0Afunc main() %7B\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-06_15-24-16",
+            "content": "@@ -34,18 +34,18 @@\n %22fmt%22%0A%09%22\n+i\n o\n-s\n %22%0A%09%22strc\n@@ -479,56 +479,8 @@\n :%5D%0A%0A\n-%09%09if m %3E n %7B%0A%09%09%09queue = append(queue, time1)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-06_15-29-44",
+            "content": "@@ -524,59 +524,8 @@\n e1)%0A\n-%09%09%7D else if n %3E m%7B%0A%09%09%09queue = append(queue, time2)%0A\n %09%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-06-06_15-36-04",
+            "content": "@@ -575,51 +575,8 @@\n e2)%0A\n-%09%09%7D else %7B%0A%09%09%09queue = append(queue, time1)%0A\n %09%09%7D%0A\n@@ -588,16 +588,18 @@\n mt.Print\n+ln\n (queue%5B0\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-06_15-45-41",
+            "content": "@@ -29,28 +29,8 @@\n io%22%0A\n-%09//%22container/list%22%0A\n %09%22fm\n@@ -82,57 +82,16 @@\n  %7B%0A%09\n-fila := NewQueue%5Bstring%5D()%0A%09for _, letra := range\n+queue :=\n  %5B%5Ds\n@@ -179,35 +179,8 @@\n %22P%22%7D\n- %7B%0A%09%09fila.Enqueue(letra)%0A%09%7D\n %0A%09sc\n@@ -249,12 +249,8 @@\n %7B%0A%09%09\n-if !\n scan\n@@ -263,262 +263,79 @@\n an()\n- %7B%0A%09%09%09fmt.Fprintln(os.Stderr, %22Erro: entrada insuficiente%22)%0A%09%09%09return%0A%09%09%7D%0A%09%09%0A%09%09linha := scanner.Text()%0A%09%09partes := strings.Split(linha, %22 %22)%0A%09%09%0A%09%09if len(partes) != 2 %7B%0A%09%09%09fmt.Fprintln(os.Stderr, %22Erro: formato invalido%22, linha)%0A%09%09%09return%0A%09%09%7D%0A%09%09%0A%09%09m, err1\n+%0A%09%09linha := scanner.Text()%0A%09%09partes := strings.Split(linha, %22 %22)%0A%09%09m, _\n  := \n@@ -363,20 +363,17 @@\n %5D)%0A%09%09n, \n-err2\n+_\n  := strc\n@@ -396,163 +396,89 @@\n 1%5D)%0A\n+%0A\n %09%09\n-if err1 != nil %7C%7C err2 != nil %7B%0A%09%09%09fmt.Fprintln(os.Stderr, %22Erro: gols nao numericos%22)%0A%09%09%09return%0A%09%09%7D%0A\n+time1 := queue%5B0%5D%0A%09%09queue := queue%5B1:%5D\n %0A%09%09time\n-1\n+2\n  := \n-fila.Dequeue()%0A%09%09time2 := fila.De\n+queue%5B0%5D%0A%09%09queue = \n queue\n-()\n+%5B1:%5D\n %0A%0A%09%09\n@@ -635,10 +635,8 @@\n rint\n-ln\n (que\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-06_16-03-57",
+            "content": "@@ -802,18 +802,16 @@\n eue()%0A%09%09\n-//\n time2 :=\n@@ -833,122 +833,151 @@\n %0A%0A%09%09\n-var vencedor string%0A%09%09if m %3E n %7B%0A%09%09%09vencedor =\n+if m %3E n %7B%0A%09%09%09queue = append(queue,\n  time1\n-%09%09%09\n+)\n %0A%09%09%7D\n-%0A%09%09fila.Enqueue(vencedor)%0A%09%7D%0A%09campeao := fila.Dequeue()\n+ else if n %3E m%7B%0A%09%09%09queue = append(queue, time2)%0A%09%09%7D else %7B%0A%09%09%09queue = append(queue, time1)%0A%09%09%7D%0A%09%7D\n %0A%09fm\n@@ -990,15 +990,16 @@\n tln(\n-campeao\n+queue%5B0%5D\n )%0A%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-06_16-08-21",
+            "content": "@@ -333,16 +333,20 @@\n i++ %7B%0A%09%09\n+if !\n scanner.\n@@ -355,75 +355,249 @@\n an()\n-%0A%09%09%0A%09%09linha := scanner.Text()%0A%09%09partes := strings.Split(linha, %22 %22)\n+ %7B%0A%09%09%09fmt.Fprintln(os.Stderr, %22Erro: entrada insuficiente%22)%0A%09%09%09return%0A%09%09%7D%0A%09%09%0A%09%09linha := scanner.Text()%0A%09%09partes := strings.Split(linha, %22 %22)%0A%09%09%0A%09%09if len(partes) != 2 %7B%0A%09%09%09fmt.Fprintln(os.Stderr, %22Erro: formato invalido%22, linha)%0A%09%09%09return%0A%09%09%7D\n %0A%09%09%0A\n@@ -802,16 +802,18 @@\n eue()%0A%09%09\n+//\n time2 :=\n@@ -891,39 +891,8 @@\n %09%09%09%0A\n-%09%09%7D else %7B%0A%09%09%09vencedor = time2%0A\n %09%09%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-06_16-09-52",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t//\"container/list\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main() {\n\tfila := NewQueue[string]()\n\tfor _, letra := range []string{\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\"} {\n\t\tfila.Enqueue(letra)\n\t}\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor i := 0; i < 15; i++ {\n\t\tscanner.Scan()\n\t\t\n\t\tlinha := scanner.Text()\n\t\tpartes := strings.Split(linha, \" \")\n\t\t\n\t\tm, err1 := strconv.Atoi(partes[0])\n\t\tn, err2 := strconv.Atoi(partes[1])\n\t\tif err1 != nil || err2 != nil {\n\t\t\tfmt.Fprintln(os.Stderr, \"Erro: gols nao numericos\")\n\t\t\treturn\n\t\t}\n\n\t\ttime1 := fila.Dequeue()\n\t\ttime2 := fila.Dequeue()\n\n\t\tvar vencedor string\n\t\tif m > n {\n\t\t\tvencedor = time1\t\t\t\n\t\t} else {\n\t\t\tvencedor = time2\n\t\t}\n\t\tfila.Enqueue(vencedor)\n\t}\n\tcampeao := fila.Dequeue()\n\tfmt.Println(campeao)\n}\n",
+            "lines": "45"
+        }
+    ]
+}

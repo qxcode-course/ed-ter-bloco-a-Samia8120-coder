@@ -97,3 +97,72 @@
 2026-06-06 13:40:04, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:100, size:121
 2026-06-06 13:40:06, MOVE, v:1, k:ed@bst_remove, mode:BACK
 2026-06-06 13:40:41, SELF, v:1, k:ed@bst_remove, self:1, rate:100, study:140, concept:1
+2026-06-06 14:55:16, SELF, v:1, k:ed@editorint, self:1, rate:100, concept:1, refactor:1
+2026-06-06 14:56:30, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-06-06 14:56:32, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 14:57:39, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-06-06 14:56:30, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 14:56:30, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 14:57:38, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 14:56:30, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 14:57:39, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:03:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:08:52, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:12:48, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:18:39, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:20:09, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:20:18, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:24:16, EXEC, v:1, k:ed@chaves, mode:FULL, size:70, fail:COMP
+2026-06-06 15:24:17, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:24:27, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:24:34, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:24:51, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:25:47, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:29:25, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:29:35, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:29:44, EXEC, v:1, k:ed@chaves, mode:FULL, size:72, fail:COMP
+2026-06-06 15:31:32, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:35:18, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:35:26, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:36:04, EXEC, v:1, k:ed@chaves, mode:FULL, rate:10, size:74
+2026-06-06 15:37:13, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:37:23, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:45:21, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 15:45:36, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 15:45:41, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:76
+2026-06-06 15:47:57, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-06-06 15:49:48, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:47:57, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 15:55:15, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 16:00:24, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 16:03:57, EXEC, v:1, k:ed@chaves, mode:FULL, size:92, fail:COMP
+2026-06-06 16:03:58, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 16:04:08, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 16:08:21, EXEC, v:1, k:ed@chaves, mode:FULL, rate:10, size:91
+2026-06-06 16:08:56, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 16:08:21, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 16:09:45, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 16:09:51, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-06 16:09:52, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:85
+2026-06-06 16:09:57, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-06 16:10:46, SELF, v:1, k:ed@chaves, self:1, rate:100, study:135, concept:1
+2026-06-06 16:11:51, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-06-06 16:09:52, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-06 16:14:48, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:19:32, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:24:41, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:42
+2026-06-06 16:24:35, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:24:41, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:28:03, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:52
+2026-06-06 16:29:49, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:28:03, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-06 16:30:12, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:59
+2026-06-06 16:30:33, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0
+2026-06-06 16:31:57, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:65
+2026-06-06 16:32:01, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-06-06 16:32:23, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-06-06 16:32:34, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:65
+2026-06-06 16:32:42, EXEC, v:1, k:ed@triangulo, mode:FULL, size:65, fail:COMP
+2026-06-06 16:32:44, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:65
+2026-06-06 16:32:47, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-06-06 16:33:15, SELF, v:1, k:ed@triangulo, self:1, rate:100

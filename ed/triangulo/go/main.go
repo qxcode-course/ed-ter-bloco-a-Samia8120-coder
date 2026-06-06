@@ -9,22 +9,23 @@ import (
 )
 
 func processa(vet []int) {
-	_ = vet;
-	// 1. defina o ponto de parada
-	if len(vet) == 1{
+	_ = vet
+
+	if len(vet) == 1 {
 		fmt.Print("[ ")
 		fmt.Print(Join(vet, " "))
 		fmt.Println(" ]")
 		return
 	}
-	// 2. monte o vetor auxiliar com os resultados das somas
+
 	aux := make([]int, len(vet)-1)
-	for i := 0; i < len(vet)-1; i++{
+
+	for i := 0; i < len(vet)-1; i++ {
 		aux[i] = vet[i] + vet[i+1]
 	}
-	// 3. chame recursivamente a função processa para o vetor auxiliar
+
 	processa(aux)
-	// 4. imprima o vetor original
+
 	fmt.Print("[ ")
 	fmt.Print(Join(vet, " "))
 	fmt.Println(" ]")
@@ -32,14 +33,17 @@ func processa(vet []int) {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
+
 	if !scanner.Scan() {
 		return
 	}
-	line := scanner.Text()
-	parts := strings.Fields(line)
+
+	linha := scanner.Text()
+	partes := strings.Fields(linha)
 	vet := []int{}
-	for _, part := range parts {
-		if value, err := strconv.Atoi(part); err == nil {
+
+	for _, parte := range partes {
+		if value, err := strconv.Atoi(parte); err == nil {
 			vet = append(vet, value)
 		}
 	}
