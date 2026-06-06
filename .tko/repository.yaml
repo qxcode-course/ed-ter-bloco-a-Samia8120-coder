@@ -19,21 +19,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
-- ed@rec
-- ed@tree
-- ed@basic
 - ed@backtrack
 - sandbox@sandbox
 - ed@vector
+- ed@rec
 - ed@map_set
+- ed@linear
+- ed@basic
+- ed@tree
 - ed@list
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'false'
+  panel: skills
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: sandbox@sandbox
-selected_index: 0
+selected: ed@pilha
+selected_index: 64
