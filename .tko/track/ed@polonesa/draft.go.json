@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_22-13-55",
+            "content": "@@ -17,346 +17,59 @@\n ort \n-(%0A    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A    %22strings%22%0A)%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A%0A    linha := scanner.Text()%0A    tokens := strings.Fields(linha)%0A    %0A    if len(tokens) == 0 %7B%0A        return%0A    %7D%0A%0A    //npr := notacao(tokens)%0A    fmt.Println(strings.Join(npr, %22 %22)\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-07_22-24-34",
+            "content": "@@ -67,99 +67,8 @@\n %0A)%0A%0A\n-func notacao(tokens %5B%5Dstring) %5B%5Dstring %7B%0A    var output %5B%5Dstring%0A    %0A    return output%0A%7D%0A%0A\n func\n@@ -288,16 +288,18 @@\n  %7D%0A%0A    \n+//\n npr := n\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-07_22-27-10",
+            "content": "@@ -72,406 +72,72 @@\n unc \n-precedencia(op string) int%7B%0A    return 1%0A%7D%0A%0Afunc associativo(op string) bool %7B%0A    return op != %22%5E%22%0A%7D%0A%0Afunc notacao(tokens %5B%5Dstring) %5B%5Dstring %7B%0A    var output %5B%5Dstring%0A    var stack %5B%5Dstring%0A%0A    for _, token := range tokens %7B%0A        if precedencia(token) == 0 %7B%0A            output = append(output, token)%0A            continue%0A        %7D%0A%0A        for len(stack) %3E 0 %7B%0A            %0A        %7D%0A    %7D%0A%0A\n+notacao(tokens %5B%5Dstring) %5B%5Dstring %7B%0A    var output %5B%5Dstring%0A    \n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-06-07_22-36-43",
+            "content": "@@ -452,423 +452,18 @@\n     \n-cima := stack%5Blen(stack)-1%5D%0A            cimaPrec := precedencia(cima)%0A            agrPrec := precedencia(token)%0A%0A            if (associativo(token) && agrPrec %3C= cimaPrec) %7C%7C (!associativo(token) && agrPrec %3C cimaPrec) %7B%0A                output = append(output, cima)%0A                stack = stack%5B:len(stack)-1%5D%0A            %7D else %7B%0A                break%0A            %7D%0A        %7D%0A        stack = append(stack, token)\n+%0A        %7D\n %0A   \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-07_22-43-15",
+            "content": "@@ -875,136 +875,8 @@\n  %7D%0A%0A\n-    for len(stack) %3E 0 %7B%0A            output = append(output, stack%5Blen(stack)-1%5D)%0A            stack = stack%5B:len(stack)-1%5D%0A    %7D\n %0A   \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-07_22-45-48",
+            "content": "@@ -104,91 +104,16 @@\n     \n-switch op %7B%0A    case %22+%22, %22-%22:%0A        return 1%0A    default:%0A        return 0%0A    %7D\n+return 1\n %0A%7D%0A%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-07_22-47-52",
+            "content": "@@ -152,39 +152,8 @@\n n 1%0A\n-    case %22*%22:%0A        return 2%0A\n     \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-07_22-48-37",
+            "content": "@@ -164,13 +164,8 @@\n  %22*%22\n-, %22/%22\n :%0A  \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-07_22-53-40",
+            "content": "@@ -188,39 +188,8 @@\n n 2%0A\n-    case %22%5E%22:%0A        return 3%0A\n     \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-07_23-04-07",
+            "content": "package main\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strings\"\n)\n\nfunc precedencia(op string) int{\n    switch op {\n    case \"+\", \"-\":\n        return 1\n    case \"*\", \"/\":\n        return 2\n    case \"^\":\n        return 3\n    default:\n        return 0\n    }\n}\n\nfunc associativo(op string) bool {\n    return op != \"^\"\n}\n\nfunc notacao(tokens []string) []string {\n    var output []string\n    var stack []string\n\n    for _, token := range tokens {\n        if precedencia(token) == 0 {\n            output = append(output, token)\n            continue\n        }\n\n        for len(stack) > 0 {\n            cima := stack[len(stack)-1]\n            cimaPrec := precedencia(cima)\n            agrPrec := precedencia(token)\n\n            if (associativo(token) && agrPrec <= cimaPrec) || (!associativo(token) && agrPrec < cimaPrec) {\n                output = append(output, cima)\n                stack = stack[:len(stack)-1]\n            } else {\n                break\n            }\n        }\n        stack = append(stack, token)\n    }\n\n    for len(stack) > 0 {\n            output = append(output, stack[len(stack)-1])\n            stack = stack[:len(stack)-1]\n    }\n    return output\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if !scanner.Scan() {\n        return\n    }\n\n    linha := scanner.Text()\n    tokens := strings.Fields(linha)\n    \n    if len(tokens) == 0 {\n        return\n    }\n\n    npr := notacao(tokens)\n    fmt.Println(strings.Join(npr, \" \"))\n}\n",
+            "lines": "74"
+        }
+    ]
+}

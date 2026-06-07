@@ -88,3 +88,41 @@
 2026-06-07 19:07:52, MOVE, v:1, k:ed@priminhos, mode:BACK
 2026-06-07 19:08:01, SELF, v:1, k:ed@priminhos, self:1, rate:100, study:41
 2026-06-07 19:07:47, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-06-07 22:13:28, MOVE, v:1, k:ed@polonesa, mode:DOWN
+2026-06-07 22:13:35, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:13:55, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:5
+2026-06-07 22:13:28, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:13:28, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:13:55, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:17:16, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:22:16, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:24:34, EXEC, v:1, k:ed@polonesa, mode:FULL, size:25, fail:COMP
+2026-06-07 22:27:10, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:31
+2026-06-07 22:27:07, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:27:10, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:30:10, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:36:43, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:52
+2026-06-07 22:36:46, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:36:56, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:41:45, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-06-07 22:43:15, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:62
+2026-06-07 22:45:48, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:65
+2026-06-07 22:46:02, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:46:10, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:47:52, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:0, size:70
+2026-06-07 22:48:37, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:40, size:72
+2026-06-07 22:48:48, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:48:58, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:53:33, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:53:39, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:53:40, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:60, size:72
+2026-06-07 22:54:16, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:54:39, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 22:59:08, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 22:59:12, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 23:03:33, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 23:04:05, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-06-07 23:04:07, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:100, size:74
+2026-06-07 23:04:08, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-06-07 23:04:20, SELF, v:1, k:ed@polonesa, self:1, rate:100, study:50, concept:1
+2026-06-07 23:04:29, SELF, v:1, k:ed@polonesa, self:1, rate:100, study:50, concept:1, refactor:1
