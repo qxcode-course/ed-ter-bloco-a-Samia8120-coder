@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_18-49-22",
+            "content": "@@ -553,16 +553,22 @@\n nt(&out,\n+ %22%25d%22,\n  p)%0A    \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-07_18-50-50",
+            "content": "@@ -658,57 +658,8 @@\n l %7B%0A\n-    if num %3C 2 %7B%0A        return false%0A    %7D%0A    %0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-07_18-56-27",
+            "content": "@@ -706,85 +706,8 @@\n     \n-if num == 2 %7B%0A        return false%0A    %7D%0A    if num %25 2 == 0 %7B%0A        %0A    %7D\n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-07_18-58-40",
+            "content": "@@ -777,128 +777,8 @@\n     \n-return false %0A    %7D%0A%0A    for i := 3; i * i %3C= num; i += 2 %7B%0A        if num %25 i == 0 %7B%0A            return false%0A        %7D\n %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-07_19-01-33",
+            "content": "@@ -731,19 +731,20 @@\n  return \n-tru\n+fals\n e%0A    %7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-07_19-07-47",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n    \"strings\"\n)\n\nfunc main() {\n    var input string\n    fmt.Scan(&input)\n\n    n, err := strconv.Atoi(input)\n    if err != nil {\n        fmt.Fprintln(os.Stderr, \"Erro\")\n    }\n\n    primos := make([]int, 0, n)\n    for num := 2; len(primos) < n; num++ {\n        if ePrimo(num) {\n            primos = append(primos, num)\n        }\n    }\n\n    var out strings.Builder\n    out.WriteString(\"[\")\n\n    for i, p := range primos {\n        if i > 0 {\n            out.WriteString(\", \")\n        }\n        fmt.Fprint(&out, p)\n    }\n    \n    out.WriteString(\"]\")\n    fmt.Println(out.String())\n}\n\nfunc ePrimo(num int) bool {\n    if num < 2 {\n        return false\n    }\n    if num == 2 {\n        return true\n    }\n    if num % 2 == 0 {\n        return false \n    }\n\n    for i := 3; i * i <= num; i += 2 {\n        if num % i == 0 {\n            return false\n        }\n    }\n    return true    \n}\n",
+            "lines": "56"
+        }
+    ]
+}

@@ -19,17 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
-- sandbox@sandbox
-- ed@basic
-- ed@tree
-- ed@backtrack
-- ed@list
-- ed@map_set
 - ed@vector
+- ed@tree
+- ed@bfs
+- ed@linear
 - ed@dfs
 - ed@rec
-- ed@linear
+- ed@basic
+- sandbox@sandbox
+- ed@list
+- ed@backtrack
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -37,5 +37,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@baruel
-selected_index: 8
+selected: ed@controlz
+selected_index: 60
