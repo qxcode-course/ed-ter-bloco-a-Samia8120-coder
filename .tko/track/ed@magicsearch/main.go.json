@@ -7,8 +7,53 @@
         },
         {
             "label": "2026-05-03_14-22-03",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tleft, right := 0, len(slice)-1\n\tfound := -1\n\n\tfor left <= right {\n\t\tmid := (left + right) / 2\n\n\t\tif slice[mid] == value {\n\t\t\tfound = mid\n\t\t\tbreak\n\t\t} else if slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tright = mid - 1\n\t\t}\n\t}\n\n\tif found != -1 {\n\t\ti := found\n\t\tfor i+1 < len(slice) && slice[i+1] == value {\n\t\t\ti++\n\t\t}\n\t\treturn i\n\t}\n\n\treturn left\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -111,28 +111,23 @@\n  int\n+ \n %7B%0A%09\n-esquerda, direita\n+left, right\n  := \n@@ -146,50 +146,311 @@\n )-1%0A\n-%0A%09for esquerda %3C= direita %7B%0A%09%09%0A\n+%09found := -1%0A%0A%09for left %3C= right %7B%0A%09%09mid := (left + right) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09found = mid%0A%09%09%09break%0A%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09right = mid - 1%0A%09%09%7D%0A%09%7D%0A%0A%09if found != -1 %7B%0A%09%09i := found%0A%09%09for i+1 %3C len(slice) && slice%5Bi+1%5D == value %7B%0A%09%09%09i++%0A%09\n %09%7D%0A\n+%09\n %09return \n esqu\n@@ -449,16 +449,26 @@\n urn \n-esquerda\n+i%0A%09%7D%0A%0A%09return left\n %0A%7D%0A%0A\n@@ -540,15 +540,13 @@\n n()%0A\n-%0A\n %09part\n-e\n s :=\n@@ -605,17 +605,16 @@\n , 0, 1)%0A\n-%0A\n %09for _, \n@@ -631,17 +631,16 @@\n nge part\n-e\n s%5B1 : le\n@@ -645,17 +645,16 @@\n len(part\n-e\n s)-1%5D %7B%0A\n@@ -786,19 +786,16 @@\n %0A%09result\n-ado\n  := Magi\n@@ -839,420 +839,8 @@\n sult\n-ado\n )%0A%7D%0A\n-/*%0Afunc MagicSearch(slice %5B%5Dint, value int) int %7B%0A%09left, right := 0, len(slice)-1%0A%09found := -1%0A%0A%09for left %3C= right %7B%0A%09%09mid := (left + right) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09found = mid%0A%09%09%09break%0A%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09right = mid - 1%0A%09%09%7D%0A%09%7D%0A%0A%09if found != -1 %7B%0A%09%09i := found%0A%09%09for i+1 %3C len(slice) && slice%5Bi+1%5D == value %7B%0A%09%09%09i++%0A%09%09%7D%0A%09%09return i%0A%09%7D%0A%0A%09return left%0A%7D%0A*/%0A\n",
             "lines": "53"
+        },
+        {
+            "label": "2026-06-07_13-51-21",
+            "content": "@@ -150,22 +150,8 @@\n e)-1\n-%0A%09achado := -1\n %0A%0A%09f\n@@ -179,123 +179,8 @@\n a %7B%0A\n-%09%09meio := (esquerda + direita) / 2%0A%0A%09%09if slice%5Bmeio%5D == value%7B%0A%09%09%09achado = meio%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09if achado != 1 %7B%0A\n %09%09%0A%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-07_13-58-01",
+            "content": "@@ -310,67 +310,8 @@\n %7B%0A%09%09\n-i := achado%0A%0A%09%09for i+1 %3C len(slice) %7B%0A%09%09%09i++%0A%09%09%7D%0A%09%09return i\n %0A%09%7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-07_13-59-38",
+            "content": "@@ -341,39 +341,16 @@\n n(slice)\n- && slice%5Bi+1%5D == value\n  %7B%0A%09%09%09i+\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-07_14-00-35",
+            "content": "@@ -282,65 +282,8 @@\n eak%0A\n-%09%09%7D else if slice%5Bmeio%5D %3C value %7B%0A%09%09%09esquerda = meio + 1%0A\n %09%09%7D%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-07_14-02-06",
+            "content": "@@ -339,41 +339,8 @@\n + 1%0A\n-%09%09%7D else %7B%0A%09%09%09direita = meio - 1%0A\n %09%09%7D%0A\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-07_14-02-41",
+            "content": "@@ -386,25 +386,24 @@\n f achado != \n--\n 1 %7B%0A%09%09i := a\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-07_14-03-55",
+            "content": "@@ -390,16 +390,17 @@\n hado != \n+-\n 1 %7B%0A%09%09i \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-07_14-04-19",
+            "content": "@@ -386,25 +386,24 @@\n f achado != \n--\n 1 %7B%0A%09%09i := a\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-06-07_14-40-08",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int{\n\tesquerda, direita := 0, len(slice)-1\n\tachado := -1\n\n\tfor esquerda <= direita {\n\t\tmeio := (esquerda + direita) / 2\n\n\t\tif slice[meio] == value{\n\t\t\tachado = meio\n\t\t\tbreak\n\t\t} else if slice[meio] < value {\n\t\t\tesquerda = meio + 1\n\t\t} else {\n\t\t\tdireita = meio - 1\n\t\t}\n\t}\n\n\tif achado != -1 {\n\t\ti := achado\n\n\t\tfor i+1 < len(slice) && slice[i+1] == value {\n\t\t\ti++\n\t\t}\n\t\treturn i\n\t}\n\treturn esquerda\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\n\tpartes := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\n\tfor _, elem := range partes[1 : len(partes)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresultado := MagicSearch(slice, value)\n\tfmt.Println(resultado)\n}\n/*\nfunc MagicSearch(slice []int, value int) int {\n\tleft, right := 0, len(slice)-1\n\tfound := -1\n\n\tfor left <= right {\n\t\tmid := (left + right) / 2\n\n\t\tif slice[mid] == value {\n\t\t\tfound = mid\n\t\t\tbreak\n\t\t} else if slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tright = mid - 1\n\t\t}\n\t}\n\n\tif found != -1 {\n\t\ti := found\n\t\tfor i+1 < len(slice) && slice[i+1] == value {\n\t\t\ti++\n\t\t}\n\t\treturn i\n\t}\n\n\treturn left\n}\n*/\n",
+            "lines": "84"
         }
     ]
 }

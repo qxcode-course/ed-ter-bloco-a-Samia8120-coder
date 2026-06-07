@@ -12,7 +12,32 @@
         },
         {
             "label": "2026-03-22_17-30-31",
-            "content": "package main\nimport (\n    \"fmt\"\n)\n\ntype Jogada struct{\n    pa, pb int\n}\n\nfunc pontuacao(j Jogada) int {\n    if j.pa > j.pb{\n        return j.pa - j.pb\n    }\n    return j.pb - j.pa\n}\n\nfunc main() {\n    qtd := 0\n    fmt.Scan(&qtd)\n    jogadas := make([]Jogada, qtd)\n    for i := range qtd{\n        fmt.Scan(&jogadas[i].pa, &jogadas[i].pb)\n    }\n    ind_melhor := -1\n    for i, jog := range jogadas{\n        if jog.pa < 10 || jog.pb < 10{\n            continue\n        }\n        if ind_melhor == -1 || (pontuacao(jog) < pontuacao(jogadas[ind_melhor])){\n            ind_melhor = i\n        }\n    }\n    if ind_melhor == -1 {\n        fmt.Print(\"sem ganhador\\n\")\n    } else {\n        fmt.Print(ind_melhor, \"\\n\")\n    } \n\n}\n",
+            "content": "@@ -0,0 +1,713 @@\n+package main%0Aimport (%0A    %22fmt%22%0A)%0A%0Atype Jogada struct%7B%0A    pa, pb int%0A%7D%0A%0Afunc pontuacao(j Jogada) int %7B%0A    if j.pa %3E j.pb%7B%0A        return j.pa - j.pb%0A    %7D%0A    return j.pb - j.pa%0A%7D%0A%0Afunc main() %7B%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A    jogadas := make(%5B%5DJogada, qtd)%0A    for i := range qtd%7B%0A        fmt.Scan(&jogadas%5Bi%5D.pa, &jogadas%5Bi%5D.pb)%0A    %7D%0A    ind_melhor := -1%0A    for i, jog := range jogadas%7B%0A        if jog.pa %3C 10 %7C%7C jog.pb %3C 10%7B%0A            continue%0A        %7D%0A        if ind_melhor == -1 %7C%7C (pontuacao(jog) %3C pontuacao(jogadas%5Bind_melhor%5D))%7B%0A            ind_melhor = i%0A        %7D%0A    %7D%0A    if ind_melhor == -1 %7B%0A        fmt.Print(%22sem ganhador%5Cn%22)%0A    %7D else %7B%0A        fmt.Print(ind_melhor, %22%5Cn%22)%0A    %7D %0A%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-06_22-18-22",
+            "content": "@@ -1,76 +0,0 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A%7D%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2026-06-06_22-20-33",
+            "content": "@@ -70,90 +70,7 @@\n qtd)\n-%0A%0A    melhor := -1%0A%0A    if melhor == -1 %7B%0A        fmt.Print(%22sem ganhador%5Cn%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-06_22-22-35",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -25,592 +25,71 @@\n t%22%0A%0A\n-type Jogada struct %7B%0A    peda1, peda2 int%0A%7D%0A%0Afunc pontuacao(j Jogada) int %7B%0A    if j.peda1 %3E j.peda2 %7B%0A        return j.peda1 - j.peda2%0A    %7D%0A    return j.peda1 - j.peda2%0A%7D%0A%0Afunc main() %7B%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A    jogadas := make(%5B%5DJogada, qtd)%0A%0A    for i := range qtd %7B%0A        fmt.Scan(&jogadas%5Bi%5D.peda1, &jogadas%5Bi%5D.peda2)%0A    %7D%0A%0A    melhor := -1%0A    for i, jog := range jogadas %7B%0A        if jog.peda1 %3C 10 %7C%7C jog.peda2 %3C 10 %7B%0A            continue%0A        %7D%0A        if melhor == -1 %7C%7C (pontuacao(jog) %3C pontuacao(jogadas%5Bmelhor%5D)) %7B%0A            melhor = i%0A        %7D%0A    %7D\n+func main() %7B%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A%0A    melhor := -1\n %0A%0A  \n@@ -125,18 +125,16 @@\n mt.Print\n-ln\n (%22sem ga\n@@ -143,50 +143,11 @@\n ador\n-%22)%0A    %7D else %7B%0A        fmt.Println(melhor\n+%5Cn%22\n )%0A  \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-06_22-32-03",
+            "content": "@@ -179,17 +179,17 @@\n n j.peda\n-2\n+1\n  - j.ped\n@@ -189,17 +189,17 @@\n - j.peda\n-1\n+2\n %0A%7D%0A%0Afunc\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-06_22-42-16",
+            "content": "package main\nimport \"fmt\"\n\ntype Jogada struct {\n    peda1, peda2 int\n}\n\nfunc pontuacao(j Jogada) int {\n    if j.peda1 > j.peda2 {\n        return j.peda1 - j.peda2\n    }\n    return j.peda2 - j.peda1\n}\n\nfunc main() {\n    qtd := 0\n    fmt.Scan(&qtd)\n    jogadas := make([]Jogada, qtd)\n\n    for i := range qtd {\n        fmt.Scan(&jogadas[i].peda1, &jogadas[i].peda2)\n    }\n\n    melhor := -1\n    for i, jog := range jogadas {\n        if jog.peda1 < 10 || jog.peda2 < 10 {\n            continue\n        }\n        if melhor == -1 || (pontuacao(jog) < pontuacao(jogadas[melhor])) {\n            melhor = i\n        }\n    }\n\n    if melhor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(melhor)\n    }\n}\n",
             "lines": "39"
         }
     ]

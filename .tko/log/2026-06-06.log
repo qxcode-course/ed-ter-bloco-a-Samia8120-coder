@@ -166,3 +166,29 @@
 2026-06-06 16:32:44, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:65
 2026-06-06 16:32:47, MOVE, v:1, k:ed@triangulo, mode:BACK
 2026-06-06 16:33:15, SELF, v:1, k:ed@triangulo, self:1, rate:100
+2026-06-06 22:18:01, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:18:22, EXEC, v:1, k:ed@pedra, mode:FULL, size:0, fail:COMP
+2026-06-06 22:18:24, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:18:34, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:20:33, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:8
+2026-06-06 22:20:38, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:20:44, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:22:29, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:20:33, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:22:35, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:14
+2026-06-06 22:27:25, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:22:35, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:32:03, EXEC, v:1, k:ed@pedra, mode:FULL, rate:50, size:39
+2026-06-06 22:32:08, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:31:57, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:32:03, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-06 22:32:35, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:32:58, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:33:06, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:37:31, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:37:36, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:42:09, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:42:15, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-06 22:42:16, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:39
+2026-06-06 22:42:17, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-06 22:42:46, SELF, v:1, k:ed@pedra, self:1, rate:100, study:65

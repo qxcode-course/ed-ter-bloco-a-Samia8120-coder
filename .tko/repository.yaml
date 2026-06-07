@@ -20,20 +20,20 @@ sources:
   quests: null
 expanded:
 - sandbox@sandbox
-- ed@basic
+- ed@list
+- ed@vector
+- ed@map_set
+- ed@backtrack
 - ed@rec
 - ed@linear
-- ed@backtrack
+- ed@basic
 - ed@tree
-- ed@map_set
-- ed@vector
-- ed@list
 flags:
   inbox: all
-  panel: skills
-  show_panel: 'true'
+  panel: graph
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@map_set
-selected_index: 10
+selected: ed@magicsearch
+selected_index: 49

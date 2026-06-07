@@ -1,39 +1,39 @@
 package main
-import (
-    "fmt"
-)
+import "fmt"
 
-type Jogada struct{
-    pa, pb int
+type Jogada struct {
+    peda1, peda2 int
 }
 
 func pontuacao(j Jogada) int {
-    if j.pa > j.pb{
-        return j.pa - j.pb
+    if j.peda1 > j.peda2 {
+        return j.peda1 - j.peda2
     }
-    return j.pb - j.pa
+    return j.peda2 - j.peda1
 }
 
 func main() {
     qtd := 0
     fmt.Scan(&qtd)
     jogadas := make([]Jogada, qtd)
-    for i := range qtd{
-        fmt.Scan(&jogadas[i].pa, &jogadas[i].pb)
+
+    for i := range qtd {
+        fmt.Scan(&jogadas[i].peda1, &jogadas[i].peda2)
     }
-    ind_melhor := -1
-    for i, jog := range jogadas{
-        if jog.pa < 10 || jog.pb < 10{
+
+    melhor := -1
+    for i, jog := range jogadas {
+        if jog.peda1 < 10 || jog.peda2 < 10 {
             continue
         }
-        if ind_melhor == -1 || (pontuacao(jog) < pontuacao(jogadas[ind_melhor])){
-            ind_melhor = i
+        if melhor == -1 || (pontuacao(jog) < pontuacao(jogadas[melhor])) {
+            melhor = i
         }
     }
-    if ind_melhor == -1 {
-        fmt.Print("sem ganhador\n")
-    } else {
-        fmt.Print(ind_melhor, "\n")
-    } 
 
+    if melhor == -1 {
+        fmt.Println("sem ganhador")
+    } else {
+        fmt.Println(melhor)
+    }
 }
