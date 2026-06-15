@@ -19,23 +19,23 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
-- ed@vector
-- ed@list
-- ed@linear
-- ed@map_set
 - ed@tree
-- sandbox@sandbox
+- ed@map_set
 - ed@basic
 - ed@dfs
-- ed@rec
+- ed@list
+- sandbox@sandbox
+- ed@vector
 - ed@bfs
+- ed@rec
+- ed@backtrack
+- ed@linear
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@backtrack
-selected_index: 72
+selected: ed@soma
+selected_index: 84
