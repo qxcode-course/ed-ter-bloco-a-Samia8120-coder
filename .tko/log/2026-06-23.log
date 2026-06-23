@@ -1,0 +1,4 @@
+2026-06-23 18:59:54, MOVE, v:1, k:ed@hex, mode:DOWN
+2026-06-23 18:59:56, MOVE, v:1, k:ed@hex, mode:PICK
+2026-06-23 19:00:05, EXEC, v:1, k:ed@hex, mode:LOCK, rate:0, size:5
+2026-06-23 19:00:54, MOVE, v:1, k:ed@hex, mode:BACK
