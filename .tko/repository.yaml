@@ -19,25 +19,25 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@vector
-- ed@backtrack
-- ed@rec
-- ed@bfs
-- ed@dfs
-- sandbox@sandbox
 - ed@tree
-- ed@linear
+- ed@vector
+- ed@bfs
+- ed@rec
+- ed@backtrack
+- ed@map_set
+- ed@dfs
 - ed@list
 - ed@basic
-- ed@map_set
+- ed@linear
+- sandbox@sandbox
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@caminho
-selected_index: 99
+selected: ed@compare
+selected_index: 86

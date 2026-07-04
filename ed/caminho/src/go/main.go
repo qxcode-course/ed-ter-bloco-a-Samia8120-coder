@@ -25,10 +25,57 @@ func match(grid [][]rune, pos Pos, char rune) bool {
 }
 
 func search(grid [][]rune, startPos Pos, endPos Pos) {
-	_, _, _ = grid, startPos, endPos
+	rows := len(grid)
+	cols := len(grid[0])
+
+	visited := make([][]bool, rows)
+	prev := make([][]Pos, rows)
+	for i := 0; i < rows; i++ {
+		visited[i] = make([]bool, cols)
+		prev[i] = make([]Pos, cols)
+		for j := 0; j < cols; j++ {
+			prev[i][j] = Pos{-1, -1}
+		}
+	}
+
+	queue := NewQueue[Pos]()
+	queue.Enqueue(startPos)
+	visited[startPos.l][startPos.c] = true
+
+	dirs := [][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+	found := false
+
+	for !queue.IsEmpty() {
+		cur, _ := queue.Dequeue()
+
+		if cur == endPos {
+			found = true
+			break
+		}
+		for _, d := range dirs {
+			nl, nc := cur.l+d[0], cur.c+d[1]
+			np := Pos{nl, nc}
+
+			if inside(grid, np) && !visited[nl][nc] && grid[nl][nc] != '#' {
+				visited[nl][nc] = true
+				prev[nl][nc] = cur
+				queue.Enqueue(np)
+			}
+		}
+	}
+	if found {
+		voltar(grid, startPos, endPos, prev)
+	}
 }
 
-func voltar()
+func voltar(grid [][]rune, start Pos, end Pos, prev [][]Pos) {
+	cur := end
+	for cur != start {
+		grid[cur.l][cur.c] = '.'
+		cur = prev[cur.l][cur.c]
+	}
+	grid[start.l][start.c] = '.'
+} 
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

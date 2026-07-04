@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_22-09-04",
+            "content": "@@ -115,25 +115,14 @@\n nt) \n-int\n %7B%0A    \n-return 0\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-04_22-09-19",
+            "content": "@@ -124,450 +124,16 @@\n     \n-if len(grid) == 0 %7B%0A        return 0%0A    %7D%0A    m, n := len(grid), len(grid%5B0%5D)%0A%0A    queue := make(%5B%5D%5B2%5Dint, 0)%0A    fresh := 0%0A    for i := 0; i %3C m; i++ %7B%0A        for j := 0; j %3C n; j++ %7B%0A            if grid%5Bi%5D%5Bj%5D == 2 %7B%0A                queue = append(queue, %5B2%5Dint%7Bi, j%7D)%0A            %7D else if grid%5Bi%5D%5Bj%5D == 1 %7B%0A                fresh++%0A            %7D%0A        %7D%0A    %7D%0A    if fresh == 0 %7B%0A        return 0%0A    %7D%0A%0A    minutes := 0%0A%0A    return mi\n+return 0\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-04_22-24-38",
+            "content": "@@ -562,21 +562,16 @@\n eturn mi\n-nutes\n %0A%7D%0A%0Afunc\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-04_22-25-01",
+            "content": "@@ -551,64 +551,8 @@\n := 0\n-%0A    dirs := %5B%5D%5B2%5Dint%7B%7B-1,0%7D, %7B1,0%7D, %7B0,-1%7D, %7B0,1%7D%7D%0A    \n %0A%0A  \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-04_22-27-34",
+            "content": "@@ -556,10 +556,8 @@\n     \n-//\n dirs\n@@ -599,16 +599,20 @@\n  %7B0,1%7D%7D%0A\n+    \n %0A%0A    re\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-04_22-27-37",
+            "content": "@@ -552,16 +552,18 @@\n = 0%0A    \n+//\n dirs := \n@@ -605,525 +605,8 @@\n 1%7D%7D%0A\n-    for len(queue) %3E 0 && fresh %3E 0 %7B%0A        size := len(queue)%0A        for k := 0; k %3C size; k++ %7B%0A            pos := queue%5B0%5D%0A            queue = queue%5B1:%5D%0A%0A            for _, d := range dirs %7B%0A                ni, nj := pos%5B0%5D+d%5B0%5D, pos%5B1%5D+d%5B1%5D%0A                if ni %3E= 0 && ni %3C m && nj %3E= 0 && nj %3C n && grid%5Bni%5D%5Bnj%5D == 1 %7B%0A                    grid%5Bni%5D%5Bnj%5D = 2%0A                    fresh--%0A                    queue = append(queue, %5B2%5Dint%7Bni, nj%7D)%0A                %7D%0A            %7D%0A        %7D%0A        minutes++%0A    %7D\n %0A%0A  \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-04_22-38-20",
+            "content": "@@ -1117,20 +1117,16 @@\n +%0A    %7D%0A\n-    \n %0A    ret\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-04_22-38-42",
+            "content": "@@ -1125,46 +1125,8 @@\n     \n-if fresh %3E 0 %7B%0A        return -1%0A    %7D\n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-04_22-43-29",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"bufio\"\n    \"os\"\n    \"strconv\"\n    \"strings\"\n)\n\nfunc LaranjasPodres(grid [][]int) int{\n    if len(grid) == 0 {\n        return 0\n    }\n    m, n := len(grid), len(grid[0])\n\n    queue := make([][2]int, 0)\n    fresh := 0\n    for i := 0; i < m; i++ {\n        for j := 0; j < n; j++ {\n            if grid[i][j] == 2 {\n                queue = append(queue, [2]int{i, j})\n            } else if grid[i][j] == 1 {\n                fresh++\n            }\n        }\n    }\n    if fresh == 0 {\n        return 0\n    }\n\n    minutes := 0\n    dirs := [][2]int{{-1,0}, {1,0}, {0,-1}, {0,1}}\n    for len(queue) > 0 && fresh > 0 {\n        size := len(queue)\n        for k := 0; k < size; k++ {\n            pos := queue[0]\n            queue = queue[1:]\n\n            for _, d := range dirs {\n                ni, nj := pos[0]+d[0], pos[1]+d[1]\n                if ni >= 0 && ni < m && nj >= 0 && nj < n && grid[ni][nj] == 1 {\n                    grid[ni][nj] = 2\n                    fresh--\n                    queue = append(queue, [2]int{ni, nj})\n                }\n            }\n        }\n        minutes++\n    }\n    if fresh > 0 {\n        return -1\n    }\n    return minutes\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    var tokens []string\n\n    for scanner.Scan() {\n        line := scanner.Text()\n        fields := strings.Fields(line)\n        tokens = append(tokens, fields...)\n    }\n    if len(tokens) == 0 {\n        return \n    }\n\n    nums := make([]int, len(tokens))\n    for i, t := range tokens {\n        val, _ := strconv.Atoi(t)\n        nums[i] = val\n    }\n\n    idx := 0\n    m, n := nums[idx], nums[idx+1]\n    idx += 2\n\n    grid := make([][]int, m)\n    for i := 0; i < m; i++ {\n        grid[i] = make([]int, n)\n        for j := 0; j < n; j++ {\n            grid[i][j] = nums[idx]\n            idx++\n        } \n    }\n    fmt.Println(LaranjasPodres(grid))\n}\n",
+            "lines": "88"
+        }
+    ]
+}
