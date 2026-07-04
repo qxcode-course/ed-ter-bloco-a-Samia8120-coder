@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_13-32-43",
+            "content": "@@ -117,104 +117,33 @@\n  %7B%0A%09\n-if len(matrix) == 0 %7C%7C len(matrix%5B0%5D) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09m, n := len(matrix), len(matrix%5B0%5D)\n+//%0A%09_ := matrix%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-04_13-41-20",
+            "content": "@@ -214,143 +214,8 @@\n 0%5D)%0A\n-%09memo := make(%5B%5D%5B%5Dint, m)%0A%09%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09memo%5Bi%5D = make(%5B%5Dint, n)%0A%09%7D%0A%09dirs := %5B%5D%5B2%5Dint%7B%7B-1,0%7D, %7B1,0%7D, %7B0,1%7D, %7B0,-1%7D%7D%0A%0A%09%0A\n %7D%0A%0A/\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-04_13-44-20",
+            "content": "@@ -348,183 +348,8 @@\n %7D%0A%0A%09\n-var dfs func(int, int) int%0A%09dfs = func(i, j int) int %7B%0A%09%09if memo%5Bi%5D%5Bj%5D %3E 0 %7B%0A%09%09%09return memo%5Bi%5D%5Bj%5D%0A%09%09%7D%0A%09%09best := 1%0A%09%09for _, d := range dirs %7B%0A%09%09%09ni, nj := i+d%5B0%5D, j+d%5B1%5D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-04_13-50-54",
+            "content": "@@ -446,17 +446,16 @@\n %5Bj%5D%0A%09%09%7D%0A\n-%0A\n %09%09best :\n@@ -519,215 +519,9 @@\n %5D%0A%09%09\n-%09if ni %3E= 0 && ni %3C m && nj %3E= 0 && nj %3C n && matrix%5Bni%5D%5Bnj%5D %3E matrix%5Bi%5D%5Bj%5D %7B%0A%09%09%09%09candidate := 1 + dfs(ni, nj)%0A%09%09%09%09if candidate %3E best %7B%0A%09%09%09%09%09best = candidate%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09memo%5Bi%5D%5Bj%5D = best%0A%09%09return best\n+%7D\n %0A%09%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-04_13-55-22",
+            "content": "@@ -731,30 +731,8 @@\n %0A%09%7D%0A\n-%09ans := 0%0A%09return ans%0A\n %7D%0A%0A/\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-07-04_13-55-56",
+            "content": "@@ -741,126 +741,8 @@\n = 0%0A\n-%09for i := 0; i %3C m; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09val := dfs(i, j)%0A%09%09%09if val == ans %7B%0A%09%09%09%09ans = val%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-04_13-59-37",
+            "content": "@@ -820,17 +820,18 @@\n %09if val \n-%3C\n+==\n  ans %7B%0A%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-04_13-59-48",
+            "content": "@@ -820,17 +820,17 @@\n %09if val \n-%3E\n+%3C\n  ans %7B%0A%09\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-04_14-04-07",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc longestIncreasingPath(matrix [][]int) int {\n\tif len(matrix) == 0 || len(matrix[0]) == 0 {\n\t\treturn 0\n\t}\n\n\tm, n := len(matrix), len(matrix[0])\n\tmemo := make([][]int, m)\n\t\n\tfor i := 0; i < m; i++ {\n\t\tmemo[i] = make([]int, n)\n\t}\n\tdirs := [][2]int{{-1,0}, {1,0}, {0,1}, {0,-1}}\n\n\tvar dfs func(int, int) int\n\tdfs = func(i, j int) int {\n\t\tif memo[i][j] > 0 {\n\t\t\treturn memo[i][j]\n\t\t}\n\n\t\tbest := 1\n\t\tfor _, d := range dirs {\n\t\t\tni, nj := i+d[0], j+d[1]\n\t\t\tif ni >= 0 && ni < m && nj >= 0 && nj < n && matrix[ni][nj] > matrix[i][j] {\n\t\t\t\tcandidate := 1 + dfs(ni, nj)\n\t\t\t\tif candidate > best {\n\t\t\t\t\tbest = candidate\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tmemo[i][j] = best\n\t\treturn best\n\t}\n\tans := 0\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tval := dfs(i, j)\n\t\t\tif val > ans {\n\t\t\t\tans = val\n\t\t\t}\n\t\t}\n\t}\n\treturn ans\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\tmatrix := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tif !scanner.Scan() {\n\t\t\treturn\n\t\t}\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc && j < len(tokens); j++ {\n\t\t\tv, _ := strconv.Atoi(tokens[j])\n\t\t\trow[j] = v\n\t\t}\n\t\tmatrix[i] = row\n\t}\n\n\tfmt.Println(longestIncreasingPath(matrix))\n}\n",
+            "lines": "84"
+        }
+    ]
+}

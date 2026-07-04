@@ -19,17 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
-- ed@bfs
-- ed@linear
-- ed@basic
-- ed@vector
-- ed@map_set
-- sandbox@sandbox
-- ed@backtrack
 - ed@dfs
-- ed@list
+- ed@vector
+- ed@linear
+- ed@rec
 - ed@tree
+- ed@basic
+- ed@map_set
+- ed@list
+- ed@backtrack
+- sandbox@sandbox
+- ed@bfs
 flags:
   inbox: all
   panel: skills
@@ -39,5 +39,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@hex
-selected_index: 71
+selected: ed@battleship
+selected_index: 97

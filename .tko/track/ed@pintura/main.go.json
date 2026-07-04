@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_12-54-58",
+            "content": "@@ -185,319 +185,32 @@\n  %7B%0A%09\n-original := image%5Bsr%5D%5Bsc%5D%0A%09if original == color %7B%0A%09%09return image%0A%09%7D%0A%0A%09m, n := len(image), len(image%5B0%5D)%0A%09dirs := %5B%5D%5B2%5Dint%7B%7B1, 0%7D, %7B-1, 0%7D, %7B0,1%7D, %7B0,-1%7D%7D%0A%09image%5Bsr%5D%5Bsc%5D = color%0A%09stack := %5B%5D%5B2%5Dint %7B%7Bsr, sc%7D%7D%0A%0A%09for len(stack) %3E 0 %7B%0A%09%09p := stack%5Blen(stack)-1%5D%0A%09%09stack = stack%5B:len(stack)-1%5D%0A%09%09r, c := p%5B0%5D, p%5B1%5D%0A%09%7D\n+//%0A%09_ := image%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-04_13-12-18",
+            "content": "@@ -493,72 +493,8 @@\n p%5B1%5D\n-%0A%0A%09%09for _, d := range dirs %7B%0A%09%09%09nr, nc := r+d%5B0%5D, c+d%5B1%5D%0A%09%09%09%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-04_13-21-33",
+            "content": "@@ -553,107 +553,15 @@\n %0A%09%09%09\n-if nr %3E= 0 && nr %3C m && nc %3E= 0 && nc %3C n && image%5Bnr%5D%5Bnc%5D == original %7B%0A%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return image\n+%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-07-04_13-23-15",
+            "content": "@@ -546,17 +546,16 @@\n  c+d%5B1%5D%0A\n-%0A\n %09%09%09if nr\n@@ -626,75 +626,8 @@\n l %7B%0A\n-%09%09%09%09image%5Bnr%5D%5Bnc%5D = color%0A%09%09%09%09stack = append(stack, %5B2%5Dint%7Bnr, nc%7D)\n %0A%09%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-04_13-28-52",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\toriginal := image[sr][sc]\n\tif original == color {\n\t\treturn image\n\t}\n\n\tm, n := len(image), len(image[0])\n\tdirs := [][2]int{{1, 0}, {-1, 0}, {0,1}, {0,-1}}\n\timage[sr][sc] = color\n\tstack := [][2]int {{sr, sc}}\n\n\tfor len(stack) > 0 {\n\t\tp := stack[len(stack)-1]\n\t\tstack = stack[:len(stack)-1]\n\t\tr, c := p[0], p[1]\n\n\t\tfor _, d := range dirs {\n\t\t\tnr, nc := r+d[0], c+d[1]\n\n\t\t\tif nr >= 0 && nr < m && nc >= 0 && nc < n && image[nr][nc] == original {\n\t\t\t\timage[nr][nc] = color\n\t\t\t\tstack = append(stack, [2]int{nr, nc})\n\t\t\t}\n\t\t}\n\t}\n\treturn image\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "79"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_11-52-34",
+            "content": "@@ -118,196 +118,17 @@\n  %7B%0A%09\n-m := len(board)%0A%09if m == 0 %7B%0A%09%09return%0A%09%7D%0A%09n := len(board%5B0%5D)%0A%09dirs := %5B%5D%5B2%5Dint%7B%7B1,0%7D, %7B-1,0%7D, %7B0,1%7D, %7B0,-1%7D%7D%0A%0A%09var bfs func(r, c int)%0A%09bfs = func(r, c int) %7B%0A%09%09queue := %5B%5D%5B2%5Dint%7B%7Br, c%7D%7D%0A%09%7D\n+_ = board\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-04_12-20-27",
+            "content": "@@ -304,168 +304,8 @@\n c%7D%7D%0A\n-%09%09board%5Br%5D%5Bc%5D = 'T'%0A%0A%09%09for len(queue) %3E 0 %7B%0A%09%09%09p := queue%5B0%5D%0A%09%09%09queue = queue%5B1:%5D%0A%0A%09%09%09for _, d := range dirs %7B%0A%09%09%09%09nr, nc := p%5B0%5D+d%5B0%5D, p%5B1%5D+d%5B1%5D%0A%09%09%09%09%0A%09%09%09%7D%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_12-25-52",
+            "content": "@@ -454,149 +454,8 @@\n %09%09%09%09\n-if nr %3E= 0 && nr %3C m && nc %3E= 0 && nc %3C n && board%5Bnr%5D%5Bnc%5D == 'O' %7B%0A%09%09%09%09%09board%5Bnr%5D%5Bnc%5D = 'T'%0A%09%09%09%09%09queue = append(queue, %5B2%5Dint%7Bnr, nc%7D)%0A%09%09%09%09%7D\n %0A%09%09%09\n@@ -462,19 +462,16 @@\n %7D%0A%09%09%7D%0A%09%7D\n-%0A%0A%09\n %0A%7D%0A%0A// N\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-04_12-32-37",
+            "content": "@@ -610,125 +610,8 @@\n %7D%0A%0A%09\n-for i := 0; i %3C m; i++ %7B%0A%09%09if board%5Bi%5D%5B0%5D == 'O' %7B%0A%09%09%09bfs(i, 0)%0A%09%09%7D%0A%09%09if board%5Bi%5D%5Bn-1%5D == 'O' %7B%0A%09%09%09bfs(i, n-1)%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-04_12-35-34",
+            "content": "@@ -727,243 +727,8 @@\n %7D%0A%09%7D\n-%0A%0A%09for j := 0; j %3C n; j++ %7B%0A%09%09if board%5B0%5D%5Bj%5D == 'O' %7B%0A%09%09%09bfs(0, j)%0A%09%09%7D%0A%09%09if board%5Bm-1%5D%5Bj%5D == 'O' %7B%0A%09%09%09bfs(m-1, j)%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if board%5Bi%5D%5Bj%5D == 'O' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_12-43-00",
+            "content": "@@ -951,64 +951,8 @@\n 'X'%0A\n-%09%09%09%7D else if board%5Bi%5D%5Bj%5D == 'T' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'O'%0A\n %09%09%09%7D\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-04_12-51-31",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tm := len(board)\n\tif m == 0 {\n\t\treturn\n\t}\n\tn := len(board[0])\n\tdirs := [][2]int{{1,0}, {-1,0}, {0,1}, {0,-1}}\n\n\tvar bfs func(r, c int)\n\tbfs = func(r, c int) {\n\t\tqueue := [][2]int{{r, c}}\n\t\tboard[r][c] = 'T'\n\n\t\tfor len(queue) > 0 {\n\t\t\tp := queue[0]\n\t\t\tqueue = queue[1:]\n\n\t\t\tfor _, d := range dirs {\n\t\t\t\tnr, nc := p[0]+d[0], p[1]+d[1]\n\t\t\t\tif nr >= 0 && nr < m && nc >= 0 && nc < n && board[nr][nc] == 'O' {\n\t\t\t\t\tboard[nr][nc] = 'T'\n\t\t\t\t\tqueue = append(queue, [2]int{nr, nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tfor i := 0; i < m; i++ {\n\t\tif board[i][0] == 'O' {\n\t\t\tbfs(i, 0)\n\t\t}\n\t\tif board[i][n-1] == 'O' {\n\t\t\tbfs(i, n-1)\n\t\t}\n\t}\n\n\tfor j := 0; j < n; j++ {\n\t\tif board[0][j] == 'O' {\n\t\t\tbfs(0, j)\n\t\t}\n\t\tif board[m-1][j] == 'O' {\n\t\t\tbfs(m-1, j)\n\t\t}\n\t}\n\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif board[i][j] == 'O' {\n\t\t\t\tboard[i][j] = 'X'\n\t\t\t} else if board[i][j] == 'T' {\n\t\t\t\tboard[i][j] = 'O'\n\t\t\t}\n\t\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "81"
+        }
+    ]
+}
