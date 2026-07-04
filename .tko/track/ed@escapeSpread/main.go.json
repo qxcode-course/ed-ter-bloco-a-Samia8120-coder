@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_15-30-25",
+            "content": "@@ -202,17 +202,39 @@\n  int %7B%0A%09\n-%09\n+//%0A%09_ := grid%0A%09return 0\n %0A%7D%0A%0A// N\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-04_15-36-24",
+            "content": "@@ -206,196 +206,9 @@\n  %7B%0A%09\n-m := len(grid)%0A%09if m == 0 %7B%0A%09%09return 0%0A%09%7D%0A%09n := len(grid%5B0%5D)%0A%0A%09fire := make(%5B%5D%5B%5Dint, m)%0A%09for i := range fire %7B%0A%09%09fire%5Bi%5D = make(%5B%5Dint, n)%0A%09%09for j := range fire%5Bi%5D %7B%0A%09%09%09fire%5Bi%5D%5Bj%5D = %0A%09%09%7D%0A%09%7D\n+%09\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-04_15-50-02",
+            "content": "@@ -205,40 +205,8 @@\n t %7B%0A\n-%09const INF = 1_000_000_000_000%0A%0A\n %09m :\n@@ -387,236 +387,8 @@\n %5D = \n-INF%0A%09%09%7D%0A%09%7D%0A%0A%09dirs := %5B%5D%5B2%5Dint%7B%7B-1,0%7D, %7B1,0%7D, %7B0,-1%7D, %7B0,1%7D%7D%0A%09queue := make(%5B%5D%5B2%5Dint, 0)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == 1 %7B%0A%09%09%09%09fire%5Bi%5D%5Bj%5D = 0%0A%09%09%09%09queue = append(queue, %5B2%5Dint%7Bi, j%7D)%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-04_15-56-03",
+            "content": "@@ -655,243 +655,8 @@\n %0A%09%7D%0A\n-%09head := 0%0A%09for head %3C len(queue) %7B%0A%09%09r, c := queue%5Bhead%5D%5B0%5D, queue%5Bhead%5D%5B1%5D%0A%09%09head++%0A%0A%09%09for _, d := range dirs %7B%0A%09%09%09nr, nc := r+d%5B0%5D, c+d%5B1%5D%0A%09%09%09if nr %3C 0 %7C%7C nr %3E= m %7C%7C nc %3C 0 %7C%7Cnc %3E= n %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09low := 0%0A%09return low%0A\n %7D%0A%0A/\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-04_16-14-33",
+            "content": "@@ -235,36 +235,8 @@\n _000\n-%0A%09const HIGH = 1_000_000_000\n %0A%0A%09m\n@@ -868,238 +868,8 @@\n %0A%09%7D%0A\n-%09possible := func(t int) bool %7B%0A%09%09if fire%5B0%5D%5B0%5D %3C= t %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09return false%0A%09%7D%0A%0A%09if !possible(0) %7B%0A%09%09return -1%0A%09%7D%0A%0A%09high := HIGH%0A%09if fire%5B0%5D%5B0%5D %3C INF %7B%0A%09%09high = fire%5B0%5D%5B0%5D-1%0A%09%7D%0A%09if possible(high) %7B%0A%09%09return high%0A%09%7D%0A%0A\n %09low\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-04_16-24-20",
+            "content": "@@ -1136,122 +1136,8 @@\n = 0%0A\n-%09for low %3C high %7B%0A%09%09mid := (low + high) / 2%0A%09%09if possible(mid) %7B%0A%09%09%09low = mid%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-04_16-28-27",
+            "content": "@@ -971,148 +971,8 @@\n %09%09%7D%0A\n-%0A%09%09visited := make(%5B%5D%5B%5Dbool, n)%0A%09%09for i := range visited %7B%0A%09%09%09visited%5Bi%5D = make(%5B%5Dbool, n)%0A%09%09%7D%0A%0A%09%09type node struct %7B%0A%09%09%09r, c, time int%0A%09%09%7D%0A%0A\n %09%09re\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-04_16-34-13",
+            "content": "@@ -1111,69 +1111,8 @@\n %09%7D%0A%0A\n-%09%09q := %5B%5Dnode%7B%7B0, 0, t%7D%7D%0A%09%09visited%5B0%5D%5B0%5D = true%0A%09%09head := 0%0A%0A\n %09%09re\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-04_16-41-19",
+            "content": "@@ -1172,309 +1172,8 @@\n  0%0A%0A\n-%09%09for head %3C len(q) %7B%0A%09%09%09cur := q%5Bhead%5D%0A%09%09%09head++%0A%0A%09%09%09if cur.r == m-1 && cur.c == n-1 %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09for _, d := range dirs %7B%0A%09%09%09%09nr, nc := cur.r+d%5B0%5D, cur.c+d%5B1%5D%0A%0A%09%09%09%09if nr %3C 0 %7C%7C nr %3E= m %7C%7C nc %3C 0 %7C%7C nc %3E= n %7B%0A%09%09%09%09%09continue%0A%09%09%09%09%7D%0A%09%09%09%09if grid%5Bnr%5D%5Bnc%5D == 2 %7B%0A%09%09%09%09%09continue%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%0A\n %09%09re\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-04_16-47-43",
+            "content": "@@ -1463,297 +1463,8 @@\n %09%09%7D%0A\n-%09%09%09%09if visited%5Bnr%5D%5Bnc%5D %7B%0A%09%09%09%09%09continue%0A%09%09%09%09%7D%0A%0A%09%09%09%09nxt := cur.time + 1%0A%09%09%09%09if nr == m-1 && nc == n-1 %7B%0A%09%09%09%09%09if fire%5Bnr%5D%5Bnc%5D %3C nxt %7B%0A%09%09%09%09%09%09continue%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09if fire%5Bnr%5D%5Bnc%5D %3C= nxt %7B%0A%09%09%09%09%09%09continue%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%0A%09%09%09%09visited%5Bnr%5D%5Bnc%5D = true%0A%09%09%09%09q = append(q, node%7Bnr, nc, nxt%7D)%0A\n %09%09%09%7D\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-07-04_16-51-51",
+            "content": "@@ -1961,20 +1961,16 @@\n w + high\n- + 1\n ) / 2%0A%09%09\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-07-04_16-53-12",
+            "content": "@@ -679,17 +679,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09head :=\n@@ -889,169 +889,8 @@\n %09%09%7D%0A\n-%09%09%09if grid%5Bnr%5D%5Bnc%5D == 2 %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09if fire%5Bnr%5D%5Bnc%5D %3E fire%5Br%5D%5Bc%5D+1 %7B%0A%09%09%09%09fire%5Bnr%5D%5Bnc%5D = fire%5Br%5D%5Bc%5D + 1%0A%09%09%09%09queue = append(queue, %5B2%5Dint%7Bnr, nc%7D)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-07-04_16-56-17",
+            "content": "@@ -1158,17 +1158,17 @@\n %5B%5Dbool, \n-m\n+n\n )%0A%09%09for \n@@ -2030,19 +2030,17 @@\n re%5B0%5D%5B0%5D\n- - \n+-\n 1%0A%09%7D%0A%09if\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-07-04_17-02-26",
+            "content": "@@ -42,30 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A%09%22strings%22%0A\n )%0A%0A/\n@@ -2324,479 +2324,8 @@\n n()%0A\n-%09parts := strings.Fields(scanner.Text())%0A%09if len(parts) %3C 2 %7B%0A%09%09return%0A%09%7D%0A%09m, _ := strconv.Atoi(parts%5B0%5D)%0A%09n, _ := strconv.Atoi(parts%5B1%5D)%0A%0A%09grid := make(%5B%5D%5B%5Dint, m)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09scanner.Scan()%0A%09%09tokens := strings.Fields(scanner.Text())%0A%09%09row := make(%5B%5Dint, n)%0A%09%09for j := 0; j %3C n && j %3C len(tokens); j++ %7B%0A%09%09%09row%5Bj%5D, _ = strconv.Atoi(tokens%5Bj%5D)%0A%09%09%7D%0A%09%09grid%5Bi%5D = row%0A%09%7D%0A%09fmt.Println(numIslands(grid))%0A%09/*scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A\n %09lin\n@@ -2560,10 +2560,6 @@\n lt)%0A\n-%09*/%0A\n %7D%0A\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-07-04_17-21-36",
+            "content": "@@ -211,19 +211,20 @@\n rid %5B%5D%5B%5D\n-int\n+byte\n ) int %7B%0A\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-07-04_17-24-17",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]int) int {\n\tconst INF = 1_000_000_000_000\n\tconst HIGH = 1_000_000_000\n\n\tm := len(grid)\n\tif m == 0 {\n\t\treturn 0\n\t}\n\tn := len(grid[0])\n\n\tfire := make([][]int, m)\n\tfor i := range fire {\n\t\tfire[i] = make([]int, n)\n\t\tfor j := range fire[i] {\n\t\t\tfire[i][j] = INF\n\t\t}\n\t}\n\n\tdirs := [][2]int{{-1,0}, {1,0}, {0,-1}, {0,1}}\n\tqueue := make([][2]int, 0)\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif grid[i][j] == 1 {\n\t\t\t\tfire[i][j] = 0\n\t\t\t\tqueue = append(queue, [2]int{i, j})\n\t\t\t}\n\t\t}\n\t}\n\n\thead := 0\n\tfor head < len(queue) {\n\t\tr, c := queue[head][0], queue[head][1]\n\t\thead++\n\n\t\tfor _, d := range dirs {\n\t\t\tnr, nc := r+d[0], c+d[1]\n\t\t\tif nr < 0 || nr >= m || nc < 0 ||nc >= n {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif grid[nr][nc] == 2 {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif fire[nr][nc] > fire[r][c]+1 {\n\t\t\t\tfire[nr][nc] = fire[r][c] + 1\n\t\t\t\tqueue = append(queue, [2]int{nr, nc})\n\t\t\t}\n\t\t}\n\t}\n\tpossible := func(t int) bool {\n\t\tif fire[0][0] <= t {\n\t\t\treturn false\n\t\t}\n\n\t\tvisited := make([][]bool, m)\n\t\tfor i := range visited {\n\t\t\tvisited[i] = make([]bool, n)\n\t\t}\n\n\t\ttype node struct {\n\t\t\tr, c, time int\n\t\t}\n\n\t\tq := []node{{0, 0, t}}\n\t\tvisited[0][0] = true\n\t\thead := 0\n\n\t\tfor head < len(q) {\n\t\t\tcur := q[head]\n\t\t\thead++\n\n\t\t\tif cur.r == m-1 && cur.c == n-1 {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\tfor _, d := range dirs {\n\t\t\t\tnr, nc := cur.r+d[0], cur.c+d[1]\n\n\t\t\t\tif nr < 0 || nr >= m || nc < 0 || nc >= n {\n\t\t\t\t\tcontinue\n\t\t\t\t}\n\t\t\t\tif grid[nr][nc] == 2 {\n\t\t\t\t\tcontinue\n\t\t\t\t}\n\t\t\t\tif visited[nr][nc] {\n\t\t\t\t\tcontinue\n\t\t\t\t}\n\n\t\t\t\tnxt := cur.time + 1\n\t\t\t\tif nr == m-1 && nc == n-1 {\n\t\t\t\t\tif fire[nr][nc] < nxt {\n\t\t\t\t\t\tcontinue\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tif fire[nr][nc] <= nxt {\n\t\t\t\t\t\tcontinue\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tvisited[nr][nc] = true\n\t\t\t\tq = append(q, node{nr, nc, nxt})\n\t\t\t}\n\t\t}\n\n\t\treturn false\n\t}\n\n\tif !possible(0) {\n\t\treturn -1\n\t}\n\n\thigh := HIGH\n\tif fire[0][0] < INF {\n\t\thigh = fire[0][0] - 1\n\t}\n\tif possible(high) {\n\t\treturn high\n\t}\n\n\tlow := 0\n\tfor low < high {\n\t\tmid := (low + high + 1) / 2\n\t\tif possible(mid) {\n\t\t\tlow = mid\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn low\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tm, _ := strconv.Atoi(parts[0])\n\tn, _ := strconv.Atoi(parts[1])\n\n\tgrid := make([][]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tscanner.Scan()\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, n)\n\t\tfor j := 0; j < n && j < len(tokens); j++ {\n\t\t\trow[j], _ = strconv.Atoi(tokens[j])\n\t\t}\n\t\tgrid[i] = row\n\t}\n\tfmt.Println(numIslands(grid))\n\t/*scanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n\t*/\n}\n",
+            "lines": "178"
+        }
+    ]
+}

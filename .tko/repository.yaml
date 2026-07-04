@@ -19,25 +19,25 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
 - ed@vector
-- ed@linear
+- ed@backtrack
 - ed@rec
+- ed@bfs
+- ed@dfs
+- sandbox@sandbox
 - ed@tree
+- ed@linear
+- ed@list
 - ed@basic
 - ed@map_set
-- ed@list
-- ed@backtrack
-- sandbox@sandbox
-- ed@bfs
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@battleship
-selected_index: 97
+selected: ed@caminho
+selected_index: 99

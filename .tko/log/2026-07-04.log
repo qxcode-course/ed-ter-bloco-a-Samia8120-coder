@@ -115,3 +115,58 @@
 2026-07-04 14:24:02, EXEC, v:1, k:ed@battleship, mode:FULL, rate:100, size:46
 2026-07-04 14:24:04, MOVE, v:1, k:ed@battleship, mode:BACK
 2026-07-04 14:24:50, SELF, v:1, k:ed@battleship, self:1, rate:100, study:20, refactor:1
+2026-07-04 15:27:33, MOVE, v:1, k:ed@escapeSpread, mode:DOWN
+2026-07-04 15:27:37, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 15:30:25, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:31, fail:COMP
+2026-07-04 15:27:33, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 15:31:21, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 15:36:24, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:29, fail:COMP
+2026-07-04 15:36:24, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 15:46:24, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 15:50:02, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:41, fail:COMP
+2026-07-04 15:50:03, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 15:50:11, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 15:54:46, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 15:56:03, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:54, fail:COMP
+2026-07-04 15:56:03, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 15:56:16, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:06:37, EXEC, v:1, k:ed@escapeSpread, mode:FULL, fail:COMP
+2026-07-04 16:06:38, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 16:06:45, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:11:34, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:14:33, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:0, size:68
+2026-07-04 16:16:20, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:14:33, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:21:38, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:24:20, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:88
+2026-07-04 16:24:37, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 16:24:55, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:28:27, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:96
+2026-07-04 16:28:34, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 16:28:49, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:33:30, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:34:13, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:106
+2026-07-04 16:35:28, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:34:13, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:41:19, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:110, fail:COMP
+2026-07-04 16:41:20, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 16:42:26, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:47:21, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:47:43, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:130
+2026-07-04 16:51:51, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:147
+2026-07-04 16:52:08, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 16:52:17, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-04 16:53:12, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:147
+2026-07-04 16:56:17, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:155
+2026-07-04 16:56:45, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33
+2026-07-04 16:56:16, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 16:56:45, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 17:02:03, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 17:02:26, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:33, size:155
+2026-07-04 17:02:25, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 17:17:11, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 17:21:36, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:178, fail:COMP
+2026-07-04 17:20:47, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-04 17:24:17, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:100, size:178
+2026-07-04 17:24:23, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-07-04 17:25:16, SELF, v:1, k:ed@escapeSpread, self:1, rate:100, study:116, concept:1
