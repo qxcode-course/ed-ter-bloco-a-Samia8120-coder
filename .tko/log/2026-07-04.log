@@ -299,3 +299,17 @@
 2026-07-04 23:36:52, MOVE, v:1, k:ed@compare, mode:EDIT
 2026-07-04 23:36:52, MOVE, v:1, k:ed@compare, mode:EDIT
 2026-07-04 23:37:57, EXEC, v:1, k:ed@compare, mode:FULL, rate:25, size:83
+2026-07-04 23:37:57, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-04 23:41:54, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-04 23:45:26, EXEC, v:1, k:ed@compare, mode:FULL, size:90, fail:COMP
+2026-07-04 23:45:32, EXEC, v:1, k:ed@compare, mode:FULL, rate:25, size:91
+2026-07-04 23:45:47, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-04 23:46:27, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-04 23:47:01, EXEC, v:1, k:ed@compare, mode:FULL, rate:25, size:91
+2026-07-04 23:48:15, EXEC, v:1, k:ed@compare, mode:FULL, rate:62, size:94
+2026-07-04 23:48:20, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-04 23:48:28, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-04 23:51:53, EXEC, v:1, k:ed@compare, mode:FULL, rate:100, size:100
+2026-07-04 23:51:55, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-04 23:52:08, SELF, v:1, k:ed@compare, self:1, rate:100, study:15
+2026-07-04 23:54:20, MOVE, v:1, k:ed@multiset, mode:PICK
