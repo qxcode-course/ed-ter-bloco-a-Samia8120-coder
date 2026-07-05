@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_20-38-58",
+            "content": "@@ -24,18 +24,16 @@\n %09%22fmt%22%0A%09\n-//\n %22strings\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-05_20-39-07",
+            "content": "@@ -253,71 +253,8 @@\n %5D %7B%0A\n-%09next := it.Next()%0A%09if next == l.End() %7B%0A%09%09next = l.Front()%0A%09%7D%0A\n %09ret\n@@ -258,19 +258,18 @@\n return n\n-ext\n+il\n %0A%7D%0A%0Afunc\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-05_20-43-40",
+            "content": "@@ -24,16 +24,18 @@\n %09%22fmt%22%0A%09\n+//\n %22strings\n@@ -147,93 +147,17 @@\n  %7B%0A%09\n-var sb strings.Builder%0A%09sb.WriteString(%22%5B%22)%0A%0A%09sb.WriteString(%22%5D%22)%0A%09return sb.String()\n+return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_20-45-35",
+            "content": "@@ -190,52 +190,8 @@\n %22)%0A%0A\n-%09if l.Size() %3E 0 %7B%0A%09%09sb.WriteString(%22 %22)%0A%09%7D%0A\n %09sb.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-05_20-47-57",
+            "content": "@@ -190,95 +190,8 @@\n %22)%0A%0A\n-%09for node := l.Front(); node != l.End(); node = node.Next() %7B%0A%09%09sb.WriteString(%22 %22)%0A%09%7D%0A\n %09if \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-05_20-53-18",
+            "content": "@@ -271,16 +271,18 @@\n g(%22 %22)%0A%09\n+%7D%0A\n %09if l.Si\n@@ -292,17 +292,16 @@\n ) %3E 0 %7B%0A\n-%09\n %09%09sb.Wri\n@@ -318,152 +318,8 @@\n  %22)%0A\n-%09%09%09if node == sword %7B%0A%09%09%09%09sb.WriteString(fmt.Sprintf(%22%25d%3E%22, node.Value))%0A%09%09%09%7D else %7B%0A%09%09%09%09sb.WriteString(fmt.Sprintf(%22%25d%22, node.Value))%0A%09%09%09%7D%0A%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-05_21-02-05",
+            "content": "@@ -270,16 +270,59 @@\n ng(%22 %22)%0A\n+%09%09if l.Size() %3E 0 %7B%0A%09%09%09sb.WriteString(%22 %22)%0A\n %09%09%09if no\n@@ -461,56 +461,11 @@\n %09%09%7D%0A\n-%09%09if l.Size() %3E 0 %7B%0A%09%09%09sb.WriteString(%22 %22)%0A%09\n %09%7D%0A\n-%09\n %09sb.\n@@ -481,17 +481,16 @@\n ng(%22%5D%22)%0A\n-%09\n %09return \n@@ -501,18 +501,16 @@\n tring()%0A\n-%0A%09\n %7D%0A%0A// mo\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-05_21-04-58",
+            "content": "@@ -272,16 +272,17 @@\n (%22 %22)%0A%09%09\n+%09\n if node \n@@ -292,16 +292,17 @@\n sword %7B%0A\n+%09\n %09%09%09sb.Wr\n@@ -345,16 +345,17 @@\n lue))%0A%09%09\n+%09\n %7D else %7B\n@@ -355,16 +355,17 @@\n  else %7B%0A\n+%09\n %09%09%09sb.Wr\n@@ -411,13 +411,16 @@\n )%0A%09%09\n+%09\n %7D%0A\n+%09\n %09%7D%0A\n+%09\n %09if \n@@ -432,24 +432,25 @@\n e() %3E 0 %7B%0A%09%09\n+%09\n sb.WriteStri\n@@ -457,19 +457,21 @@\n ng(%22 %22)%0A\n+%09\n %09%7D%0A\n+%09\n %09sb.Writ\n@@ -483,16 +483,17 @@\n ng(%22%5D%22)%0A\n+%09\n %09return \n@@ -504,16 +504,18 @@\n tring()%0A\n+%0A%09\n %7D%0A%0A// mo\n@@ -742,18 +742,16 @@\n hosen)%0A%09\n-//\n fmt.Prin\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_21-13-29",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar sb strings.Builder\n\tsb.WriteString(\"[\")\n\n\tfor node := l.Front(); node != l.End(); node = node.Next() {\n\t\tsb.WriteString(\" \")\n\t\tif node == sword {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d>\", node.Value))\n\t\t} else {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d\", node.Value))\n\t\t}\n\t}\n\tif l.Size() > 0 {\n\t\tsb.WriteString(\" \")\n\t}\n\tsb.WriteString(\"]\")\n\treturn sb.String()\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tnext := it.Next()\n\tif next == l.End() {\n\t\tnext = l.Front()\n\t}\n\treturn next\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t//fmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "55"
+        }
+    ]
+}
