@@ -19,17 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
-- ed@dfs
-- ed@rec
-- ed@map_set
 - ed@bfs
+- ed@map_set
 - ed@basic
-- ed@vector
-- ed@backtrack
-- ed@linear
 - sandbox@sandbox
+- ed@linear
+- ed@backtrack
+- ed@rec
+- ed@dfs
+- ed@vector
 - ed@list
+- ed@tree
 flags:
   inbox: all
   panel: graph
@@ -39,5 +39,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@detonate
-selected_index: 101
+selected: ed@vector
+selected_index: 44
